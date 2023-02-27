@@ -1,0 +1,454 @@
+{
+  "preFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "ntileValues": "10",
+  "keys": [],
+  "values": [
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "date",
+      "count": false,
+      "$idx": 0,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "date",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": true,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "precision",
+      "count": false,
+      "$idx": 1,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": true,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": true,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "recall",
+      "count": false,
+      "$idx": 2,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": true,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": true,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "auc",
+      "count": false,
+      "$idx": 3,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": true,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": true,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "f1",
+      "count": false,
+      "$idx": 4,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": true,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "accuracy",
+      "count": false,
+      "$idx": 5,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "mcc",
+      "count": false,
+      "$idx": 6,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "hammingLoss",
+      "count": false,
+      "$idx": 7,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "logLoss",
+      "count": false,
+      "$idx": 8,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "lift",
+      "count": false,
+      "$idx": 9,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "calibrationLoss",
+      "count": false,
+      "$idx": 10,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "customScore",
+      "count": false,
+      "$idx": 11,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    }
+  ],
+  "windows": [
+    {
+      "windowUpperBound": 0,
+      "enablePartitioning": false,
+      "enableOrdering": true,
+      "precedingRows": 0,
+      "limitFollowing": false,
+      "orders": [
+        {
+          "column": "date",
+          "desc": false
+        }
+      ],
+      "limitPreceding": false,
+      "followingRows": 0,
+      "windowLowerBound": 0,
+      "enableLimits": false
+    }
+  ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "name": "precision",
+            "type": "double"
+          },
+          {
+            "name": "recall",
+            "type": "double"
+          },
+          {
+            "name": "auc",
+            "type": "double"
+          },
+          {
+            "name": "f1",
+            "type": "double"
+          },
+          {
+            "name": "accuracy",
+            "type": "double"
+          },
+          {
+            "name": "mcc",
+            "type": "double"
+          },
+          {
+            "name": "hammingLoss",
+            "type": "double"
+          },
+          {
+            "name": "logLoss",
+            "type": "double"
+          },
+          {
+            "name": "lift",
+            "type": "double"
+          },
+          {
+            "name": "calibrationLoss",
+            "type": "double"
+          },
+          {
+            "name": "customScore",
+            "type": "double"
+          },
+          {
+            "name": "precision_lag",
+            "type": "double"
+          },
+          {
+            "name": "precision_lag_diff",
+            "type": "double"
+          },
+          {
+            "name": "recall_lag",
+            "type": "double"
+          },
+          {
+            "name": "recall_lag_diff",
+            "type": "double"
+          },
+          {
+            "name": "auc_lag",
+            "type": "double"
+          },
+          {
+            "name": "auc_lag_diff",
+            "type": "double"
+          },
+          {
+            "name": "f1_lag",
+            "type": "double"
+          },
+          {
+            "name": "f1_lag_diff",
+            "type": "double"
+          }
+        ],
+        "userModified": false
+      }
+    },
+    "distinct": false,
+    "enabled": false
+  },
+  "cumeDist": false,
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "ntile": false,
+  "rank": false,
+  "denseRank": false,
+  "rowNumber": false,
+  "outputColumnNameOverrides": {}
+}

@@ -1,0 +1,136 @@
+{
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "explorationSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 10000,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "maxStoredBytes": 104857600,
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL"
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateComponentsExtractor",
+      "params": {
+        "outYearColumn": "contract_end_date_year",
+        "column": "contract_end_date",
+        "timezone_id": "UTC"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateDifference",
+      "params": {
+        "output": "contract_duration",
+        "input2": "contract_end_date",
+        "outputUnit": "MONTHS",
+        "input1": "contract_start_date",
+        "compareTo": "COLUMN",
+        "reverse": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "contract_end_date",
+          "contract_start_date"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateDifference",
+      "params": {
+        "output": "customer_age",
+        "outputUnit": "YEARS",
+        "input1": "customer_birthdate",
+        "compareTo": "DATE",
+        "refDate": "2017-12-31",
+        "reverse": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": true,
+      "type": "FilterOnNumericalRange",
+      "params": {
+        "min": 0.0,
+        "max": 100.0,
+        "booleanMode": "AND",
+        "columns": [
+          "customer_age"
+        ],
+        "action": "KEEP_ROW",
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "customer_birthdate"
+        ],
+        "keep": false,
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    }
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "previewMode": "ALL_ROWS",
+  "vizSampling": {
+    "_refreshTrigger": 0,
+    "autoRefreshSample": false
+  },
+  "analysisColumnData": {},
+  "sorting": [],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
+  }
+}

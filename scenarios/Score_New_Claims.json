@@ -1,0 +1,288 @@
+{
+  "type": "step_based",
+  "name": "Score New Claims",
+  "active": false,
+  "runAsUser": "admin",
+  "versionTag": {
+    "versionNumber": 25,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677516155569
+  },
+  "checklists": {
+    "checklists": []
+  },
+  "delayedTriggersBehavior": {
+    "delayWhileRunning": true,
+    "squashDelayedTriggers": true,
+    "suppressTriggersWhileRunning": true
+  },
+  "tags": [],
+  "triggers": [
+    {
+      "id": "kcndB8bJ",
+      "type": "temporal",
+      "name": "daily",
+      "delay": 5,
+      "active": true,
+      "params": {
+        "repeatFrequency": 1,
+        "frequency": "Daily",
+        "startingFrom": "2021-05-10T22:00:00.000Z",
+        "daysOfWeek": [
+          "Saturday"
+        ],
+        "monthlyRunOn": "ON_THE_DAY",
+        "minute": 0,
+        "hour": 17,
+        "timezone": "SERVER",
+        "lastUpdate": 1677516155569
+      }
+    },
+    {
+      "id": "y07QRPse",
+      "type": "temporal",
+      "name": "score_5minutes",
+      "delay": 5,
+      "active": false,
+      "params": {
+        "repeatFrequency": 5,
+        "frequency": "Minutely",
+        "startingFrom": "2022-04-03T22:00:00.000Z",
+        "daysOfWeek": [
+          "Saturday"
+        ],
+        "minute": 0,
+        "hour": 17,
+        "timezone": "SERVER",
+        "lastUpdate": 1677516155569
+      }
+    },
+    {
+      "id": "1j1OTZcH",
+      "type": "temporal",
+      "name": "Time-based",
+      "delay": 5,
+      "active": true,
+      "params": {
+        "repeatFrequency": 1,
+        "frequency": "Hourly",
+        "startingFrom": "2022-03-15T14:39:00.000Z",
+        "daysOfWeek": [
+          "Tuesday"
+        ],
+        "monthlyRunOn": "ON_THE_DAY",
+        "minute": 41,
+        "hour": 15,
+        "timezone": "SERVER",
+        "lastUpdate": 1677516155569
+      }
+    }
+  ],
+  "reporters": [
+    {
+      "active": true,
+      "messaging": {
+        "type": "mail-scenario",
+        "configuration": {
+          "subject": "DSS scenario ${scenarioName}: ${outcome}",
+          "sender": "andrea.santiago@dataiku.com",
+          "recipient": "andrea.santiago@dataiku.com",
+          "sendAsHTML": false,
+          "attachments": [
+            {
+              "type": "DASHBOARD_EXPORT",
+              "params": {
+                "dashboardId": "p2LKf6J",
+                "exportFormat": {
+                  "fileType": "PDF",
+                  "height": 1358,
+                  "orientation": "LANDSCAPE",
+                  "paperSize": "A4",
+                  "width": 1920
+                }
+              }
+            },
+            {
+              "type": "DATASET",
+              "params": {
+                "attachedDataset": "New_Claims_scored",
+                "exportParams": {
+                  "advancedMode": false,
+                  "destinationDatasetProjectKey": "INSURANCEFRAUDDETECTIONNEW",
+                  "destinationType": "DOWNLOAD",
+                  "format": {
+                    "params": {
+                      "arrayMapFormat": "json",
+                      "charset": "utf8",
+                      "compress": "",
+                      "dateSerializationFormat": "ISO",
+                      "escapeChar": "\\",
+                      "fileReadFailureBehavior": "FAIL",
+                      "hiveSeparators": [
+                        "\u0002",
+                        "\u0003",
+                        "\u0004",
+                        "\u0005",
+                        "\u0006",
+                        "\u0007",
+                        "\b"
+                      ],
+                      "normalizeBooleans": false,
+                      "normalizeDoubles": true,
+                      "parseHeaderRow": true,
+                      "probableNumberOfRecords": 0,
+                      "quoteChar": "\"",
+                      "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+                      "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+                      "readMissingColumnsBehavior": "DISCARD_SILENT",
+                      "separator": ",",
+                      "skipRowsAfterHeader": 0,
+                      "skipRowsBeforeHeader": 0,
+                      "style": "excel",
+                      "writeDataTypeMismatchBehavior": "DISCARD_WARNING"
+                    },
+                    "type": "csv"
+                  },
+                  "originatingOptionId": "tsv-excel-header",
+                  "overwriteDestinationDataset": false,
+                  "selection": {
+                    "maxRecords": 100000,
+                    "ordering": {
+                      "enabled": false,
+                      "rules": []
+                    },
+                    "partitionSelectionMethod": "ALL",
+                    "samplingMethod": "FULL",
+                    "selectedPartitions": [],
+                    "targetRatio": 0.02
+                  }
+                }
+              }
+            }
+          ],
+          "messageSource": "TEMPLATE_FILE",
+          "templateFormat": "FREEMARKER",
+          "templateName": "default.ftl"
+        }
+      },
+      "id": "aaNJZFGQ",
+      "runConditionEnabled": false,
+      "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
+      "phase": "END"
+    }
+  ],
+  "params": {
+    "steps": [
+      {
+        "id": "build_0_true_d_New_Claims",
+        "type": "build_flowitem",
+        "name": "Get New Claims",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "New_Claims",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "handleWarningsAs": "WARNING",
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "check_false_d_New_Claims",
+        "type": "check_dataset",
+        "name": "Check Data Availability",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "checks": [
+            {
+              "type": "DATASET",
+              "itemId": "New_Claims",
+              "partitionsSpec": ""
+            }
+          ],
+          "handleWarningsAs": "WARNING",
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_d_New_Claims_to_score",
+        "type": "build_flowitem",
+        "name": "Calculate Features",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "New_Claims_enriched",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "handleWarningsAs": "WARNING",
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_d_Nes_claims_scored_final",
+        "type": "build_flowitem",
+        "name": "New Alerts",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "Claims_Alerts",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "handleWarningsAs": "WARNING",
+          "proceedOnFailure": false
+        }
+      }
+    ]
+  },
+  "automationLocal": false,
+  "customFields": {}
+}

@@ -1,0 +1,29 @@
+{
+  "type": "saved-model_report",
+  "params": {
+    "savedModelSmartId": "rOC4RTbs"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Full report of model Fraud_Classification",
+  "dashboardCreationId": "JJApRWV",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577096570502
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577096570502
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "type": "prediction_training",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "test": {
+      "items": [
+        {
+          "ref": "train_test",
+          "deps": []
+        }
+      ]
+    },
+    "main": {
+      "items": [
+        {
+          "ref": "train_train",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "VNCmGzOW",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "versionTag": {
+    "versionNumber": 3,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1620811694938
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1581526513163
+  },
+  "tags": [
+    "modeling part"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

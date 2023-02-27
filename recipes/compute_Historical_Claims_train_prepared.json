@@ -1,0 +1,93 @@
+{
+  "type": "shaker",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "engineParams": {
+      "spark": {
+        "readParams": {
+          "mode": "AUTO",
+          "autoModeRepartitionInto": 10,
+          "map": {
+            "Historical_Claims_train": {
+              "repartition": 10
+            }
+          }
+        },
+        "useGlobalMetastore": false,
+        "useNativeProcessors": true,
+        "sparkConfig": {
+          "inheritConf": "default",
+          "conf": []
+        },
+        "executionEngine": "SPARK_SUBMIT",
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true,
+        "skipPrerunValidate": false
+      },
+      "hive": {
+        "inheritConf": "default",
+        "hiveconf": [],
+        "executionEngine": "HIVECLI_LOCAL",
+        "addDkuUdf": false,
+        "skipPrerunValidate": false
+      },
+      "impala": {
+        "forceStreamMode": true
+      },
+      "hadoopConfigKeys": [],
+      "sqlPipelineParams": {
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true
+      },
+      "maxThreads": 8
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": true,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "Historical_Claims_train",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "Historical_Claims_train_prepared",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "versionTag": {
+    "versionNumber": 5,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1647960475970
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1576755872163
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

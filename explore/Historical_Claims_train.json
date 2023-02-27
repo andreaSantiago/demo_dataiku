@@ -1,0 +1,233 @@
+{
+  "charts": [
+    {
+      "copySelectionFromScript": true,
+      "def": {
+        "animationDimension": [],
+        "animationFrameDuration": 3000,
+        "animationRepeat": true,
+        "axis1LogScale": false,
+        "axis2LogScale": false,
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "bubblesOptions": {
+          "defaultRadius": 5.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "chartHeight": 200,
+        "colorMeasure": [],
+        "colorOptions": {
+          "ccScaleMode": "NORMAL",
+          "colorPalette": "default",
+          "customColors": {},
+          "customPalette": {
+            "colors": [],
+            "fixedValues": false,
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "values": []
+          },
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5,
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0,
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "singleColor": "#2678B1",
+          "transparency": 0.75
+        },
+        "computeMode": "NORMAL",
+        "disableSafetyLimits": false,
+        "facetDimension": [],
+        "fillOpacity": 0.6,
+        "genericDimension0": [],
+        "genericDimension1": [],
+        "genericMeasures": [],
+        "geometry": [],
+        "groupDimension": [],
+        "hexbinNumber": 20,
+        "hexbinRadius": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "includeZero": true,
+        "legendPlacement": "OUTER_RIGHT",
+        "mapGridOptions": {
+          "gridLatDeg": 0.6,
+          "gridLonDeg": 0.6
+        },
+        "mapOptions": {
+          "lockSquareGrid": false,
+          "tilesLayer": "cartodb-positron"
+        },
+        "multiTooltips": false,
+        "name": "New chart",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false
+        },
+        "showInChartLabels": true,
+        "showInChartValues": false,
+        "showLegend": true,
+        "showXAxis": false,
+        "showXAxisLabel": true,
+        "showYAxisLabel": true,
+        "singleXAxis": true,
+        "sizeMeasure": [],
+        "smoothing": true,
+        "strokeWidth": 1,
+        "tooltipMeasures": [],
+        "type": "grouped_columns",
+        "uaColor": [],
+        "uaShape": [],
+        "uaSize": [],
+        "uaTooltip": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "useLiveProcessingIfAvailable": true,
+        "userEditedName": false,
+        "variant": "normal",
+        "xAxisMode": "NORMAL",
+        "xCustomExtent": {},
+        "xDimension": [],
+        "xMeasure": [],
+        "yAxisMode": "NORMAL",
+        "yCustomExtent": {},
+        "yDimension": [],
+        "yMeasure": []
+      },
+      "engineType": "LINO",
+      "maxDataBytes": 157286400
+    }
+  ],
+  "script": {
+    "analysisColumnData": {},
+    "coloring": {
+      "individualColumns": [],
+      "scheme": "MEANING_AND_STATUS",
+      "valueColoringMode": "HASH"
+    },
+    "columnWidthsByName": {
+      "agency_id": 113,
+      "car_brand": 106,
+      "car_model": 300,
+      "car_number": 100,
+      "claim_amount": 105,
+      "claim_date": 183,
+      "claim_id": 100,
+      "code_dep": 100,
+      "contract_duration": 143,
+      "contract_end_date_year": 180,
+      "contract_id": 100,
+      "customer_age": 105,
+      "customer_category": 267,
+      "customer_group": 120,
+      "department": 169,
+      "email_domain": 105,
+      "expert": 100,
+      "fraud": 100,
+      "gender": 100,
+      "geopoint": 197,
+      "litigation_flag": 128,
+      "policies_last_3_years": 173,
+      "policies_last_year": 150,
+      "product_id": 120,
+      "region": 246
+    },
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "explorationFilters": [
+      {
+        "active": true,
+        "alphanumFilter": {
+          "column": "fraud",
+          "params": {
+            "mode": "full_string",
+            "normalization": "exact"
+          },
+          "selectedValues": [
+            "1"
+          ],
+          "type": "alphanum"
+        },
+        "column": "fraud",
+        "currentMode": "SIMPLE_ALPHANUM",
+        "facet": {
+          "column": "fraud",
+          "columnType": "NUMERICAL",
+          "currentMode": "ALPHANUM",
+          "minValue": 0.9315,
+          "selectedValues": {},
+          "sort": "count",
+          "type": "facet"
+        },
+        "type": "columnFilter",
+        "validityFilter": {
+          "column": "fraud",
+          "params": {
+            "empty": true,
+            "nok": true,
+            "ok": true,
+            "type": "LongMeaning"
+          },
+          "type": "validity"
+        }
+      }
+    ],
+    "explorationSampling": {
+      "_refreshTrigger": 0,
+      "autoRefreshSample": false,
+      "selection": {
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxReadUncompressedBytes": -1,
+        "maxRecords": 10000,
+        "maxStoredBytes": 104857600,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "partitionSelectionMethod": "ALL",
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "targetRatio": 0.02,
+        "timeout": -1,
+        "withinFirstN": -1
+      }
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "maxProcessedMemTableBytes": -1,
+    "previewMode": "ALL_ROWS",
+    "sorting": [],
+    "steps": [],
+    "vizSampling": {
+      "_refreshTrigger": 0,
+      "autoRefreshSample": false,
+      "selection": {
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxReadUncompressedBytes": -1,
+        "maxRecords": -1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "partitionSelectionMethod": "ALL",
+        "samplingMethod": "FULL",
+        "targetRatio": 0.02,
+        "useMemTable": false,
+        "withinFirstN": -1
+      }
+    }
+  }
+}

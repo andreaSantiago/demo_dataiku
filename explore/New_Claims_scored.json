@@ -1,0 +1,117 @@
+{
+  "charts": [],
+  "script": {
+    "analysisColumnData": {},
+    "coloring": {
+      "individualColumns": [],
+      "scheme": "MEANING_AND_STATUS",
+      "valueColoringMode": "HASH"
+    },
+    "columnWidthsByName": {
+      "agency_id": 113,
+      "car_brand": 155,
+      "car_model": 300,
+      "car_number": 100,
+      "claim_amount": 105,
+      "claim_date": 183,
+      "claim_id": 100,
+      "code_dep": 100,
+      "contract_duration": 143,
+      "contract_end_date_year": 180,
+      "contract_id": 100,
+      "customer_age": 105,
+      "customer_category": 218,
+      "customer_group": 120,
+      "customer_id": 127,
+      "department": 162,
+      "email_domain": 105,
+      "expert": 100,
+      "explanations": 300,
+      "gender": 100,
+      "geopoint": 197,
+      "litigation_flag": 128,
+      "policies_last_3_years": 173,
+      "policies_last_year": 150,
+      "prediction": 100,
+      "proba_0": 148,
+      "proba_1": 148,
+      "product_id": 120,
+      "region": 197
+    },
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "explorationFilters": [
+      {
+        "active": true,
+        "alphanumFilter": {
+          "column": "claim_id",
+          "params": {
+            "mode": "full_string",
+            "normalization": "exact"
+          },
+          "selectedValues": [
+            "28370",
+            "12755"
+          ],
+          "type": "alphanum"
+        },
+        "column": "claim_id",
+        "currentMode": "SIMPLE_ALPHANUM",
+        "facet": {
+          "column": "claim_id",
+          "columnType": "NUMERICAL",
+          "currentMode": "NUMERICAL",
+          "selectedValues": {},
+          "sort": "count",
+          "type": "facet"
+        },
+        "type": "columnFilter",
+        "validityFilter": {
+          "column": "claim_id",
+          "params": {
+            "empty": true,
+            "nok": true,
+            "ok": true,
+            "type": "LongMeaning"
+          },
+          "type": "validity"
+        }
+      }
+    ],
+    "explorationSampling": {
+      "_refreshTrigger": 0,
+      "autoRefreshSample": false,
+      "selection": {
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxReadUncompressedBytes": -1,
+        "maxRecords": 10000,
+        "maxStoredBytes": 104857600,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "partitionSelectionMethod": "ALL",
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "targetRatio": 0.02,
+        "withinFirstN": -1
+      }
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "maxProcessedMemTableBytes": -1,
+    "previewMode": "ALL_ROWS",
+    "sorting": [],
+    "steps": [],
+    "vizSampling": {
+      "_refreshTrigger": 0,
+      "autoRefreshSample": false
+    }
+  }
+}

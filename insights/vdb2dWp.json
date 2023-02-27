@@ -1,0 +1,207 @@
+{
+  "checklists": {
+    "checklists": []
+  },
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1566915975775,
+    "versionNumber": 0
+  },
+  "customFields": {},
+  "dashboardCreationId": "p2LKf6J",
+  "listed": false,
+  "name": "Count by customer_age on Historical_Claims_enriched",
+  "owner": "ludo",
+  "params": {
+    "datasetSmartName": "Historical_Claims_enriched",
+    "def": {
+      "animationDimension": [],
+      "animationFrameDuration": 3000,
+      "animationRepeat": true,
+      "axis1LogScale": false,
+      "axis2LogScale": false,
+      "boxplotBreakdownDim": [],
+      "boxplotValue": [],
+      "bubblesOptions": {
+        "defaultRadius": 5.0,
+        "singleShape": "FILLED_CIRCLE"
+      },
+      "chartHeight": 200,
+      "colorMeasure": [],
+      "colorOptions": {
+        "ccScaleMode": "NORMAL",
+        "colorPalette": "Set2",
+        "customPalette": {
+          "colors": [],
+          "fixedValues": false,
+          "id": "__dku_custom__",
+          "name": "Custom Palette",
+          "values": []
+        },
+        "numQuantizeSteps": 5,
+        "paletteMiddleValue": 0.0,
+        "paletteType": "CONTINUOUS",
+        "quantizationMode": "NONE",
+        "singleColor": "#2678B1",
+        "transparency": 0.75
+      },
+      "computeMode": "NORMAL",
+      "disableSafetyLimits": false,
+      "facetDimension": [],
+      "fillOpacity": 0.6,
+      "filters": [
+        {
+          "allValuesInSample": false,
+          "column": "customer_age",
+          "columnType": "NUMERICAL",
+          "excludeOtherValues": false,
+          "excludedValues": {},
+          "explicitExclude": false,
+          "filterType": "NUMERICAL_FACET",
+          "isA": "filter",
+          "minValue": 0.0
+        }
+      ],
+      "genericDimension0": [
+        {
+          "column": "customer_age",
+          "filters": [],
+          "generateOthersCategory": true,
+          "isA": "dimension",
+          "maxValues": 100,
+          "numParams": {
+            "binSize": 100,
+            "emptyBinsMode": "ZEROS",
+            "mode": "NONE",
+            "nbBins": 10
+          },
+          "oneTickPerBin": false,
+          "possibleSorts": [
+            {
+              "label": "Natural ordering",
+              "sortAscending": true,
+              "type": "NATURAL"
+            },
+            {
+              "label": "Count of records, descending",
+              "measureIdx": 0,
+              "type": "AGGREGATION"
+            },
+            {
+              "label": "Count of records, ascending",
+              "measureIdx": 0,
+              "sortAscending": true,
+              "type": "AGGREGATION"
+            }
+          ],
+          "sort": {
+            "label": "Natural ordering",
+            "sortAscending": true,
+            "type": "NATURAL"
+          },
+          "type": "NUMERICAL"
+        }
+      ],
+      "genericDimension1": [],
+      "genericMeasures": [
+        {
+          "computeMode": "NORMAL",
+          "computeModeDim": 0,
+          "displayAxis": "axis1",
+          "displayType": "column",
+          "displayed": true,
+          "function": "COUNT",
+          "isA": "measure",
+          "type": "NUMERICAL"
+        }
+      ],
+      "geometry": [],
+      "groupDimension": [],
+      "hexbinNumber": 20,
+      "hexbinRadius": 20,
+      "hexbinRadiusMode": "NUM_HEXAGONS",
+      "includeZero": true,
+      "legendPlacement": "OUTER_RIGHT",
+      "mapGridOptions": {
+        "gridLatDeg": 0.5,
+        "gridLonDeg": 0.5
+      },
+      "mapOptions": {
+        "lockSquareGrid": false,
+        "tilesLayer": "cartodb-positron"
+      },
+      "multiTooltips": false,
+      "name": "Count by customer_age",
+      "pieOptions": {
+        "donutHoleSize": 54.0
+      },
+      "scatterOptions": {
+        "equalScales": false,
+        "identityLine": false
+      },
+      "showInChartLabels": true,
+      "showInChartValues": false,
+      "showLegend": true,
+      "showXAxis": false,
+      "showXAxisLabel": true,
+      "showYAxisLabel": true,
+      "singleXAxis": true,
+      "sizeMeasure": [],
+      "smoothing": true,
+      "strokeWidth": 1,
+      "tooltipMeasures": [],
+      "type": "grouped_columns",
+      "uaColor": [],
+      "uaShape": [],
+      "uaSize": [],
+      "uaTooltip": [],
+      "uaXDimension": [],
+      "uaYDimension": [],
+      "useLiveProcessingIfAvailable": true,
+      "userEditedName": false,
+      "variant": "normal",
+      "xAxisMode": "NORMAL",
+      "xDimension": [],
+      "xMeasure": [],
+      "yAxisLabel": "",
+      "yAxisMode": "NORMAL",
+      "yDimension": [],
+      "yMeasure": []
+    },
+    "engineType": "LINO",
+    "maxDataBytes": 157286400,
+    "refreshableSelection": {
+      "_refreshTrigger": 0,
+      "autoRefreshSample": false,
+      "selection": {
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxReadUncompressedBytes": -1,
+        "maxRecords": 10000,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "partitionSelectionMethod": "ALL",
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "targetRatio": 0.02,
+        "useMemTable": false,
+        "withinFirstN": -1
+      }
+    }
+  },
+  "tags": [],
+  "type": "chart",
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1594240844456,
+    "versionNumber": 3
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "layout": "WIKI_ARTICLE", 
+    "attachments": [], 
+    "versionTag": {
+        "lastModifiedBy": {
+            "login": "ludo"
+        }, 
+        "lastModifiedOn": 1569255179222, 
+        "versionNumber": 7
+    }, 
+    "tags": [], 
+    "creationTag": {
+        "lastModifiedBy": {
+            "login": "ludo"
+        }, 
+        "lastModifiedOn": 1569253950428, 
+        "versionNumber": 0
+    }, 
+    "checklists": {
+        "checklists": []
+    }, 
+    "customFields": {}, 
+    "name": "Insurance Fraud Detection Project"
+}

@@ -1,0 +1,124 @@
+{
+  "rebuildBehavior": "EXPLICIT",
+  "name": "Model Evaluation Store (binary)",
+  "metrics": {
+    "probes": [],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "partition": "NP",
+      "columns": [],
+      "metrics": [
+        "reporting:BUILD_DURATION"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "partition": "NP",
+      "checks": []
+    }
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "displayParams": {
+    "displayedMetrics": [
+      "ACCURACY",
+      "PRECISION",
+      "RECALL",
+      "F1",
+      "COST_MATRIX",
+      "LOG_LOSS",
+      "ROC_AUC",
+      "CALIBRATION_LOSS",
+      "CUMULATIVE_LIFT",
+      "DATA_DRIFT"
+    ],
+    "predictionType": "BINARY_CLASSIFICATION",
+    "pinnedMetrics": [],
+    "xLabel": "evaluation:date",
+    "yLabels": [
+      "evaluationDataset:dataset-name",
+      "model:date"
+    ],
+    "alsoDisplayedLabels": [
+      "model:algorithm"
+    ],
+    "barLabels": [
+      "evaluation:date",
+      "evaluationDataset:dataset-name"
+    ],
+    "graphStyle": "BAR",
+    "sortColumn": "refStr",
+    "sortDescending": false,
+    "showConfidenceIntervals": true,
+    "disabledMERunIds": []
+  },
+  "versionTag": {
+    "versionNumber": 8,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1649150844093
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1649150198341
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

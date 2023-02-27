@@ -1,0 +1,108 @@
+{
+  "name": "tests",
+  "color": "#31439C",
+  "items": [
+    {
+      "objectId": "metrics",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "evaluation",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Historical_Claims_train_scored",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "tjauUcLm",
+      "objectType": "SAVED_MODEL"
+    },
+    {
+      "objectId": "score_Historical_Claims_train",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "evaluate_on_Historical_Claims_train",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Historical_Claims_evaluation",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_Historical_Claims_evaluation",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "train_Clustering__KMEANS__on_Historical_Claims_train",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "ZFxUza5x",
+      "objectType": "SAVED_MODEL"
+    },
+    {
+      "objectId": "train_Partitioned_prediction__RANDOM_FOREST_CLASSIFICATION__on_Historical_Claims_train_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Historical_Claims_train_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_Historical_Claims_train_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_test",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "test",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "PJcSRP3j",
+      "objectType": "SAVED_MODEL"
+    },
+    {
+      "objectId": "train_Prediction__RANDOM_FOREST_CLASSIFICATION__on_Historical_Claims_train",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "test_2",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_test_2",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "score_New_Claims_enriched_1",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "New_Claims_enriched_scored",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "rOC4RTbs",
+      "objectType": "SAVED_MODEL"
+    },
+    {
+      "objectId": "train_Fraud_Classification",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "test_dates",
+      "objectType": "DATASET"
+    }
+  ],
+  "shared": [],
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

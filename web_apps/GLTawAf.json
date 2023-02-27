@@ -1,0 +1,66 @@
+{
+  "type": "STANDARD",
+  "hasLegacyBackendURL": false,
+  "params": {
+    "backendEnabled": true,
+    "enableJavascriptModules": false,
+    "autoStartBackend": false,
+    "hideJSSecurityPanel": false,
+    "envSelection": {
+      "envMode": "INHERIT",
+      "envName": "loan_default"
+    },
+    "nbProcesses": 1,
+    "libraries": [
+      "jquery",
+      "dataiku"
+    ],
+    "infra": {
+      "containerSelection": {
+        "containerMode": "INHERIT"
+      },
+      "overrideGlobalK8sExposition": false,
+      "exposition": {
+        "type": "local_process",
+        "params": {}
+      },
+      "scaling": {
+        "initialReplicas": 1,
+        "progressDeadlineSeconds": 600,
+        "hpa": false,
+        "hpaTargetCPUPercent": 0,
+        "hpaMetrics": [],
+        "hpaMinPods": 0,
+        "hpaMaxPods": 0,
+        "hpaAnnotations": []
+      },
+      "deploymentModifier": {
+        "config": {}
+      }
+    },
+    "forceAuthentication": false
+  },
+  "config": {},
+  "name": "Real-Time Fraud Scoring",
+  "apiKey": "cTecGeBUeciYQwi1UDqM1GR089i5zMbM",
+  "versionTag": {
+    "versionNumber": 397,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1648135490663
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1566986793215
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  },
+  "customFields": {},
+  "isVirtual": false
+}

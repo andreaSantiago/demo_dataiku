@@ -1,0 +1,29 @@
+{
+  "type": "saved-model_report",
+  "params": {
+    "savedModelSmartId": "VNCmGzOW"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Full report of model pred_from_2_datasets",
+  "dashboardCreationId": "JJApRWV",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1620812270070
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1620812270070
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

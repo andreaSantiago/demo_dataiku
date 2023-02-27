@@ -1,0 +1,31 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "Historical_Claims_enriched",
+    "objectType": "DATASET",
+    "metricId": "sql_query:ratio_fraud:SQL probe"
+  },
+  "owner": "ludo",
+  "listed": false,
+  "name": "ratio_fraud (SQL probe) of Historical_Claims_enriched",
+  "dashboardCreationId": "p2LKf6J",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1566917260749
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1566917260749
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

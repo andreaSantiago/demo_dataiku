@@ -1,0 +1,290 @@
+{
+  "checklists": {
+    "checklists": []
+  },
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1569252136528,
+    "versionNumber": 0
+  },
+  "customFields": {},
+  "listed": false,
+  "name": "Project Monitoring",
+  "owner": "ludo",
+  "pages": [
+    {
+      "grid": {
+        "tiles": [
+          {
+            "autoLoad": true,
+            "box": {
+              "height": 3,
+              "left": 6,
+              "top": 5,
+              "width": 6
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "insightId": "XTGueYn",
+            "insightType": "project_activity",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "YES",
+            "tileParams": {
+              "contributorsChart": "commits",
+              "displayMode": "CONTRIBUTION_CHARTS",
+              "summaryChart": "commits",
+              "timeSpan": "year"
+            },
+            "tileType": "INSIGHT",
+            "title": "Activity of project"
+          },
+          {
+            "autoLoad": true,
+            "box": {
+              "height": 5,
+              "left": 0,
+              "top": 3,
+              "width": 6
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "insightId": "nsgvRsY",
+            "insightType": "saved-model_report",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "YES",
+            "tileParams": {
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "car_brand",
+                    "product_id",
+                    "claim_amount",
+                    "customer_group",
+                    "region",
+                    "customer_category",
+                    "contract_duration",
+                    "customer_age",
+                    "claim_date",
+                    "policies_last_year",
+                    "policies_last_3_years",
+                    "agency_id",
+                    "email_domain",
+                    "contract_end_date_year",
+                    "expert",
+                    "gender",
+                    "geopoint",
+                    "code_dep",
+                    "claim_id",
+                    "contract_id",
+                    "car_model",
+                    "car_number",
+                    "department",
+                    "fraud",
+                    "litigation_flag"
+                  ]
+                }
+              },
+              "displayMode": "bc_confusion"
+            },
+            "tileType": "INSIGHT"
+          },
+          {
+            "autoLoad": true,
+            "box": {
+              "height": 5,
+              "left": 6,
+              "top": 0,
+              "width": 6
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "insightId": "dq5o5Y5",
+            "insightType": "saved-model_report",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "YES",
+            "tileParams": {
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "car_brand",
+                    "product_id",
+                    "claim_amount",
+                    "customer_group",
+                    "region",
+                    "customer_category",
+                    "contract_duration",
+                    "customer_age",
+                    "claim_date",
+                    "policies_last_year",
+                    "policies_last_3_years",
+                    "agency_id",
+                    "email_domain",
+                    "contract_end_date_year",
+                    "expert",
+                    "gender",
+                    "geopoint",
+                    "code_dep",
+                    "claim_id",
+                    "contract_id",
+                    "car_model",
+                    "car_number",
+                    "department",
+                    "fraud",
+                    "litigation_flag"
+                  ]
+                }
+              },
+              "displayMode": "variables_importance"
+            },
+            "tileType": "INSIGHT"
+          },
+          {
+            "autoLoad": true,
+            "box": {
+              "height": 3,
+              "left": 0,
+              "top": 0,
+              "width": 6
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "insightId": "MMeDTnm",
+            "insightType": "saved-model_report",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "YES",
+            "tileParams": {
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "car_brand",
+                    "product_id",
+                    "claim_amount",
+                    "customer_group",
+                    "region",
+                    "customer_category",
+                    "contract_duration",
+                    "customer_age",
+                    "claim_date",
+                    "policies_last_year",
+                    "policies_last_3_years",
+                    "agency_id",
+                    "email_domain",
+                    "contract_end_date_year",
+                    "expert",
+                    "gender",
+                    "geopoint",
+                    "code_dep",
+                    "claim_id",
+                    "contract_id",
+                    "car_model",
+                    "car_number",
+                    "department",
+                    "fraud",
+                    "litigation_flag"
+                  ]
+                }
+              },
+              "displayMode": "summary"
+            },
+            "tileType": "INSIGHT"
+          }
+        ]
+      },
+      "id": "qlatpWx",
+      "showTitle": false,
+      "title": "Project Monitoring"
+    },
+    {
+      "grid": {
+        "tiles": [
+          {
+            "autoLoad": true,
+            "box": {
+              "height": 7,
+              "left": 0,
+              "top": 0,
+              "width": 12
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "insightId": "uvaglli",
+            "insightType": "saved-model_report",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "YES",
+            "tileParams": {
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "car_brand",
+                    "region",
+                    "department",
+                    "customer_group",
+                    "claim_amount",
+                    "customer_category",
+                    "email_domain",
+                    "customer_age",
+                    "product_id",
+                    "car_number",
+                    "code_dep",
+                    "policies_last_3_years",
+                    "claim_date",
+                    "agency_id",
+                    "policies_last_year",
+                    "claim_id",
+                    "contract_id",
+                    "geopoint",
+                    "contract_duration",
+                    "gender",
+                    "contract_end_date_year",
+                    "expert"
+                  ]
+                }
+              },
+              "displayMode": "interactive_scoring"
+            },
+            "tileType": "INSIGHT"
+          },
+          {
+            "autoLoad": true,
+            "box": {
+              "height": 4,
+              "left": 0,
+              "top": 7,
+              "width": 12
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "displayMode": "INSIGHT",
+            "insightId": "2YflNQk",
+            "insightType": "dataset_table",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "YES",
+            "tileParams": {
+              "showCustomFields": true,
+              "showDescription": true,
+              "showMeaning": false,
+              "showName": true,
+              "showProgressBar": false,
+              "showStorageType": false,
+              "viewKind": "EXPLORE"
+            },
+            "tileType": "INSIGHT"
+          }
+        ]
+      },
+      "id": "UeSDJNa",
+      "showTitle": false,
+      "title": "Interactive Scoring"
+    }
+  ],
+  "showGrid": true,
+  "tags": [],
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1647966180722,
+    "versionNumber": 40
+  }
+}

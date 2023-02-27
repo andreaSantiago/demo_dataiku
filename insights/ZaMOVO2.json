@@ -1,0 +1,29 @@
+{
+  "type": "filters",
+  "params": {
+    "datasetSmartName": "Historical_Claims_enriched"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Filters on Historical_Claims_enriched",
+  "dashboardCreationId": "p2LKf6J",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1648135111923
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1648135111923
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

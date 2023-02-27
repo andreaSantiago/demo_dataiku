@@ -1,0 +1,77 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "columnWidthsByName": {
+      "claim_id": 100,
+      "contract_id": 100,
+      "claim_amount": 105,
+      "claim_date": 183,
+      "expert": 100,
+      "litigation_flag": 128,
+      "code_dep": 100,
+      "department": 162,
+      "region": 197,
+      "geopoint": 197,
+      "product_id": 120,
+      "car_brand": 155,
+      "car_model": 300,
+      "car_number": 100,
+      "policies_last_year": 150,
+      "policies_last_3_years": 173,
+      "contract_duration": 143,
+      "contract_end_date_year": 180,
+      "customer_id": 127,
+      "agency_id": 113,
+      "customer_age": 105,
+      "customer_group": 120,
+      "email_domain": 105,
+      "gender": 100,
+      "customer_category": 218
+    },
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxStoredBytes": 104857600,
+        "timeout": -1,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": []
+}

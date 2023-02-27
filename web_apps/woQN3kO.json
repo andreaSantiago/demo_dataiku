@@ -1,0 +1,65 @@
+{
+  "type": "STANDARD",
+  "hasLegacyBackendURL": false,
+  "params": {
+    "backendEnabled": false,
+    "enableJavascriptModules": false,
+    "autoStartBackend": false,
+    "hideJSSecurityPanel": false,
+    "envSelection": {
+      "envMode": "INHERIT"
+    },
+    "nbProcesses": 1,
+    "libraries": [
+      "jquery",
+      "dataiku"
+    ],
+    "infra": {
+      "containerSelection": {
+        "containerMode": "INHERIT"
+      },
+      "overrideGlobalK8sExposition": false,
+      "exposition": {
+        "type": "local_process",
+        "params": {}
+      },
+      "scaling": {
+        "initialReplicas": 1,
+        "progressDeadlineSeconds": 600,
+        "hpa": false,
+        "hpaTargetCPUPercent": 0,
+        "hpaMetrics": [],
+        "hpaMinPods": 0,
+        "hpaMaxPods": 0,
+        "hpaAnnotations": []
+      },
+      "deploymentModifier": {
+        "config": {}
+      }
+    },
+    "forceAuthentication": false
+  },
+  "config": {},
+  "name": "test",
+  "apiKey": "W35fEX2aTeJ23SrOaMuXVq6TbFvuymt8",
+  "versionTag": {
+    "versionNumber": 247,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1568182469692
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1567062367717
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  },
+  "customFields": {},
+  "isVirtual": false
+}

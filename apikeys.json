@@ -1,0 +1,71 @@
+[
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "shareToWorkspaces": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "id": "cJpDokuUo4EUuvlS",
+    "key": "HogD6pdCJUYLNYYG4StVR6xBqtZQEGjL",
+    "label": "Key for Web app test(fIe2ICI)",
+    "createdOn": 1566986340154
+  },
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "shareToWorkspaces": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "id": "Z1w1Wv5zbE6HlcCn",
+    "key": "cTecGeBUeciYQwi1UDqM1GR089i5zMbM",
+    "label": "Key for Web app Real-Time Fraud Scoring(GLTawAf)",
+    "createdOn": 1566986793129
+  },
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "shareToWorkspaces": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "id": "ZRRATMfv09CHm9Gu",
+    "key": "W35fEX2aTeJ23SrOaMuXVq6TbFvuymt8",
+    "label": "Key for Web app test(woQN3kO)",
+    "createdOn": 1567062367395
+  }
+]

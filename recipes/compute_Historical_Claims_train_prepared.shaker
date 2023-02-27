@@ -1,0 +1,105 @@
+{
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "explorationSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 10000,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "maxStoredBytes": 104857600,
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "timeout": -1
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "LongTailGrouper",
+      "params": {
+        "toKeep": [
+          "ILE-DE-FRANCE",
+          "PROVENCE-ALPES-COTE D\u0027AZUR",
+          "HAUTE-NORMANDIE",
+          ""
+        ],
+        "column": "region",
+        "replace": "Others"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "region",
+        "column": "region_copy"
+      },
+      "alwaysShowComment": false
+    }
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "previewMode": "ALL_ROWS",
+  "vizSampling": {
+    "_refreshTrigger": 0,
+    "autoRefreshSample": false
+  },
+  "analysisColumnData": {},
+  "columnWidthsByName": {
+    "expert": 100,
+    "gender": 100,
+    "contract_id": 100,
+    "litigation_flag": 128,
+    "region_copy": 148,
+    "claim_id": 100,
+    "customer_category": 267,
+    "policies_last_year": 150,
+    "policies_last_3_years": 173,
+    "contract_end_date_year": 180,
+    "product_id": 120,
+    "car_brand": 155,
+    "department": 162,
+    "contract_duration": 143,
+    "car_model": 300,
+    "claim_amount": 105,
+    "agency_id": 113,
+    "geopoint": 197,
+    "customer_age": 105,
+    "customer_group": 120,
+    "code_dep": 100,
+    "fraud": 100,
+    "car_number": 100,
+    "email_domain": 105,
+    "region": 148,
+    "claim_date": 183
+  },
+  "sorting": [],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
+  }
+}

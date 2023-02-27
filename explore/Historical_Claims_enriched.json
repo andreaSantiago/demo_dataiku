@@ -1,0 +1,786 @@
+{
+  "charts": [
+    {
+      "copySelectionFromScript": true,
+      "def": {
+        "animationDimension": [],
+        "animationFrameDuration": 3000,
+        "animationRepeat": true,
+        "axis1LogScale": false,
+        "axis2LogScale": false,
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "bubblesOptions": {
+          "defaultRadius": 5.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "chartHeight": 200,
+        "colorMeasure": [],
+        "colorOptions": {
+          "ccScaleMode": "NORMAL",
+          "colorPalette": "Set2",
+          "customColors": {},
+          "customPalette": {
+            "colors": [],
+            "fixedValues": false,
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "values": []
+          },
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5,
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0,
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "singleColor": "#2678B1",
+          "transparency": 0.75
+        },
+        "computeMode": "NORMAL",
+        "disableSafetyLimits": false,
+        "displayXAxis": true,
+        "displayYAxis": true,
+        "facetDimension": [],
+        "fillOpacity": 0.6,
+        "filters": [],
+        "genericDimension0": [
+          {
+            "column": "fraud",
+            "filters": [],
+            "generateOthersCategory": true,
+            "isA": "dimension",
+            "maxValues": 100,
+            "numParams": {
+              "binSize": 100,
+              "emptyBinsMode": "ZEROS",
+              "mode": "NONE",
+              "nbBins": 30
+            },
+            "oneTickPerBin": false,
+            "possibleSorts": [
+              {
+                "label": "Natural ordering",
+                "sortAscending": true,
+                "type": "NATURAL"
+              },
+              {
+                "label": "Count of records, descending",
+                "measureIdx": 0,
+                "type": "AGGREGATION"
+              },
+              {
+                "label": "Count of records, ascending",
+                "measureIdx": 0,
+                "sortAscending": true,
+                "type": "AGGREGATION"
+              }
+            ],
+            "sort": {
+              "label": "Natural ordering",
+              "sortAscending": true,
+              "type": "NATURAL"
+            },
+            "type": "NUMERICAL"
+          }
+        ],
+        "genericDimension1": [],
+        "genericMeasures": [
+          {
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "displayed": true,
+            "function": "COUNT",
+            "isA": "measure",
+            "type": "NUMERICAL"
+          }
+        ],
+        "geometry": [],
+        "groupDimension": [],
+        "hexbinNumber": 20,
+        "hexbinRadius": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "includeZero": true,
+        "legendPlacement": "SIDEBAR",
+        "mapGridOptions": {
+          "gridLatDeg": 0.5,
+          "gridLonDeg": 0.5
+        },
+        "mapOptions": {
+          "lockSquareGrid": false,
+          "tilesLayer": "cartodb-positron"
+        },
+        "multiTooltips": false,
+        "name": "Fraud Ratio",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false
+        },
+        "showInChartLabels": true,
+        "showInChartValues": false,
+        "showLegend": true,
+        "showXAxis": false,
+        "showXAxisLabel": true,
+        "showYAxisLabel": true,
+        "singleXAxis": true,
+        "sizeMeasure": [],
+        "smoothing": true,
+        "strokeWidth": 1,
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACM0lEQVRoQ+3YPUjDQBQH8DulIoLoIhRxEUQEUQTBqR9KJwUHB1FoBhFbdK2Tm7NuBSmY0XRxULfqULQpOFRQF4WCg1DBqaOKIkSuclLCJbmYe2dq27VJ7n73f/cuLUZN9sFN5kUtMHTin7urOYSNzo2p2PdQBiqrUWUdelz6fGkJJ3TtnAyaKeVrY/+A66RqRJmBhksBUyzBpK/yrwEDdbHA5HtoNDi4HkvTIylbgaHRoGAWlpa1HRgSDQa2wvKCodAg4JWCNhbAKG3VgJxKmt4HsZ9BwHbpukkYImXp4P1wfNqcfLKYvbCqBtEpCwfbpcvCUqgstDSwHdYJLTJlKWAeLEGfVu4ejh5vn8zl7VtwQtfIO/GSecK8YHIfq7T9DK69L4sGIwO9qVFlTsR7ttCSZjWs2YHR/oXBiWHeyVo1L1Epg4PdlDNZlJtq5Tlzr5eh9rHvwND72HfgrdLJZfX95aNhEw7gdrwXWo42zR4mUDf7mN208LUaiW/yLprddUJLevFwu6M3OHQm+lgS1aHJvISCyQNZR9NIT7A7NR6bdEoI+kiSBuYt638FdkI37K8lq7Km5cxoYEaymC007O9hJ7DTPoY6f+lzhTct+mCnv3l44CK7cwvMs+Jur/GSMkS6IMeSeVF+g4bCSgG7bWKQWGlgMtCarh1ihPost0Ub2lFDSs7ttnF7PViXtptIoniQQgaeRxil1bBy7HbSXq7/E7CXCXu9twX2uoJ+v7/pEv4CJAz2Kap4ud4AAAAASUVORK5CYII=",
+        "tooltipMeasures": [],
+        "type": "pie",
+        "uaColor": [],
+        "uaShape": [],
+        "uaSize": [],
+        "uaTooltip": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "useLiveProcessingIfAvailable": true,
+        "userEditedName": true,
+        "variant": "donut",
+        "xAxisMode": "NORMAL",
+        "xCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "xDimension": [],
+        "xMeasure": [],
+        "yAxisMode": "NORMAL",
+        "yCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "yDimension": [],
+        "yMeasure": []
+      },
+      "engineType": "LINO",
+      "maxDataBytes": 157286400
+    },
+    {
+      "copySelectionFromScript": true,
+      "def": {
+        "animationDimension": [],
+        "animationFrameDuration": 3000,
+        "animationRepeat": true,
+        "axis1LogScale": false,
+        "axis2LogScale": false,
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "bubblesOptions": {
+          "defaultRadius": 5.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "chartHeight": 200,
+        "colorMeasure": [
+          {
+            "column": "fraud",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "displayed": true,
+            "function": "SUM",
+            "isA": "measure",
+            "type": "NUMERICAL"
+          }
+        ],
+        "colorOptions": {
+          "ccScaleMode": "NORMAL",
+          "colorPalette": "gyr1",
+          "customColors": {},
+          "customPalette": {
+            "colors": [],
+            "fixedValues": false,
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "values": []
+          },
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5,
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0,
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "singleColor": "#2678B1",
+          "transparency": 0.75
+        },
+        "computeMode": "NORMAL",
+        "disableSafetyLimits": false,
+        "facetDimension": [],
+        "fillOpacity": 0.6,
+        "filters": [],
+        "genericDimension0": [],
+        "genericDimension1": [],
+        "genericMeasures": [],
+        "geometry": [
+          {
+            "adminLevel": 6,
+            "column": "geopoint",
+            "isA": "ua",
+            "treatAsAlphanum": false,
+            "type": "GEOPOINT"
+          }
+        ],
+        "groupDimension": [],
+        "hexbinNumber": 20,
+        "hexbinRadius": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "includeZero": true,
+        "legendPlacement": "OUTER_RIGHT",
+        "mapGridOptions": {
+          "gridLatDeg": 0.5,
+          "gridLonDeg": 0.5
+        },
+        "mapOptions": {
+          "lockSquareGrid": false,
+          "tilesLayer": "cartodb-positron"
+        },
+        "multiTooltips": false,
+        "name": "Avg. of fraud by claim_date",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false
+        },
+        "showInChartLabels": true,
+        "showInChartValues": false,
+        "showLegend": true,
+        "showXAxis": false,
+        "showXAxisLabel": true,
+        "showYAxisLabel": true,
+        "singleXAxis": true,
+        "sizeMeasure": [
+          {
+            "column": "claim_amount",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "displayed": true,
+            "function": "SUM",
+            "isA": "measure",
+            "type": "NUMERICAL"
+          }
+        ],
+        "smoothing": true,
+        "strokeWidth": 1,
+        "tooltipMeasures": [],
+        "type": "admin_map",
+        "uaColor": [],
+        "uaShape": [],
+        "uaSize": [],
+        "uaTooltip": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "useLiveProcessingIfAvailable": true,
+        "userEditedName": false,
+        "variant": "normal",
+        "xAxisMode": "NORMAL",
+        "xCustomExtent": {},
+        "xDimension": [],
+        "xMeasure": [],
+        "yAxisMode": "NORMAL",
+        "yCustomExtent": {},
+        "yDimension": [],
+        "yMeasure": []
+      },
+      "engineType": "LINO",
+      "maxDataBytes": 157286400
+    },
+    {
+      "copySelectionFromScript": true,
+      "def": {
+        "animationDimension": [],
+        "animationFrameDuration": 3000,
+        "animationRepeat": true,
+        "axis1LogScale": false,
+        "axis2LogScale": false,
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "bubblesOptions": {
+          "defaultRadius": 5.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "chartHeight": 200,
+        "colorMeasure": [
+          {
+            "column": "fraud",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "displayed": true,
+            "function": "SUM",
+            "isA": "measure",
+            "type": "NUMERICAL"
+          }
+        ],
+        "colorOptions": {
+          "ccScaleMode": "NORMAL",
+          "colorPalette": "gyr1",
+          "customColors": {},
+          "customPalette": {
+            "colors": [],
+            "fixedValues": false,
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "values": []
+          },
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5,
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0,
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "singleColor": "#2678B1",
+          "transparency": 0.75
+        },
+        "computeMode": "NORMAL",
+        "disableSafetyLimits": false,
+        "facetDimension": [],
+        "fillOpacity": 0.6,
+        "filters": [],
+        "genericDimension0": [],
+        "genericDimension1": [],
+        "genericMeasures": [
+          {
+            "column": "claim_amount",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "displayed": true,
+            "function": "AVG",
+            "isA": "measure",
+            "type": "NUMERICAL"
+          }
+        ],
+        "geometry": [],
+        "groupDimension": [],
+        "hexbinNumber": 20,
+        "hexbinRadius": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "includeZero": true,
+        "legendPlacement": "OUTER_RIGHT",
+        "mapGridOptions": {
+          "gridLatDeg": 0.5,
+          "gridLonDeg": 0.5
+        },
+        "mapOptions": {
+          "lockSquareGrid": false,
+          "tilesLayer": "cartodb-positron"
+        },
+        "multiTooltips": false,
+        "name": "Fraud by Customers groups and Regions",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false
+        },
+        "showInChartLabels": true,
+        "showInChartValues": false,
+        "showLegend": true,
+        "showXAxis": false,
+        "showXAxisLabel": true,
+        "showYAxisLabel": true,
+        "singleXAxis": true,
+        "sizeMeasure": [],
+        "smoothing": true,
+        "strokeWidth": 1,
+        "tooltipMeasures": [],
+        "type": "pivot_table",
+        "uaColor": [],
+        "uaShape": [],
+        "uaSize": [],
+        "uaTooltip": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "useLiveProcessingIfAvailable": true,
+        "userEditedName": true,
+        "variant": "colored",
+        "xAxisMode": "NORMAL",
+        "xCustomExtent": {},
+        "xDimension": [
+          {
+            "column": "customer_group",
+            "filters": [],
+            "generateOthersCategory": true,
+            "isA": "dimension",
+            "maxValues": 20,
+            "numParams": {
+              "emptyBinsMode": "ZEROS"
+            },
+            "oneTickPerBin": false,
+            "possibleSorts": [
+              {
+                "label": "Natural ordering",
+                "sortAscending": true,
+                "type": "NATURAL"
+              },
+              {
+                "label": "Average of claim_amount, descending",
+                "measureIdx": 0,
+                "type": "AGGREGATION"
+              },
+              {
+                "label": "Average of claim_amount, ascending",
+                "measureIdx": 0,
+                "sortAscending": true,
+                "type": "AGGREGATION"
+              }
+            ],
+            "sort": {
+              "label": "Natural ordering",
+              "sortAscending": true,
+              "type": "NATURAL"
+            },
+            "type": "ALPHANUM"
+          }
+        ],
+        "xMeasure": [],
+        "yAxisMode": "NORMAL",
+        "yCustomExtent": {},
+        "yDimension": [
+          {
+            "column": "department",
+            "filters": [],
+            "generateOthersCategory": false,
+            "isA": "dimension",
+            "maxValues": 100,
+            "numParams": {
+              "emptyBinsMode": "ZEROS",
+              "nbBins": ""
+            },
+            "oneTickPerBin": false,
+            "possibleSorts": [
+              {
+                "label": "Natural ordering",
+                "sortAscending": true,
+                "type": "NATURAL"
+              },
+              {
+                "label": "Average of claim_amount, descending",
+                "measureIdx": 0,
+                "type": "AGGREGATION"
+              },
+              {
+                "label": "Average of claim_amount, ascending",
+                "measureIdx": 0,
+                "sortAscending": true,
+                "type": "AGGREGATION"
+              }
+            ],
+            "sort": {
+              "label": "Natural ordering",
+              "sortAscending": true,
+              "type": "NATURAL"
+            },
+            "type": "ALPHANUM"
+          }
+        ],
+        "yMeasure": []
+      },
+      "engineType": "LINO",
+      "maxDataBytes": 157286400
+    },
+    {
+      "copySelectionFromScript": true,
+      "def": {
+        "animationDimension": [],
+        "animationFrameDuration": 3000,
+        "animationRepeat": true,
+        "axis1LogScale": false,
+        "axis2LogScale": false,
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "bubblesOptions": {
+          "defaultRadius": 5.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "chartHeight": 200,
+        "colorMeasure": [],
+        "colorOptions": {
+          "ccScaleMode": "NORMAL",
+          "colorPalette": "Set2",
+          "customColors": {},
+          "customPalette": {
+            "colors": [],
+            "fixedValues": false,
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "values": []
+          },
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5,
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0,
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "singleColor": "#2678B1",
+          "transparency": 0.75
+        },
+        "computeMode": "NORMAL",
+        "disableSafetyLimits": false,
+        "facetDimension": [],
+        "fillOpacity": 0.6,
+        "filters": [],
+        "genericDimension0": [
+          {
+            "column": "customer_age",
+            "filters": [],
+            "generateOthersCategory": true,
+            "isA": "dimension",
+            "maxValues": 100,
+            "numParams": {
+              "binSize": 100,
+              "emptyBinsMode": "ZEROS",
+              "mode": "NONE",
+              "nbBins": 10
+            },
+            "oneTickPerBin": false,
+            "possibleSorts": [
+              {
+                "label": "Natural ordering",
+                "sortAscending": true,
+                "type": "NATURAL"
+              },
+              {
+                "label": "Count of records, descending",
+                "measureIdx": 0,
+                "type": "AGGREGATION"
+              },
+              {
+                "label": "Count of records, ascending",
+                "measureIdx": 0,
+                "sortAscending": true,
+                "type": "AGGREGATION"
+              }
+            ],
+            "sort": {
+              "label": "Natural ordering",
+              "sortAscending": true,
+              "type": "NATURAL"
+            },
+            "type": "NUMERICAL"
+          }
+        ],
+        "genericDimension1": [],
+        "genericMeasures": [
+          {
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "displayed": true,
+            "function": "COUNT",
+            "isA": "measure",
+            "type": "NUMERICAL"
+          }
+        ],
+        "geometry": [],
+        "groupDimension": [],
+        "hexbinNumber": 20,
+        "hexbinRadius": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "includeZero": true,
+        "legendPlacement": "OUTER_RIGHT",
+        "mapGridOptions": {
+          "gridLatDeg": 0.5,
+          "gridLonDeg": 0.5
+        },
+        "mapOptions": {
+          "lockSquareGrid": false,
+          "tilesLayer": "cartodb-positron"
+        },
+        "multiTooltips": false,
+        "name": "Count by customer_age",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false
+        },
+        "showInChartLabels": true,
+        "showInChartValues": false,
+        "showLegend": true,
+        "showXAxis": false,
+        "showXAxisLabel": true,
+        "showYAxisLabel": true,
+        "singleXAxis": true,
+        "sizeMeasure": [],
+        "smoothing": true,
+        "strokeWidth": 1,
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACTElEQVRoQ+2YvUvDQBjG37eSQeziLDgJ/hU2WAd3Pwab4gc0Irio+Heoi4upiGDr4Ac4OmhpncVZcBKcXRSH2r5y6OE1JpePpmljr0sol3D3e5/nubwXhD77YZJ4C9WT9aKe329nzQq4nep1+lmlcIgKK0uHKFpsjyhLhyi1snSIosX2SCItbdZOKlYmP+lWJdm4Ag7hrdgzrBS2qaQsDQC5u9JwecJ4TWyG6fNzu5hdvhfF5co6KewG7BUPp4h3JcNNalqH+mJZBizC9BUwA39HnBEtbVZLx5ZuLP1Lhf8NcApTptiA2DMs/ndSGJBGWSRkTUxPZZgDy0AZDFd4iOiSCM7ZJx5m6a4CB8kSu5dtWi3At09TZnbshgPar0xhGXCQ+SPZpf1MKCrJgeuN+oo2oB1ZCvjbyn4tze+dr+ynzybX32QtdqwKAwBbTLodhRFhDgifxQzLmhY7fCzAbEE/EyvgoBnue4W5ZXnegeDR0vNrbjmWWtqslaatjHHtdc722qU7aemIgeWfY/hkvQYMCONuHZiHwv6+P/U6sLg+X8BuQH5eB4KdmSEi36WdLG1XuCPATWpsHepLD/Yzri3/sQET4F4xY1yx+dsGLlRLF0XdmG1tF3+BxfG4gIHwBZBG2C7NFI4U2KyVK1Ym19L+iQqL4zECfwDSYGDg1Wp590DPbYpW+FWSgzoDp1DbIaAnBBzjBekmMAJuiMKwtfzZtIIC1xv1BW1AO2UKi8DfoE37K7xjGQbCPwr7AvZqMpI+HsnhIUlF6DvgL50pD3QzsOeCAAAAAElFTkSuQmCC",
+        "tooltipMeasures": [],
+        "type": "grouped_columns",
+        "uaColor": [],
+        "uaShape": [],
+        "uaSize": [],
+        "uaTooltip": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "useLiveProcessingIfAvailable": true,
+        "userEditedName": false,
+        "variant": "normal",
+        "xAxisMode": "NORMAL",
+        "xCustomExtent": {},
+        "xDimension": [],
+        "xMeasure": [],
+        "yAxisMode": "NORMAL",
+        "yCustomExtent": {},
+        "yDimension": [],
+        "yMeasure": []
+      },
+      "engineType": "LINO",
+      "maxDataBytes": 157286400
+    }
+  ],
+  "script": {
+    "analysisColumnData": {},
+    "coloring": {
+      "individualColumns": [],
+      "scheme": "MEANING_AND_STATUS",
+      "valueColoringMode": "HASH"
+    },
+    "columnWidthsByName": {
+      "agency_id": 113,
+      "car_brand": 155,
+      "car_model": 300,
+      "car_number": 100,
+      "claim_amount": 105,
+      "claim_date": 183,
+      "claim_id": 100,
+      "code_dep": 100,
+      "contract_duration": 143,
+      "contract_end_date_year": 180,
+      "contract_id": 100,
+      "customer_age": 105,
+      "customer_category": 218,
+      "customer_group": 120,
+      "department": 162,
+      "email_domain": 105,
+      "expert": 100,
+      "fraud": 100,
+      "gender": 100,
+      "geopoint": 197,
+      "litigation_flag": 128,
+      "policies_last_3_years": 173,
+      "policies_last_year": 150,
+      "product_id": 120,
+      "region": 197
+    },
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "explorationFilters": [
+      {
+        "active": true,
+        "alphanumFilter": {
+          "column": "fraud",
+          "params": {
+            "mode": "full_string",
+            "normalization": "exact"
+          },
+          "selectedValues": [],
+          "type": "alphanum"
+        },
+        "column": "fraud",
+        "currentMode": "FACET",
+        "facet": {
+          "column": "fraud",
+          "columnType": "NUMERICAL",
+          "currentMode": "ALPHANUM",
+          "dateFilterPart": "YEAR",
+          "dateFilterRelativeLast": 1,
+          "dateFilterRelativeNext": 1,
+          "dateFilterRelativeOption": "THIS",
+          "selectedValues": {
+            "1": true
+          },
+          "sort": "count",
+          "timezone": "UTC",
+          "type": "facet"
+        },
+        "type": "columnFilter",
+        "validityFilter": {
+          "column": "fraud",
+          "params": {
+            "empty": true,
+            "nok": true,
+            "ok": true,
+            "type": "LongMeaning"
+          },
+          "type": "validity"
+        }
+      }
+    ],
+    "explorationSampling": {
+      "_refreshTrigger": 0,
+      "autoRefreshSample": false,
+      "selection": {
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxReadUncompressedBytes": -1,
+        "maxRecords": 10000,
+        "maxStoredBytes": 104857600,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "partitionSelectionMethod": "ALL",
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "targetRatio": 0.02,
+        "timeout": -1,
+        "withinFirstN": -1
+      }
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "maxProcessedMemTableBytes": -1,
+    "previewMode": "ALL_ROWS",
+    "sorting": [],
+    "steps": [],
+    "vizSampling": {
+      "_refreshTrigger": 0,
+      "autoRefreshSample": false,
+      "selection": {
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxReadUncompressedBytes": -1,
+        "maxRecords": -1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "partitionSelectionMethod": "ALL",
+        "samplingMethod": "FULL",
+        "targetRatio": 0.02,
+        "useMemTable": false,
+        "withinFirstN": -1
+      }
+    }
+  }
+}

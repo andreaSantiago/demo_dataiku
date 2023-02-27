@@ -1,0 +1,73 @@
+{
+  "tags": {
+    "insurance": {
+      "color": "#123883"
+    },
+    "charts": {
+      "color": "#374535"
+    },
+    "recipe-editor": {
+      "color": "#1ac2ab"
+    },
+    "macro used to infer data type": {
+      "color": "#90a8b7"
+    },
+    "Machine Learning": {
+      "color": "#0f6d82"
+    },
+    "evaluation part": {
+      "color": "#4363b5"
+    },
+    "checks_metrics_plugin_model_data_compliance": {
+      "color": "#f1c7fc"
+    },
+    "checks": {
+      "color": "#77bec2"
+    },
+    "deleted-recipe-editor": {
+      "color": "#90a8b7"
+    },
+    "partition": {
+      "color": "#123883"
+    },
+    "fraud": {
+      "color": "#d66b9b"
+    },
+    "geography": {
+      "color": "#d66b9b"
+    },
+    "a/b testing": {
+      "color": "#90a8b7"
+    },
+    "fairness_report": {
+      "color": "#90a8b7"
+    },
+    "scoring part": {
+      "color": "#e6b835"
+    },
+    "imported": {
+      "color": "#263238"
+    },
+    "DRIFT MDOEL": {
+      "color": "#90a8b7"
+    },
+    "modeling part": {
+      "color": "#00a55a"
+    },
+    "Modeling_global_tag:Modeling_gobal_tag": {
+      "color": "#a088bd"
+    },
+    "metrics": {
+      "color": "#94be8e"
+    },
+    "Modeling_global_tag:Preparation_global_tag": {
+      "color": "#1ac2ab"
+    },
+    "Anomalies": {
+      "color": "#94be8e"
+    },
+    "drift_train_test": {
+      "color": "#94be8e"
+    }
+  }
+}

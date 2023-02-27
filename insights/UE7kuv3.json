@@ -1,0 +1,29 @@
+{
+  "type": "saved-model_report",
+  "params": {
+    "savedModelSmartId": "rOC4RTbs"
+  },
+  "owner": "ludo",
+  "listed": false,
+  "name": "Full report of model Fraud_Classification",
+  "dashboardCreationId": "p2LKf6J",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1566918237687
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1566918237687
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

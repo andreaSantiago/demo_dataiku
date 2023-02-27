@@ -1,0 +1,275 @@
+{
+  "type": "PostgreSQL",
+  "managed": true,
+  "featureGroup": false,
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 18,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1603274894513
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1603273249969
+  },
+  "tags": [],
+  "params": {
+    "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
+    "connection": "postgres",
+    "notReadyIfEmpty": false,
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${projectKey}_historical_claims_enriched_filtered",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "readColsWithUnknownTzAsDates": false,
+    "readSQLDateColsAsDSSDates": true,
+    "sparkJdbcAccess": "NONE",
+    "numPartitions": -1
+  },
+  "schema": {
+    "columns": [
+      {"name":"claim_id","type":"string"},
+      {"name":"contract_id","type":"string"},
+      {"name":"claim_amount","type":"string"},
+      {"name":"claim_date","type":"string"},
+      {"name":"expert","type":"string"},
+      {"name":"litigation_flag","type":"string"},
+      {"name":"fraud","type":"string"},
+      {"name":"code_dep","type":"bigint"},
+      {"name":"department","type":"string"},
+      {"name":"region","type":"string"},
+      {"name":"geopoint","type":"string"},
+      {"name":"product_id","type":"string"},
+      {"name":"car_brand","type":"string"},
+      {"name":"car_model","type":"string"},
+      {"name":"car_number","type":"string"},
+      {"name":"policies_last_year","type":"bigint"},
+      {"name":"policies_last_3_years","type":"bigint"},
+      {"name":"contract_duration","type":"bigint"},
+      {"name":"contract_end_date_year","type":"bigint"},
+      {"name":"agency_id","type":"bigint"},
+      {"name":"customer_age","type":"bigint"},
+      {"name":"customer_group","type":"string"},
+      {"name":"email_domain","type":"string"},
+      {"name":"gender","type":"string"},
+      {"name":"customer_category","type":"string"}
+    ],
+    "userModified": true
+  },
+  "dkuProperties": [],
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "col_stats",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Columns statistics",
+          "level": 2
+        },
+        "configuration": {
+          "aggregates": []
+        }
+      },
+      {
+        "type": "adv_col_stats",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Most frequent values",
+          "level": 3
+        },
+        "configuration": {
+          "aggregates": [],
+          "numberTopValues": 10
+        }
+      },
+      {
+        "type": "percentile_stats",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Columns percentiles",
+          "level": 4
+        },
+        "configuration": {
+          "aggregates": []
+        }
+      },
+      {
+        "type": "verify_col",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Data validity",
+          "level": 4
+        },
+        "configuration": {
+          "aggregates": []
+        }
+      },
+      {
+        "type": "py_plugin_model-data-compliance_feature-difference",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Compare dataset with a reference",
+          "level": 10
+        },
+        "configuration": {
+          "config": {
+            "input_mode": "dataset",
+            "range_mode": "absolute_range",
+            "columns_dataset": [
+              "region",
+              "policies_last_year",
+              "customer_age",
+              "department"
+            ],
+            "columns_model": [],
+            "ds_ref": "Historical_Claims_enriched"
+          }
+        }
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "partition": "NP",
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "check:CHECK:compliance_3_years",
+        "check:CHECK:compliance_age",
+        "check:CHECK:compliance_region",
+        "check:CHECK:region",
+        "py_plugin:py_plugin_model-data-compliance_feature-difference:New categories in region:Compare dataset with a reference:Compare dataset with a reference",
+        "py_plugin:py_plugin_model-data-compliance_feature-difference:New categories in department:Compare dataset with a reference:Compare dataset with a reference"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [
+      {
+        "config": {
+          "input_mode": "dataset",
+          "message_type": "error_message",
+          "tolerance": 0.01,
+          "range_mode": "absolute_range",
+          "columns_dataset": [
+            "customer_age",
+            "department",
+            "policies_last_year"
+          ],
+          "columns_model": [],
+          "ds_ref": "Historical_Claims_enriched"
+        },
+        "type": "custom_python_model-data-compliance_check-against-reference",
+        "meta": {
+          "name": "Check dataset against a reference",
+          "label": "compliance"
+        },
+        "computeOnBuildMode": "PARTITION"
+      }
+    ],
+    "displayedState": {
+      "partition": "NP",
+      "checks": [
+        "compliance"
+      ]
+    }
+  },
+  "customFields": {}
+}

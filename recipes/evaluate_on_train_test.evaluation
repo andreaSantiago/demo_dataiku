@@ -1,0 +1,54 @@
+{
+  "outputs": [
+    "prediction_correct"
+  ],
+  "perGPUMemoryFraction": 0.5,
+  "sqlPipelineParams": {
+    "pipelineAllowMerge": true,
+    "pipelineAllowStart": true
+  },
+  "backendType": "PY_MEMORY",
+  "filterInputColumns": false,
+  "modelVersionId": "",
+  "useGPU": false,
+  "keptInputColumns": [],
+  "pythonBatchSize": 100000,
+  "gpuAllowGrowth": false,
+  "selection": {
+    "samplingMethod": "FULL"
+  },
+  "outputProbaPercentiles": false,
+  "outputProbabilities": true,
+  "forceOriginalEngine": false,
+  "metrics": [
+    "precision",
+    "recall",
+    "auc",
+    "f1",
+    "accuracy",
+    "mcc",
+    "hammingLoss",
+    "logLoss",
+    "lift",
+    "calibrationLoss",
+    "customScore"
+  ],
+  "batchSize": 100,
+  "forcedClassifierThreshold": 0,
+  "overrideModelSpecifiedThreshold": false,
+  "gpuList": [
+    0
+  ],
+  "sparkParams": {
+    "pipelineAllowMerge": true,
+    "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK",
+    "pipelineAllowStart": true,
+    "sparkExecutionEngine": "SPARK_SUBMIT",
+    "sparkConf": {
+      "conf": [],
+      "inheritConf": "default"
+    },
+    "sparkRepartitionNonHDFS": 1,
+    "sparkUseGlobalMetastore": false
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "type": "chart",
+  "params": {
+    "datasetSmartName": "Historical_Claims_enriched",
+    "engineType": "LINO",
+    "refreshableSelection": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "def": {
+      "type": "pie",
+      "variant": "donut",
+      "name": "Fraud Ratio",
+      "userEditedName": true,
+      "genericDimension0": [
+        {
+          "column": "fraud",
+          "type": "NUMERICAL",
+          "numParams": {
+            "mode": "NONE",
+            "nbBins": 30,
+            "binSize": 100,
+            "emptyBinsMode": "ZEROS"
+          },
+          "maxValues": 100,
+          "generateOthersCategory": true,
+          "oneTickPerBin": false,
+          "filters": [],
+          "isA": "dimension",
+          "possibleSorts": [
+            {
+              "type": "NATURAL",
+              "label": "Natural ordering",
+              "sortAscending": true
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 0,
+              "label": "Count of records, descending"
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 0,
+              "label": "Count of records, ascending",
+              "sortAscending": true
+            }
+          ],
+          "sort": {
+            "type": "NATURAL",
+            "label": "Natural ordering",
+            "sortAscending": true
+          }
+        }
+      ],
+      "genericDimension1": [],
+      "facetDimension": [],
+      "animationDimension": [],
+      "genericMeasures": [
+        {
+          "function": "COUNT",
+          "type": "NUMERICAL",
+          "displayed": true,
+          "isA": "measure",
+          "displayAxis": "axis1",
+          "displayType": "column",
+          "computeMode": "NORMAL",
+          "computeModeDim": 0
+        }
+      ],
+      "xDimension": [],
+      "yDimension": [],
+      "uaXDimension": [],
+      "uaYDimension": [],
+      "uaSize": [],
+      "uaShape": [],
+      "uaColor": [],
+      "uaTooltip": [],
+      "groupDimension": [],
+      "xMeasure": [],
+      "yMeasure": [],
+      "colorMeasure": [],
+      "sizeMeasure": [],
+      "geometry": [],
+      "tooltipMeasures": [],
+      "boxplotBreakdownDim": [],
+      "boxplotValue": [],
+      "filters": [],
+      "axis1LogScale": false,
+      "axis2LogScale": false,
+      "includeZero": true,
+      "smoothing": true,
+      "showLegend": true,
+      "showXAxis": false,
+      "showInChartValues": false,
+      "showInChartLabels": true,
+      "strokeWidth": 1,
+      "fillOpacity": 0.6,
+      "showXAxisLabel": true,
+      "showYAxisLabel": true,
+      "hexbinRadius": 20,
+      "hexbinNumber": 20,
+      "hexbinRadiusMode": "NUM_HEXAGONS",
+      "chartHeight": 200,
+      "singleXAxis": true,
+      "multiTooltips": false,
+      "animationFrameDuration": 3000,
+      "animationRepeat": true,
+      "colorOptions": {
+        "singleColor": "#2678B1",
+        "transparency": 0.75,
+        "colorPalette": "Set2",
+        "ccScaleMode": "NORMAL",
+        "customPalette": {
+          "id": "__dku_custom__",
+          "name": "Custom Palette",
+          "colors": [],
+          "values": [],
+          "fixedValues": false
+        },
+        "paletteType": "CONTINUOUS",
+        "quantizationMode": "NONE",
+        "numQuantizeSteps": 5,
+        "paletteMiddleValue": 0.0
+      },
+      "bubblesOptions": {
+        "defaultRadius": 5.0,
+        "singleShape": "FILLED_CIRCLE"
+      },
+      "computeMode": "NORMAL",
+      "xAxisMode": "NORMAL",
+      "yAxisMode": "NORMAL",
+      "pieOptions": {
+        "donutHoleSize": 54.0
+      },
+      "scatterOptions": {
+        "equalScales": false,
+        "identityLine": false
+      },
+      "mapOptions": {
+        "tilesLayer": "cartodb-positron",
+        "lockSquareGrid": false
+      },
+      "mapGridOptions": {
+        "gridLonDeg": 0.5,
+        "gridLatDeg": 0.5
+      },
+      "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACM0lEQVRoQ+3YPUjDQBQH8DulIoLoIhRxEUQEUQTBqR9KJwUHB1FoBhFbdK2Tm7NuBSmY0XRxULfqULQpOFRQF4WCg1DBqaOKIkSuclLCJbmYe2dq27VJ7n73f/cuLUZN9sFN5kUtMHTin7urOYSNzo2p2PdQBiqrUWUdelz6fGkJJ3TtnAyaKeVrY/+A66RqRJmBhksBUyzBpK/yrwEDdbHA5HtoNDi4HkvTIylbgaHRoGAWlpa1HRgSDQa2wvKCodAg4JWCNhbAKG3VgJxKmt4HsZ9BwHbpukkYImXp4P1wfNqcfLKYvbCqBtEpCwfbpcvCUqgstDSwHdYJLTJlKWAeLEGfVu4ejh5vn8zl7VtwQtfIO/GSecK8YHIfq7T9DK69L4sGIwO9qVFlTsR7ttCSZjWs2YHR/oXBiWHeyVo1L1Epg4PdlDNZlJtq5Tlzr5eh9rHvwND72HfgrdLJZfX95aNhEw7gdrwXWo42zR4mUDf7mN208LUaiW/yLprddUJLevFwu6M3OHQm+lgS1aHJvISCyQNZR9NIT7A7NR6bdEoI+kiSBuYt638FdkI37K8lq7Km5cxoYEaymC007O9hJ7DTPoY6f+lzhTct+mCnv3l44CK7cwvMs+Jur/GSMkS6IMeSeVF+g4bCSgG7bWKQWGlgMtCarh1ihPost0Ub2lFDSs7ttnF7PViXtptIoniQQgaeRxil1bBy7HbSXq7/E7CXCXu9twX2uoJ+v7/pEv4CJAz2Kap4ud4AAAAASUVORK5CYII\u003d",
+      "disableSafetyLimits": false,
+      "useLiveProcessingIfAvailable": true,
+      "legendPlacement": "SIDEBAR"
+    },
+    "maxDataBytes": 157286400
+  },
+  "owner": "ludo",
+  "listed": false,
+  "name": "Fraud Ratio on Historical_Claims_enriched",
+  "dashboardCreationId": "p2LKf6J",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1566915975741
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1566915975741
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

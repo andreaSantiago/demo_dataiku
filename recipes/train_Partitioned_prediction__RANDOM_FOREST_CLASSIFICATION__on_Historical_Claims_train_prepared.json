@@ -1,0 +1,66 @@
+{
+  "type": "prediction_training",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "Historical_Claims_train_prepared",
+          "deps": [
+            {
+              "out": "ZFxUza5x",
+              "idim": "region_copy",
+              "odim": "region_copy",
+              "func": "equals",
+              "params": {},
+              "expandVariables": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "ZFxUza5x",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "versionTag": {
+    "versionNumber": 2,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1647960475987
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1581525831325
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

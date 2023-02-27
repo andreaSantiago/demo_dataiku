@@ -1,0 +1,206 @@
+{
+  "centileShuffle": false,
+  "centileSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "preFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "defaultOutputIndex": 1,
+  "seed": 1337,
+  "randomColumns": [],
+  "centileOrders": [],
+  "rangeSetTime": false,
+  "randomSplits": [
+    {
+      "outputIndex": 0,
+      "share": 80
+    }
+  ],
+  "randomColumnsSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "computedColumns": [],
+  "writeComputedColumnsInOutput": false,
+  "mode": "RANDOM",
+  "centileTDigest": false,
+  "valueSplits": [
+    {
+      "outputIndex": 0,
+      "caseSensitive": false
+    }
+  ],
+  "rangeSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": []
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ],
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "filterSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": []
+        },
+        "$status": {
+          "schema": {
+            "columns": [
+              {
+                "name": "claim_id",
+                "type": "string"
+              },
+              {
+                "name": "contract_id",
+                "type": "string"
+              },
+              {
+                "name": "claim_amount",
+                "type": "string"
+              },
+              {
+                "name": "claim_date",
+                "type": "string"
+              },
+              {
+                "name": "expert",
+                "type": "string"
+              },
+              {
+                "name": "litigation_flag",
+                "type": "string"
+              },
+              {
+                "name": "fraud",
+                "type": "string"
+              },
+              {
+                "name": "code_dep",
+                "type": "bigint"
+              },
+              {
+                "name": "department",
+                "type": "string"
+              },
+              {
+                "name": "region",
+                "type": "string"
+              },
+              {
+                "name": "geopoint",
+                "type": "string"
+              },
+              {
+                "name": "product_id",
+                "type": "string"
+              },
+              {
+                "name": "car_brand",
+                "type": "string"
+              },
+              {
+                "name": "car_model",
+                "type": "string"
+              },
+              {
+                "name": "car_number",
+                "type": "string"
+              },
+              {
+                "name": "policies_last_year",
+                "type": "bigint"
+              },
+              {
+                "name": "policies_last_3_years",
+                "type": "bigint"
+              },
+              {
+                "name": "contract_duration",
+                "type": "bigint"
+              },
+              {
+                "name": "contract_end_date_year",
+                "type": "bigint"
+              },
+              {
+                "name": "agency_id",
+                "type": "bigint"
+              },
+              {
+                "name": "customer_age",
+                "type": "bigint"
+              },
+              {
+                "name": "customer_group",
+                "type": "string"
+              },
+              {
+                "name": "email_domain",
+                "type": "string"
+              },
+              {
+                "name": "gender",
+                "type": "string"
+              },
+              {
+                "name": "customer_category",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ]
+}

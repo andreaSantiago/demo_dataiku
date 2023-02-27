@@ -1,0 +1,87 @@
+/*
+    This imports default colors, you can use them with the syntax `var(--variable-name)`.
+    Example:
+        border: 3px solid var(--border-color);
+*/
+@import '/static/public/styles/1.0.0/variables.css';
+
+.fetch-dataset-container {
+    display: flex;
+    width: 100%;
+}
+
+.fetch-dataset-container section, .fetch-dataset-container form {
+    height: 100%;
+    overflow: auto;
+}
+
+.error-message {
+    color: var(--error-red);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fetch-dataset-form {
+    min-width: 300px;
+}
+
+.fetch-dataset-results {
+    margin-top: 20px;
+    border: 3px solid var(--border-color);
+    width: 100%;
+    font-size: 16px;
+    background-color: var(--grey-background);
+    color: var(--grey);
+    min-height: 300px;
+}
+
+#message{
+    white-space: pre-wrap;
+}
+
+body {
+        font-family:  Helvetica, Arial, sans-serif;
+        margin: 32px;
+}
+
+#power-gauge g.arc {
+        fill: steelblue;
+}
+
+#power-gauge g.pointer {
+        fill: #e85116;
+        stroke: #b64011;
+}
+
+#power-gauge g.label text {
+        text-anchor: middle;
+        font-size: 14px;
+        font-weight: bold;
+        fill: #666;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  /*background-color: var(--grey-background);*/
+}
+
+.columnb {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  transform: translate(25%, 50%);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

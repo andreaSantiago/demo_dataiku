@@ -1,0 +1,99 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "columnWidthsByName": {
+      "claim_id": 100,
+      "contract_id": 100,
+      "claim_amount": 105,
+      "claim_date": 183,
+      "expert": 100,
+      "litigation_flag": 128,
+      "fraud": 100,
+      "code_dep": 100,
+      "department": 169,
+      "region": 246,
+      "geopoint": 197,
+      "product_id": 120,
+      "car_brand": 141,
+      "car_model": 300,
+      "car_number": 100,
+      "policies_last_year": 150,
+      "policies_last_3_years": 173,
+      "contract_duration": 143,
+      "contract_end_date_year": 180,
+      "agency_id": 113,
+      "customer_age": 105,
+      "customer_group": 120,
+      "email_domain": 105,
+      "gender": 100,
+      "customer_category": 267,
+      "proba_0": 148,
+      "proba_1": 148,
+      "prediction": 100,
+      "prediction_correct": 150
+    },
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxStoredBytes": 104857600,
+        "timeout": -1,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": -1,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": []
+}

@@ -1,0 +1,150 @@
+{
+  "type": "step_based",
+  "name": "Refresh Historical Data",
+  "active": false,
+  "runAsUser": "admin",
+  "versionTag": {
+    "versionNumber": 18,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677516155360
+  },
+  "checklists": {
+    "checklists": []
+  },
+  "delayedTriggersBehavior": {
+    "delayWhileRunning": true,
+    "squashDelayedTriggers": true,
+    "suppressTriggersWhileRunning": true
+  },
+  "tags": [],
+  "triggers": [
+    {
+      "id": "doJIo5bO",
+      "type": "temporal",
+      "name": "Daily Refresh",
+      "delay": 5,
+      "active": true,
+      "params": {
+        "repeatFrequency": 1,
+        "frequency": "Daily",
+        "startingFrom": "2021-05-10T22:00:00.000Z",
+        "daysOfWeek": [
+          "Saturday"
+        ],
+        "monthlyRunOn": "ON_THE_DAY",
+        "minute": 0,
+        "hour": 7,
+        "timezone": "SERVER",
+        "lastUpdate": 1677516155360
+      }
+    },
+    {
+      "id": "6sCqD7fd",
+      "type": "temporal",
+      "name": "refresh_5minutes",
+      "delay": 5,
+      "active": false,
+      "params": {
+        "repeatFrequency": 5,
+        "frequency": "Minutely",
+        "startingFrom": "2021-05-10T22:00:00.000Z",
+        "daysOfWeek": [
+          "Saturday"
+        ],
+        "monthlyRunOn": "ON_THE_DAY",
+        "minute": 0,
+        "hour": 2,
+        "timezone": "SERVER",
+        "lastUpdate": 1677516155360
+      }
+    }
+  ],
+  "reporters": [],
+  "params": {
+    "steps": [
+      {
+        "id": "build_0_true_d_Historical_Claims",
+        "type": "build_flowitem",
+        "name": "Get Historic Data",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "Historical_Claims",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "handleWarningsAs": "WARNING",
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "check_false_d_Historical_Claims",
+        "type": "check_dataset",
+        "name": "Check Data Availability",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "checks": [
+            {
+              "type": "DATASET",
+              "itemId": "Historical_Claims",
+              "partitionsSpec": ""
+            }
+          ],
+          "handleWarningsAs": "WARNING",
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_d_Historical_Claims_train",
+        "type": "build_flowitem",
+        "name": "Build Historic Flow",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "Historical_Claims_train",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "handleWarningsAs": "WARNING",
+          "proceedOnFailure": false
+        }
+      }
+    ]
+  },
+  "automationLocal": false,
+  "customFields": {}
+}

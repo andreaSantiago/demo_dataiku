@@ -1,0 +1,55 @@
+{
+  "type": "split",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "Historical_Claims_train",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "train_train",
+          "appendMode": false
+        },
+        {
+          "ref": "train_test",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 5,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1614870285480
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1581526185470
+  },
+  "tags": [
+    "modeling part"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

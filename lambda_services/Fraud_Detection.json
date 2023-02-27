@@ -1,0 +1,127 @@
+{
+  "authMethod": "PUBLIC",
+  "authRealm": {
+    "queryKeys": []
+  },
+  "checklists": {
+    "checklists": []
+  },
+  "customFields": {},
+  "endpoints": [
+    {
+      "auditPostEnrichData": false,
+      "enrichMapping": [
+        {
+          "columnsMapping": {
+            "agency_id": "agency_id",
+            "car_brand": "car_brand",
+            "car_model": "car_model",
+            "car_number": "car_number",
+            "contract_duration": "contract_duration",
+            "contract_end_date_year": "contract_end_date_year",
+            "contract_id": "contract_id",
+            "customer_age": "customer_age",
+            "customer_category": "customer_category",
+            "customer_group": "customer_group",
+            "customer_id": "customer_id",
+            "email_domain": "email_domain",
+            "gender": "gender",
+            "policies_last_3_years": "policies_last_3_years",
+            "policies_last_year": "policies_last_year",
+            "product_id": "product_id"
+          },
+          "datasetRef": "Contracts_and_Customers_ref",
+          "missingLookupKeyBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "notFoundBehavior": "IGNORE",
+          "on": [
+            {
+              "resourceLookupCol": "contract_id"
+            }
+          ],
+          "packagingType": "REFERENCED"
+        },
+        {
+          "columnsMapping": {
+            "department": "department",
+            "region": "region"
+          },
+          "datasetRef": "Departements_Ref",
+          "missingLookupKeyBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "notFoundBehavior": "IGNORE",
+          "on": [
+            {
+              "resourceLookupCol": "code_dep"
+            }
+          ],
+          "packagingType": "REFERENCED"
+        }
+      ],
+      "healthCheckQueries": [],
+      "id": "Fraud_Scoring",
+      "individualExplanationParams": {
+        "drawInScoredSet": false,
+        "method": "ICE",
+        "nbExplanations": 3,
+        "shapleyBackgroundSize": 100,
+        "subChunkSize": 5000
+      },
+      "mlFlowOutputStyle": "RAW",
+      "modelRef": "VNCmGzOW",
+      "outputExplanations": true,
+      "returnPostEnrichData": false,
+      "testQueries": [
+        {
+          "name": "Test_query_With_enrichment",
+          "q": {
+            "features": {
+              "claim_amount": "240.93",
+              "claim_date": "2015-11-27T00:00:00.000Z",
+              "code_dep": 76,
+              "contract_id": "229959",
+              "expert": "1",
+              "litigation_flag": "0"
+            }
+          }
+        }
+      ],
+      "type": "STD_PREDICTION",
+      "useJava": false
+    },
+    {
+      "id": "bca_test",
+      "queries": [
+        {
+          "inputParameters": [],
+          "maxResults": -1,
+          "postCommit": false,
+          "query": "-- Insert your SQL code here"
+        }
+      ],
+      "testQueries": [],
+      "type": "SQL_QUERY"
+    },
+    {
+      "code": "\n# Insert here initialization code\n\n# This function is the entry point for your Python function API\n# You can call this function with passing \"param1\", \"param2\",\n# \"param3\" as arguments to the API call\n# (see REST API documentation)\ndef api_py_function(param1, param2, param3):\n    return param1 + param2 * param3\n",
+      "envSelection": {
+        "envMode": "INHERIT"
+      },
+      "id": "python_function",
+      "inputFolderRefs": [],
+      "testQueries": [],
+      "type": "PY_FUNCTION",
+      "userFunctionName": "api_py_function"
+    }
+  ],
+  "name": "Fraud_Detection",
+  "publicAccess": true,
+  "tags": [],
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1648031535464,
+    "versionNumber": 6
+  }
+}

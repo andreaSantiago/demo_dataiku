@@ -1,0 +1,30 @@
+{
+  "type": "web_app",
+  "params": {
+    "webAppSmartId": "GLTawAf",
+    "webAppType": "STANDARD"
+  },
+  "owner": "ludo",
+  "listed": false,
+  "name": "Real-Time Fraud Scoring",
+  "dashboardCreationId": "rUrXbJe",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1567505789409
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1567505789409
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "type": "clustering_scoring",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "model": {
+      "items": [
+        {
+          "ref": "tjauUcLm",
+          "deps": []
+        }
+      ]
+    },
+    "main": {
+      "items": [
+        {
+          "ref": "Historical_Claims_train",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "Historical_Claims_train_scored",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "versionTag": {
+    "versionNumber": 3,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1647960475945
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1594126816659
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

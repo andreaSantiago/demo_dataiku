@@ -1,0 +1,29 @@
+{
+  "type": "saved-model_report",
+  "params": {
+    "savedModelSmartId": "PJcSRP3j"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Full report of model Prediction (RANDOM_FOREST_CLASSIFICATION) on Historical_Claims_train",
+  "dashboardCreationId": "JJApRWV",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1620687815148
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1620687815148
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "project_activity",
+  "params": {
+    "projectKey": "INSURANCEFRAUDDETECTION"
+  },
+  "owner": "ludo",
+  "listed": false,
+  "name": "Activity of Insurance Fraud Detection (INSURANCEFRAUDDETECTION)",
+  "dashboardCreationId": "JJApRWV",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1569252393271
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1569252393271
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

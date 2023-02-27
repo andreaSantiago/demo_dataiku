@@ -1,0 +1,127 @@
+{
+  "checklists": {
+    "checklists": []
+  },
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1566919178577,
+    "versionNumber": 0
+  },
+  "customFields": {},
+  "listed": true,
+  "name": "Fraud Operations",
+  "owner": "ludo",
+  "pages": [
+    {
+      "backgroundColor": "#ffffff",
+      "grid": {
+        "tiles": [
+          {
+            "autoLoad": true,
+            "box": {
+              "height": 6,
+              "left": 0,
+              "top": 1,
+              "width": 6
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "displayMode": "INSIGHT",
+            "insightId": "kpNuczG",
+            "insightType": "dataset_table",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "NO",
+            "tileParams": {
+              "showCustomFields": true,
+              "showDescription": true,
+              "showMeaning": false,
+              "showName": true,
+              "showProgressBar": false,
+              "showStorageType": false,
+              "viewKind": "EXPLORE"
+            },
+            "tileType": "INSIGHT"
+          },
+          {
+            "autoLoad": true,
+            "borderColor": "#ededed",
+            "box": {
+              "height": 1,
+              "left": 1,
+              "top": 0,
+              "width": 4
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "NO",
+            "tileParams": {
+              "isTransparent": true,
+              "text": "<i>This listing shows the claims with the highest fraud probabilities.\nThey are feeding a Case Management System on a regular basis</i>",
+              "textAlign": "LEFT"
+            },
+            "tileType": "TEXT",
+            "title": "Comments"
+          },
+          {
+            "autoLoad": true,
+            "box": {
+              "height": 1,
+              "left": 0,
+              "top": 0,
+              "width": 1
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "IMAGE",
+            "imageId": "8EqERpe",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "MOUSEOVER",
+            "tileType": "IMAGE"
+          }
+        ]
+      },
+      "id": "PwZkXhW",
+      "showTitle": true,
+      "title": "Alerts for Case Management"
+    },
+    {
+      "backgroundColor": "#ffffff",
+      "grid": {
+        "tiles": [
+          {
+            "autoLoad": true,
+            "box": {
+              "height": 7,
+              "left": 0,
+              "top": 0,
+              "width": 12
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "insightId": "yDmg4bj",
+            "insightType": "web_app",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "NO",
+            "tileParams": {
+              "loadTimeoutInSeconds": 0
+            },
+            "tileType": "INSIGHT"
+          }
+        ]
+      },
+      "id": "T0XRvp9",
+      "showTitle": true,
+      "title": "Real Time Fraud Scoring"
+    }
+  ],
+  "showGrid": true,
+  "tags": [],
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1610632018507,
+    "versionNumber": 19
+  }
+}
