@@ -1,14 +1,14 @@
 {
   "type": "step_based",
   "name": "Score New Claims",
-  "active": false,
+  "active": true,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 25,
+    "versionNumber": 26,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677516155569
+    "lastModifiedOn": 1677536172802
   },
   "checklists": {
     "checklists": []
@@ -37,7 +37,7 @@
         "minute": 0,
         "hour": 17,
         "timezone": "SERVER",
-        "lastUpdate": 1677516155569
+        "lastUpdate": 1677536172803
       }
     },
     {
@@ -56,7 +56,7 @@
         "minute": 0,
         "hour": 17,
         "timezone": "SERVER",
-        "lastUpdate": 1677516155569
+        "lastUpdate": 1677536172803
       }
     },
     {
@@ -76,7 +76,7 @@
         "minute": 41,
         "hour": 15,
         "timezone": "SERVER",
-        "lastUpdate": 1677516155569
+        "lastUpdate": 1677536172803
       }
     }
   ],
