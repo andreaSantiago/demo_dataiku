@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1647960888675
+    "lastModifiedOn": 1677536438787
   },
   "creationTag": {
     "versionNumber": 0,
@@ -65,9 +65,9 @@
       {"name":"contract_id","type":"bigint"},
       {"name":"claim_amount","type":"double"},
       {"name":"claim_date","type":"date"},
-      {"name":"expert","type":"bigint"},
+      {"name":"expert","type":"double"},
       {"name":"litigation_flag","type":"bigint"},
-      {"name":"fraud","type":"bigint"},
+      {"name":"fraud","type":"string"},
       {"name":"code_dep","type":"bigint"},
       {"name":"department","type":"string"},
       {"name":"region","type":"string"},
@@ -76,22 +76,22 @@
       {"name":"car_brand","type":"string"},
       {"name":"car_model","type":"string"},
       {"name":"car_number","type":"string"},
-      {"name":"policies_last_year","type":"bigint"},
-      {"name":"policies_last_3_years","type":"bigint"},
-      {"name":"contract_duration","type":"bigint"},
-      {"name":"contract_end_date_year","type":"bigint"},
-      {"name":"agency_id","type":"bigint"},
-      {"name":"customer_age","type":"bigint"},
+      {"name":"policies_last_year","type":"double"},
+      {"name":"policies_last_3_years","type":"double"},
+      {"name":"contract_duration","type":"double"},
+      {"name":"contract_end_date_year","type":"double"},
+      {"name":"agency_id","type":"double"},
+      {"name":"customer_age","type":"double"},
       {"name":"customer_group","type":"string"},
       {"name":"email_domain","type":"string"},
       {"name":"gender","type":"string"},
       {"name":"customer_category","type":"string"},
+      {"name":"prediction","type":"string"},
       {"name":"proba_0","type":"double"},
       {"name":"proba_1","type":"double"},
-      {"name":"prediction","type":"string"},
       {"name":"prediction_correct","type":"boolean"}
     ],
-    "userModified": true
+    "userModified": false
   },
   "dkuProperties": [],
   "metrics": {
