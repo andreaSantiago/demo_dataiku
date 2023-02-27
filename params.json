@@ -237,7 +237,7 @@
     },
     "codeEnvs": {
       "python": {
-        "mode": "INHERIT",
+        "mode": "USE_BUILTIN_MODE",
         "preventOverride": false
       },
       "r": {
@@ -367,11 +367,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 189,
+    "versionNumber": 190,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677516155279
+    "lastModifiedOn": 1677537530336
   },
   "creationTag": {
     "versionNumber": 0,
