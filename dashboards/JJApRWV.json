@@ -1,60 +1,70 @@
 {
-  "checklists": {
-    "checklists": []
-  },
-  "creationTag": {
-    "lastModifiedBy": {
-      "login": "ludo"
-    },
-    "lastModifiedOn": 1569252136528,
-    "versionNumber": 0
-  },
-  "customFields": {},
-  "listed": false,
-  "name": "Project Monitoring",
-  "owner": "ludo",
   "pages": [
     {
+      "id": "qlatpWx",
       "grid": {
         "tiles": [
           {
-            "autoLoad": true,
-            "box": {
-              "height": 3,
-              "left": 6,
-              "top": 5,
-              "width": 6
-            },
-            "clickAction": "DO_NOTHING",
-            "displayMode": "INSIGHT",
-            "insightId": "XTGueYn",
-            "insightType": "project_activity",
-            "resizeImageMode": "FIT_SIZE",
-            "showTitle": "YES",
-            "tileParams": {
-              "contributorsChart": "commits",
-              "displayMode": "CONTRIBUTION_CHARTS",
-              "summaryChart": "commits",
-              "timeSpan": "year"
-            },
             "tileType": "INSIGHT",
-            "title": "Activity of project"
-          },
-          {
-            "autoLoad": true,
             "box": {
-              "height": 5,
-              "left": 0,
               "top": 3,
-              "width": 6
+              "left": 0,
+              "width": 6,
+              "height": 5
             },
             "clickAction": "DO_NOTHING",
-            "displayMode": "INSIGHT",
+            "tileParams": {
+              "displayMode": "bc_confusion",
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "car_brand",
+                    "product_id",
+                    "claim_amount",
+                    "customer_group",
+                    "region",
+                    "customer_category",
+                    "contract_duration",
+                    "customer_age",
+                    "claim_date",
+                    "policies_last_year",
+                    "policies_last_3_years",
+                    "agency_id",
+                    "email_domain",
+                    "contract_end_date_year",
+                    "expert",
+                    "gender",
+                    "geopoint",
+                    "code_dep",
+                    "claim_id",
+                    "contract_id",
+                    "car_model",
+                    "car_number",
+                    "department",
+                    "fraud",
+                    "litigation_flag"
+                  ]
+                }
+              }
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
             "insightId": "nsgvRsY",
             "insightType": "saved-model_report",
-            "resizeImageMode": "FIT_SIZE",
-            "showTitle": "YES",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 0,
+              "left": 6,
+              "width": 6,
+              "height": 5
+            },
+            "clickAction": "DO_NOTHING",
             "tileParams": {
+              "displayMode": "variables_importance",
               "advancedOptions": {
                 "interactiveScoring": {
                   "featuresOrder": [
@@ -85,76 +95,26 @@
                     "litigation_flag"
                   ]
                 }
-              },
-              "displayMode": "bc_confusion"
+              }
             },
-            "tileType": "INSIGHT"
-          },
-          {
             "autoLoad": true,
-            "box": {
-              "height": 5,
-              "left": 6,
-              "top": 0,
-              "width": 6
-            },
-            "clickAction": "DO_NOTHING",
-            "displayMode": "INSIGHT",
+            "showTitle": "YES",
             "insightId": "dq5o5Y5",
             "insightType": "saved-model_report",
-            "resizeImageMode": "FIT_SIZE",
-            "showTitle": "YES",
-            "tileParams": {
-              "advancedOptions": {
-                "interactiveScoring": {
-                  "featuresOrder": [
-                    "car_brand",
-                    "product_id",
-                    "claim_amount",
-                    "customer_group",
-                    "region",
-                    "customer_category",
-                    "contract_duration",
-                    "customer_age",
-                    "claim_date",
-                    "policies_last_year",
-                    "policies_last_3_years",
-                    "agency_id",
-                    "email_domain",
-                    "contract_end_date_year",
-                    "expert",
-                    "gender",
-                    "geopoint",
-                    "code_dep",
-                    "claim_id",
-                    "contract_id",
-                    "car_model",
-                    "car_number",
-                    "department",
-                    "fraud",
-                    "litigation_flag"
-                  ]
-                }
-              },
-              "displayMode": "variables_importance"
-            },
-            "tileType": "INSIGHT"
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
           },
           {
-            "autoLoad": true,
+            "tileType": "INSIGHT",
             "box": {
-              "height": 3,
-              "left": 0,
               "top": 0,
-              "width": 6
+              "left": 0,
+              "width": 6,
+              "height": 3
             },
             "clickAction": "DO_NOTHING",
-            "displayMode": "INSIGHT",
-            "insightId": "MMeDTnm",
-            "insightType": "saved-model_report",
-            "resizeImageMode": "FIT_SIZE",
-            "showTitle": "YES",
             "tileParams": {
+              "displayMode": "summary",
               "advancedOptions": {
                 "interactiveScoring": {
                   "featuresOrder": [
@@ -185,35 +145,57 @@
                     "litigation_flag"
                   ]
                 }
-              },
-              "displayMode": "summary"
+              }
             },
-            "tileType": "INSIGHT"
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "MMeDTnm",
+            "insightType": "saved-model_report",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 5,
+              "left": 6,
+              "width": 6,
+              "height": 3
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "displayMode": "CONTRIBUTION_CHARTS",
+              "summaryChart": "commits",
+              "timeSpan": "year",
+              "contributorsChart": "commits"
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "CxW12i4",
+            "insightType": "project_activity",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
           }
         ]
       },
-      "id": "qlatpWx",
-      "showTitle": false,
-      "title": "Project Monitoring"
+      "title": "Project Monitoring",
+      "showTitle": false
     },
     {
+      "id": "UeSDJNa",
       "grid": {
         "tiles": [
           {
-            "autoLoad": true,
+            "tileType": "INSIGHT",
             "box": {
-              "height": 7,
-              "left": 0,
               "top": 0,
-              "width": 12
+              "left": 0,
+              "width": 12,
+              "height": 7
             },
             "clickAction": "DO_NOTHING",
-            "displayMode": "INSIGHT",
-            "insightId": "uvaglli",
-            "insightType": "saved-model_report",
-            "resizeImageMode": "FIT_SIZE",
-            "showTitle": "YES",
             "tileParams": {
+              "displayMode": "interactive_scoring",
               "advancedOptions": {
                 "interactiveScoring": {
                   "featuresOrder": [
@@ -241,50 +223,67 @@
                     "expert"
                   ]
                 }
-              },
-              "displayMode": "interactive_scoring"
+              }
             },
-            "tileType": "INSIGHT"
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "uvaglli",
+            "insightType": "saved-model_report",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
           },
           {
-            "autoLoad": true,
+            "tileType": "INSIGHT",
             "box": {
-              "height": 4,
-              "left": 0,
               "top": 7,
-              "width": 12
+              "left": 0,
+              "width": 12,
+              "height": 4
             },
             "clickAction": "OPEN_INSIGHT",
-            "displayMode": "INSIGHT",
+            "tileParams": {
+              "viewKind": "EXPLORE",
+              "showName": true,
+              "showDescription": true,
+              "showCustomFields": true,
+              "showStorageType": false,
+              "showMeaning": false,
+              "showProgressBar": false
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
             "insightId": "2YflNQk",
             "insightType": "dataset_table",
-            "resizeImageMode": "FIT_SIZE",
-            "showTitle": "YES",
-            "tileParams": {
-              "showCustomFields": true,
-              "showDescription": true,
-              "showMeaning": false,
-              "showName": true,
-              "showProgressBar": false,
-              "showStorageType": false,
-              "viewKind": "EXPLORE"
-            },
-            "tileType": "INSIGHT"
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
           }
         ]
       },
-      "id": "UeSDJNa",
-      "showTitle": false,
-      "title": "Interactive Scoring"
+      "title": "Interactive Scoring",
+      "showTitle": false
     }
   ],
+  "owner": "ludo",
+  "listed": false,
+  "name": "Project Monitoring",
   "showGrid": true,
-  "tags": [],
   "versionTag": {
+    "versionNumber": 41,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1647966180722,
-    "versionNumber": 40
+    "lastModifiedOn": 1677537079550
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ludo"
+    },
+    "lastModifiedOn": 1569252136528
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
   }
 }
