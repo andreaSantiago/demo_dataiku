@@ -1,0 +1,29 @@
+{
+  "type": "project_activity",
+  "params": {
+    "projectKey": "INSURANCEFRAUDDETECTIONNEW"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Activity of the project",
+  "dashboardCreationId": "JJApRWV",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677537069445
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677537069445
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
