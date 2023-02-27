@@ -1,14 +1,14 @@
 {
   "type": "step_based",
   "name": "Refresh Historical Data",
-  "active": false,
+  "active": true,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 18,
+    "versionNumber": 19,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677516155360
+    "lastModifiedOn": 1677536174442
   },
   "checklists": {
     "checklists": []
@@ -37,7 +37,7 @@
         "minute": 0,
         "hour": 7,
         "timezone": "SERVER",
-        "lastUpdate": 1677516155360
+        "lastUpdate": 1677536174447
       }
     },
     {
@@ -57,7 +57,7 @@
         "minute": 0,
         "hour": 2,
         "timezone": "SERVER",
-        "lastUpdate": 1677516155360
+        "lastUpdate": 1677536174447
       }
     }
   ],
