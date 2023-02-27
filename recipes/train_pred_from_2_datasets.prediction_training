@@ -1,54 +1,1088 @@
 {
-  "sparkParams": {
-    "sparkConf": {
-      "inheritConf": "default",
-      "conf": []
-    },
-    "sparkUseGlobalMetastore": false,
-    "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK",
-    "sparkRepartitionNonHDFS": 1,
-    "pipelineAllowStart": true,
-    "pipelineAllowMerge": true,
-    "sparkExecutionEngine": "SPARK_SUBMIT"
+  "envSelection": {
+    "envName": "model_training_36",
+    "envMode": "EXPLICIT_ENV"
   },
-  "core": {
-    "weight": {
-      "weightMethod": "CLASS_WEIGHT"
+  "modeling": {
+    "rf_classifier_grid": {
+      "max_features": {
+        "randomMode": "RANGE",
+        "values": [
+          0
+        ],
+        "limit": {
+          "min": 1
+        },
+        "range": {
+          "scaling": "LINEAR",
+          "min": 1,
+          "max": 20,
+          "nbValues": 3
+        },
+        "gridMode": "EXPLICIT"
+      },
+      "max_feature_prop": {
+        "randomMode": "RANGE",
+        "values": [
+          0.3
+        ],
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1
+        },
+        "range": {
+          "scaling": "LINEAR",
+          "min": 0.1,
+          "max": 0.7,
+          "nbValues": 3
+        },
+        "gridMode": "EXPLICIT"
+      },
+      "n_jobs": 4,
+      "n_estimators": {
+        "randomMode": "RANGE",
+        "values": [
+          100
+        ],
+        "limit": {
+          "min": 1
+        },
+        "range": {
+          "scaling": "LINEAR",
+          "min": 80,
+          "max": 200,
+          "nbValues": 3
+        },
+        "gridMode": "EXPLICIT"
+      },
+      "selection_mode": "auto",
+      "min_samples_leaf": {
+        "randomMode": "RANGE",
+        "values": [
+          3
+        ],
+        "limit": {
+          "min": 1
+        },
+        "range": {
+          "scaling": "LINEAR",
+          "min": 3,
+          "max": 20,
+          "nbValues": 3
+        },
+        "gridMode": "EXPLICIT"
+      },
+      "enabled": true,
+      "max_tree_depth": {
+        "randomMode": "RANGE",
+        "values": [
+          8
+        ],
+        "limit": {
+          "min": 1
+        },
+        "range": {
+          "scaling": "LINEAR",
+          "min": 5,
+          "max": 10,
+          "nbValues": 3
+        },
+        "gridMode": "EXPLICIT"
+      }
     },
-    "calibration": {
-      "calibrationMethod": "NO_CALIBRATION"
+    "computeLearningCurves": false,
+    "max_ensemble_nodes_serialized": 6000,
+    "pluginAlgoCustomGridSearch": false,
+    "metrics": {
+      "customEvaluationMetricGIB": true,
+      "costMatrixWeights": {
+        "fpGain": -0.3,
+        "tpGain": 1,
+        "fnGain": 0,
+        "tnGain": 0
+      },
+      "liftPoint": 0.4,
+      "evaluationMetric": "ROC_AUC",
+      "netUpliftPoint": 0.5,
+      "customEvaluationMetricNeedsProba": false,
+      "thresholdOptimizationMetric": "F1",
+      "customMetrics": []
     },
-    "time": {
-      "enabled": false,
-      "ascending": true
+    "autoOptimizeThreshold": true,
+    "forcedClassifierThreshold": 0,
+    "grid_search_params": {
+      "bayesianOptimizer": "SCIKIT_OPTIMIZE",
+      "seed": 1337,
+      "nIterRandom": 10,
+      "nFolds": 3,
+      "distributed": false,
+      "stratified": true,
+      "shuffleIterations": 1,
+      "foldOffset": true,
+      "splitRatio": 0.8,
+      "timeout": 0,
+      "mode": "KFOLD",
+      "cvSeed": 1337,
+      "nJobs": 4,
+      "nIter": 0,
+      "strategy": "GRID",
+      "randomized": true,
+      "nContainers": 4
     },
-    "partitionedModel": {
-      "enabled": false,
-      "ssdSelection": {
+    "skipExpensiveReports": false,
+    "algorithm": "RANDOM_FOREST_CLASSIFICATION",
+    "gridLength": 1
+  },
+  "generatingModelId": "A-INSURANCEFRAUDDETECTIONNEW-9dxhzg0A-qjVvk83H-s6-pp1-m1",
+  "preprocessing": {
+    "reduce": {
+      "kept_variance": 0,
+      "enabled": false
+    },
+    "target_remapping": [
+      {
+        "sampleFreq": 9712,
+        "mappedValue": 0,
+        "sourceValue": "0"
+      },
+      {
+        "sampleFreq": 288,
+        "mappedValue": 1,
+        "sourceValue": "1"
+      }
+    ],
+    "per_feature": {
+      "expert": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "INPUT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "gender": {
+        "nb_bins_hashing": 1048576,
+        "ordinal_default_mode": "HIGHEST",
+        "min_samples": 10,
+        "impact_method": "M_ESTIMATOR",
+        "missing_impute_with": "MODE",
+        "role": "INPUT",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "impact_kfold": true,
+        "missing_handling": "NONE",
+        "frequency_default_value": 0,
+        "impact_kfold_seed": 1337,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "Gender",
+          "userModified": false
+        },
+        "ordinal_ascending": false,
+        "hash_whole_categories": false,
+        "max_nb_categories": 5,
+        "max_cat_safety": 200,
+        "dummy_drop": "NONE",
+        "frequency_normalized": true,
+        "ordinal_default_value": 0,
+        "sendToInput": "main",
+        "ordinal_order": "COUNT",
+        "impact_kfold_k": 5,
+        "customProcessorWantsMatrix": false,
+        "impact_m": 10,
+        "category_handling": "DUMMIFY",
+        "frequency_default_mode": "EXPLICIT"
+      },
+      "contract_id": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "REJECT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "litigation_flag": {
+        "role": "REJECT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "autoReason": "REJECT_ZERO_VARIANCE",
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "keep_regular": false,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "claim_id": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "REJECT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "customer_category": {
+        "nb_bins_hashing": 1048576,
+        "ordinal_default_mode": "HIGHEST",
+        "min_samples": 10,
+        "impact_method": "M_ESTIMATOR",
+        "missing_impute_with": "MODE",
+        "role": "INPUT",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "impact_kfold": true,
+        "missing_handling": "NONE",
+        "frequency_default_value": 0,
+        "impact_kfold_seed": 1337,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "Text",
+          "userModified": false
+        },
+        "ordinal_ascending": false,
+        "hash_whole_categories": false,
+        "max_nb_categories": 100,
+        "max_cat_safety": 200,
+        "dummy_drop": "NONE",
+        "frequency_normalized": true,
+        "ordinal_default_value": 0,
+        "sendToInput": "main",
+        "ordinal_order": "COUNT",
+        "impact_kfold_k": 5,
+        "autoReason": "REJECT_CARDINALITY",
+        "customProcessorWantsMatrix": false,
+        "impact_m": 10,
+        "category_handling": "DUMMIFY",
+        "frequency_default_mode": "EXPLICIT"
+      },
+      "policies_last_year": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "INPUT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "policies_last_3_years": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "INPUT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "contract_end_date_year": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "INPUT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "product_id": {
+        "nb_bins_hashing": 1048576,
+        "ordinal_default_mode": "HIGHEST",
+        "min_samples": 10,
+        "impact_method": "M_ESTIMATOR",
+        "missing_impute_with": "MODE",
+        "role": "INPUT",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "impact_kfold": true,
+        "missing_handling": "NONE",
+        "frequency_default_value": 0,
+        "impact_kfold_seed": 1337,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "Text",
+          "userModified": false
+        },
+        "ordinal_ascending": false,
+        "hash_whole_categories": false,
+        "max_nb_categories": 5,
+        "max_cat_safety": 200,
+        "dummy_drop": "NONE",
+        "frequency_normalized": true,
+        "ordinal_default_value": 0,
+        "sendToInput": "main",
+        "ordinal_order": "COUNT",
+        "impact_kfold_k": 5,
+        "customProcessorWantsMatrix": false,
+        "impact_m": 10,
+        "category_handling": "DUMMIFY",
+        "frequency_default_mode": "EXPLICIT"
+      },
+      "car_brand": {
+        "nb_bins_hashing": 1048576,
+        "ordinal_default_mode": "HIGHEST",
+        "min_samples": 10,
+        "impact_method": "M_ESTIMATOR",
+        "missing_impute_with": "MODE",
+        "role": "INPUT",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "impact_kfold": true,
+        "missing_handling": "NONE",
+        "frequency_default_value": 0,
+        "impact_kfold_seed": 1337,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "Text",
+          "userModified": false
+        },
+        "ordinal_ascending": false,
+        "hash_whole_categories": false,
+        "max_nb_categories": 100,
+        "max_cat_safety": 200,
+        "dummy_drop": "NONE",
+        "frequency_normalized": true,
+        "ordinal_default_value": 0,
+        "sendToInput": "main",
+        "ordinal_order": "COUNT",
+        "impact_kfold_k": 5,
+        "autoReason": "REJECT_CARDINALITY",
+        "customProcessorWantsMatrix": false,
+        "impact_m": 10,
+        "category_handling": "DUMMIFY",
+        "frequency_default_mode": "EXPLICIT"
+      },
+      "department": {
+        "nb_bins_hashing": 1048576,
+        "ordinal_default_mode": "HIGHEST",
+        "min_samples": 10,
+        "impact_method": "M_ESTIMATOR",
+        "missing_impute_with": "MODE",
+        "role": "REJECT",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "impact_kfold": true,
+        "missing_handling": "NONE",
+        "frequency_default_value": 0,
+        "impact_kfold_seed": 1337,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "Text",
+          "userModified": false
+        },
+        "ordinal_ascending": false,
+        "hash_whole_categories": false,
+        "max_nb_categories": 100,
+        "max_cat_safety": 200,
+        "dummy_drop": "NONE",
+        "frequency_normalized": true,
+        "ordinal_default_value": 0,
+        "sendToInput": "main",
+        "ordinal_order": "COUNT",
+        "impact_kfold_k": 5,
+        "autoReason": "REJECT_CARDINALITY",
+        "customProcessorWantsMatrix": false,
+        "impact_m": 10,
+        "category_handling": "DUMMIFY",
+        "frequency_default_mode": "EXPLICIT"
+      },
+      "contract_duration": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "INPUT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "car_model": {
+        "minRowsRatio": 0.001,
+        "text_handling": "TOKENIZE_HASHING_SVD",
+        "sentenceEmbeddingBatchSize": 32,
+        "ngramMaxSize": 1,
+        "role": "REJECT",
+        "stopWordsMode": "NONE",
+        "maxWords": 0,
+        "useCustomVectorizer": false,
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "type": "TEXT",
+        "maxSequenceLength": 128,
+        "autoReason": "REJECT_DEFAULT_TEXT_HANDLING",
+        "customProcessorWantsMatrix": false,
+        "ngramMinSize": 1,
+        "maxRowsRatio": 0.8,
+        "hashSVDSVDComponents": 100,
+        "name": "car_model",
+        "hashSize": 200000,
+        "hashSVDSVDLimit": 50000,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "FreeText",
+          "userModified": false
+        }
+      },
+      "claim_amount": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "INPUT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "DoubleMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "agency_id": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "INPUT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "geopoint": {
+        "nb_bins_hashing": 1048576,
+        "ordinal_default_mode": "HIGHEST",
+        "min_samples": 10,
+        "impact_method": "M_ESTIMATOR",
+        "missing_impute_with": "MODE",
+        "role": "REJECT",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "impact_kfold": true,
+        "missing_handling": "NONE",
+        "frequency_default_value": 0,
+        "impact_kfold_seed": 1337,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "GeoPoint",
+          "userModified": false
+        },
+        "ordinal_ascending": false,
+        "hash_whole_categories": false,
+        "max_nb_categories": 100,
+        "max_cat_safety": 200,
+        "dummy_drop": "NONE",
+        "frequency_normalized": true,
+        "ordinal_default_value": 0,
+        "sendToInput": "main",
+        "ordinal_order": "COUNT",
+        "impact_kfold_k": 5,
+        "autoReason": "REJECT_CARDINALITY",
+        "customProcessorWantsMatrix": false,
+        "impact_m": 10,
+        "category_handling": "DUMMIFY",
+        "frequency_default_mode": "EXPLICIT"
+      },
+      "customer_age": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "INPUT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "customer_group": {
+        "nb_bins_hashing": 1048576,
+        "ordinal_default_mode": "HIGHEST",
+        "min_samples": 10,
+        "impact_method": "M_ESTIMATOR",
+        "missing_impute_with": "MODE",
+        "role": "INPUT",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "impact_kfold": true,
+        "missing_handling": "NONE",
+        "frequency_default_value": 0,
+        "impact_kfold_seed": 1337,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "Text",
+          "userModified": false
+        },
+        "ordinal_ascending": false,
+        "hash_whole_categories": false,
+        "max_nb_categories": 5,
+        "max_cat_safety": 200,
+        "dummy_drop": "NONE",
+        "frequency_normalized": true,
+        "ordinal_default_value": 0,
+        "sendToInput": "main",
+        "ordinal_order": "COUNT",
+        "impact_kfold_k": 5,
+        "customProcessorWantsMatrix": false,
+        "impact_m": 10,
+        "category_handling": "DUMMIFY",
+        "frequency_default_mode": "EXPLICIT"
+      },
+      "code_dep": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "REJECT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "fraud": {
+        "role": "TARGET",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "keep_regular": false,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "LongMeaning",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      },
+      "car_number": {
+        "nb_bins_hashing": 1048576,
+        "ordinal_default_mode": "HIGHEST",
+        "min_samples": 10,
+        "impact_method": "M_ESTIMATOR",
+        "missing_impute_with": "MODE",
+        "role": "REJECT",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "impact_kfold": true,
+        "missing_handling": "NONE",
+        "frequency_default_value": 0,
+        "impact_kfold_seed": 1337,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "Text",
+          "userModified": false
+        },
+        "ordinal_ascending": false,
+        "hash_whole_categories": false,
+        "max_nb_categories": 100,
+        "max_cat_safety": 200,
+        "dummy_drop": "NONE",
+        "frequency_normalized": true,
+        "ordinal_default_value": 0,
+        "sendToInput": "main",
+        "ordinal_order": "COUNT",
+        "impact_kfold_k": 5,
+        "autoReason": "REJECT_CARDINALITY",
+        "customProcessorWantsMatrix": false,
+        "impact_m": 10,
+        "category_handling": "DUMMIFY",
+        "frequency_default_mode": "EXPLICIT"
+      },
+      "email_domain": {
+        "nb_bins_hashing": 1048576,
+        "ordinal_default_mode": "HIGHEST",
+        "min_samples": 10,
+        "impact_method": "M_ESTIMATOR",
+        "missing_impute_with": "MODE",
+        "role": "INPUT",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "impact_kfold": true,
+        "missing_handling": "NONE",
+        "frequency_default_value": 0,
+        "impact_kfold_seed": 1337,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "Text",
+          "userModified": false
+        },
+        "ordinal_ascending": false,
+        "hash_whole_categories": false,
+        "max_nb_categories": 5,
+        "max_cat_safety": 200,
+        "dummy_drop": "NONE",
+        "frequency_normalized": true,
+        "ordinal_default_value": 0,
+        "sendToInput": "main",
+        "ordinal_order": "COUNT",
+        "impact_kfold_k": 5,
+        "customProcessorWantsMatrix": false,
+        "impact_m": 10,
+        "category_handling": "DUMMIFY",
+        "frequency_default_mode": "EXPLICIT"
+      },
+      "region": {
+        "nb_bins_hashing": 1048576,
+        "ordinal_default_mode": "HIGHEST",
+        "min_samples": 10,
+        "impact_method": "M_ESTIMATOR",
+        "missing_impute_with": "MODE",
+        "role": "INPUT",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "impact_kfold": true,
+        "missing_handling": "NONE",
+        "frequency_default_value": 0,
+        "impact_kfold_seed": 1337,
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "Text",
+          "userModified": false
+        },
+        "ordinal_ascending": false,
+        "hash_whole_categories": false,
+        "max_nb_categories": 100,
+        "max_cat_safety": 200,
+        "dummy_drop": "NONE",
+        "frequency_normalized": true,
+        "ordinal_default_value": 0,
+        "sendToInput": "main",
+        "ordinal_order": "COUNT",
+        "impact_kfold_k": 5,
+        "autoReason": "REJECT_CARDINALITY",
+        "customProcessorWantsMatrix": false,
+        "impact_m": 10,
+        "category_handling": "DUMMIFY",
+        "frequency_default_mode": "EXPLICIT"
+      },
+      "claim_date": {
+        "rescaling": "AVGSTD",
+        "missing_impute_with": "MEAN",
+        "role": "INPUT",
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "binarize_constant_threshold": 0,
+        "type": "NUMERIC",
+        "binarize_threshold_mode": "MEDIAN",
+        "datetime_cyclical_periods": [],
+        "customProcessorWantsMatrix": false,
+        "quantile_bin_nb_bins": 4,
+        "generate_derivative": false,
+        "missing_handling": "IMPUTE",
+        "keep_regular": false,
+        "numerical_handling": "REGULAR",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "Date",
+          "userModified": false
+        },
+        "impute_constant_value": 0
+      }
+    },
+    "skipPreprocessing": false,
+    "feature_generation": {
+      "polynomial_combinations": {
+        "behavior": "DISABLED"
+      },
+      "manual_interactions": {
+        "interactions": []
+      },
+      "numericals_clustering": {
+        "all_features": false,
+        "input_features": [],
+        "k": 0,
+        "behavior": "DISABLED"
+      },
+      "categoricals_count_transformer": {
+        "all_features": false,
+        "input_features": [],
+        "behavior": "DISABLED"
+      },
+      "pairwise_linear": {
+        "behavior": "DISABLED"
+      }
+    },
+    "preprocessingFitSampleRatio": 1,
+    "preprocessingFitSampleSeed": 1337,
+    "feature_selection_params": {
+      "pca_params": {
+        "n_features": 25,
+        "variance_proportion": 0.9
+      },
+      "custom_params": {
+        "code": "# type your code here"
+      },
+      "method": "NONE",
+      "correlation_params": {
+        "min_abs_correlation": 0,
+        "max_abs_correlation": 1,
+        "n_features": 25
+      },
+      "lasso_params": {
+        "alpha": [
+          0.01,
+          0.1,
+          1,
+          10,
+          100
+        ],
+        "cross_validate": true
+      },
+      "random_forest_params": {
+        "depth": 10,
+        "n_trees": 30,
+        "n_features": 25
+      }
+    }
+  },
+  "backendType": "PY_MEMORY",
+  "expectedPreparationOutputSchema": {
+    "columns": [
+      {
+        "name": "claim_id",
+        "type": "bigint"
+      },
+      {
+        "name": "contract_id",
+        "type": "bigint"
+      },
+      {
+        "name": "claim_amount",
+        "type": "double"
+      },
+      {
+        "name": "claim_date",
+        "type": "date"
+      },
+      {
+        "name": "expert",
+        "type": "bigint"
+      },
+      {
+        "name": "litigation_flag",
+        "type": "bigint"
+      },
+      {
+        "name": "fraud",
+        "type": "bigint"
+      },
+      {
+        "name": "code_dep",
+        "type": "bigint"
+      },
+      {
+        "name": "department",
+        "type": "string"
+      },
+      {
+        "name": "region",
+        "type": "string"
+      },
+      {
+        "name": "geopoint",
+        "type": "string"
+      },
+      {
+        "name": "product_id",
+        "type": "string"
+      },
+      {
+        "name": "car_brand",
+        "type": "string"
+      },
+      {
+        "name": "car_model",
+        "type": "string"
+      },
+      {
+        "name": "car_number",
+        "type": "string"
+      },
+      {
+        "name": "policies_last_year",
+        "type": "bigint"
+      },
+      {
+        "name": "policies_last_3_years",
+        "type": "bigint"
+      },
+      {
+        "name": "contract_duration",
+        "type": "bigint"
+      },
+      {
+        "name": "contract_end_date_year",
+        "type": "bigint"
+      },
+      {
+        "name": "agency_id",
+        "type": "bigint"
+      },
+      {
+        "name": "customer_age",
+        "type": "bigint"
+      },
+      {
+        "name": "customer_group",
+        "type": "string"
+      },
+      {
+        "name": "email_domain",
+        "type": "string"
+      },
+      {
+        "name": "gender",
+        "type": "string"
+      },
+      {
+        "name": "customer_category",
+        "type": "string"
+      }
+    ],
+    "userModified": false
+  },
+  "script": {
+    "contextProjectKey": "INSURANCEFRAUDDETECTIONNEW",
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "explorationSampling": {
+      "_refreshTrigger": 0,
+      "selection": {
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxRecords": 10000,
+        "maxRecordsForDisplay": -1,
+        "ordering": {
+          "rules": [],
+          "enabled": false
+        },
+        "withinFirstN": -1,
+        "partitionSelectionMethod": "ALL",
+        "maxStoredBytes": 104857600,
+        "targetRatio": 0.02,
+        "maxReadUncompressedBytes": -1,
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "timeout": -1
+      },
+      "autoRefreshSample": false
+    },
+    "explorationFilters": [],
+    "columnUseScientificNotationByName": {},
+    "exploreUIParams": {},
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "previewMode": "ALL_ROWS",
+    "vizSampling": {
+      "_refreshTrigger": 0,
+      "selection": {
         "useMemTable": false,
         "filter": {
           "distinct": false,
           "enabled": false
         },
-        "partitionSelectionMethod": "ALL",
         "latestPartitionsN": 1,
-        "ordering": {
-          "enabled": false,
-          "rules": []
-        },
-        "samplingMethod": "FULL",
         "maxRecords": -1,
-        "targetRatio": 0.02,
+        "ordering": {
+          "rules": [],
+          "enabled": false
+        },
         "withinFirstN": -1,
-        "maxReadUncompressedBytes": -1
-      }
+        "partitionSelectionMethod": "ALL",
+        "targetRatio": 0.02,
+        "maxReadUncompressedBytes": -1,
+        "samplingMethod": "FULL"
+      },
+      "autoRefreshSample": false
     },
-    "target_variable": "fraud",
-    "prediction_type": "BINARY_CLASSIFICATION",
-    "backendType": "PY_MEMORY",
+    "analysisColumnData": {},
+    "columnWidthsByName": {},
+    "sorting": [],
+    "globalSearchQuery": "",
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    }
+  },
+  "core": {
     "taskType": "PREDICTION",
     "diagnosticsSettings": {
-      "enabled": true,
       "settings": [
         {
           "type": "ML_DIAGNOSTICS_DATASET_SANITY_CHECKS",
@@ -78,942 +1112,78 @@
           "type": "ML_DIAGNOSTICS_ML_ASSERTIONS",
           "enabled": true
         }
-      ]
+      ],
+      "enabled": true
     },
     "executionParams": {
       "envSelection": {
-        "envMode": "EXPLICIT_ENV",
-        "envName": "model_training_36"
+        "envName": "model_training_36",
+        "envMode": "EXPLICIT_ENV"
       },
       "envName": "model_training_36",
       "containerSelection": {
         "containerMode": "INHERIT"
       },
       "sparkParams": {
+        "pipelineAllowMerge": true,
+        "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK",
+        "pipelineAllowStart": true,
+        "sparkExecutionEngine": "SPARK_SUBMIT",
         "sparkConf": {
           "inheritConf": "default",
           "conf": []
         },
-        "sparkUseGlobalMetastore": false,
-        "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK",
         "sparkRepartitionNonHDFS": 1,
-        "pipelineAllowStart": true,
-        "pipelineAllowMerge": true,
-        "sparkExecutionEngine": "SPARK_SUBMIT"
+        "sparkUseGlobalMetastore": false
       },
       "sparkCheckpoint": "NONE"
-    }
+    },
+    "backendType": "PY_MEMORY",
+    "weight": {
+      "weightMethod": "CLASS_WEIGHT"
+    },
+    "target_variable": "fraud",
+    "time": {
+      "ascending": true,
+      "enabled": false
+    },
+    "partitionedModel": {
+      "ssdSelection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxRecords": -1,
+        "ordering": {
+          "rules": [],
+          "enabled": false
+        },
+        "withinFirstN": -1,
+        "partitionSelectionMethod": "ALL",
+        "targetRatio": 0.02,
+        "maxReadUncompressedBytes": -1,
+        "samplingMethod": "FULL"
+      },
+      "enabled": false
+    },
+    "calibration": {
+      "calibrationMethod": "NO_CALIBRATION"
+    },
+    "prediction_type": "BINARY_CLASSIFICATION"
   },
-  "preprocessing": {
-    "feature_selection_params": {
-      "method": "NONE",
-      "random_forest_params": {
-        "n_trees": 30,
-        "depth": 10,
-        "n_features": 25
-      },
-      "lasso_params": {
-        "alpha": [
-          0.01,
-          0.1,
-          1.0,
-          10.0,
-          100.0
-        ],
-        "cross_validate": true
-      },
-      "pca_params": {
-        "n_features": 25,
-        "variance_proportion": 0.9
-      },
-      "correlation_params": {
-        "min_abs_correlation": 0.0,
-        "max_abs_correlation": 1.0,
-        "n_features": 25
-      },
-      "custom_params": {
-        "code": "# type your code here"
-      }
-    },
-    "preprocessingFitSampleRatio": 1.0,
-    "preprocessingFitSampleSeed": 1337,
-    "target_remapping": [
-      {
-        "sourceValue": "0",
-        "mappedValue": 0,
-        "sampleFreq": 9712
-      },
-      {
-        "sourceValue": "1",
-        "mappedValue": 1,
-        "sampleFreq": 288
-      }
-    ],
-    "skipPreprocessing": false,
-    "per_feature": {
-      "geopoint": {
-        "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
-        "missing_impute_with": "MODE",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "min_samples": 10,
-        "max_nb_categories": 100,
-        "max_cat_safety": 200,
-        "nb_bins_hashing": 1048576,
-        "hash_whole_categories": false,
-        "dummy_drop": "NONE",
-        "impact_method": "M_ESTIMATOR",
-        "impact_m": 10,
-        "impact_kfold": true,
-        "impact_kfold_k": 5,
-        "impact_kfold_seed": 1337,
-        "ordinal_order": "COUNT",
-        "ordinal_ascending": false,
-        "ordinal_default_mode": "HIGHEST",
-        "ordinal_default_value": 0,
-        "frequency_default_mode": "EXPLICIT",
-        "frequency_default_value": 0.0,
-        "frequency_normalized": true,
-        "role": "REJECT",
-        "type": "CATEGORY",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "GeoPoint"
-        },
-        "autoReason": "REJECT_CARDINALITY",
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "car_brand": {
-        "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
-        "missing_impute_with": "MODE",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "min_samples": 10,
-        "max_nb_categories": 100,
-        "max_cat_safety": 200,
-        "nb_bins_hashing": 1048576,
-        "hash_whole_categories": false,
-        "dummy_drop": "NONE",
-        "impact_method": "M_ESTIMATOR",
-        "impact_m": 10,
-        "impact_kfold": true,
-        "impact_kfold_k": 5,
-        "impact_kfold_seed": 1337,
-        "ordinal_order": "COUNT",
-        "ordinal_ascending": false,
-        "ordinal_default_mode": "HIGHEST",
-        "ordinal_default_value": 0,
-        "frequency_default_mode": "EXPLICIT",
-        "frequency_default_value": 0.0,
-        "frequency_normalized": true,
-        "role": "INPUT",
-        "type": "CATEGORY",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Text"
-        },
-        "autoReason": "REJECT_CARDINALITY",
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "email_domain": {
-        "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
-        "missing_impute_with": "MODE",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "min_samples": 10,
-        "max_nb_categories": 5,
-        "max_cat_safety": 200,
-        "nb_bins_hashing": 1048576,
-        "hash_whole_categories": false,
-        "dummy_drop": "NONE",
-        "impact_method": "M_ESTIMATOR",
-        "impact_m": 10,
-        "impact_kfold": true,
-        "impact_kfold_k": 5,
-        "impact_kfold_seed": 1337,
-        "ordinal_order": "COUNT",
-        "ordinal_ascending": false,
-        "ordinal_default_mode": "HIGHEST",
-        "ordinal_default_value": 0,
-        "frequency_default_mode": "EXPLICIT",
-        "frequency_default_value": 0.0,
-        "frequency_normalized": true,
-        "role": "INPUT",
-        "type": "CATEGORY",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Text"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "code_dep": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "REJECT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "claim_id": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "REJECT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "contract_duration": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "INPUT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "contract_id": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "REJECT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "expert": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "INPUT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "department": {
-        "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
-        "missing_impute_with": "MODE",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "min_samples": 10,
-        "max_nb_categories": 100,
-        "max_cat_safety": 200,
-        "nb_bins_hashing": 1048576,
-        "hash_whole_categories": false,
-        "dummy_drop": "NONE",
-        "impact_method": "M_ESTIMATOR",
-        "impact_m": 10,
-        "impact_kfold": true,
-        "impact_kfold_k": 5,
-        "impact_kfold_seed": 1337,
-        "ordinal_order": "COUNT",
-        "ordinal_ascending": false,
-        "ordinal_default_mode": "HIGHEST",
-        "ordinal_default_value": 0,
-        "frequency_default_mode": "EXPLICIT",
-        "frequency_default_value": 0.0,
-        "frequency_normalized": true,
-        "role": "REJECT",
-        "type": "CATEGORY",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Text"
-        },
-        "autoReason": "REJECT_CARDINALITY",
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "car_model": {
-        "text_handling": "TOKENIZE_HASHING_SVD",
-        "minRowsRatio": 0.001,
-        "maxRowsRatio": 0.8,
-        "maxWords": 0,
-        "ngramMinSize": 1,
-        "ngramMaxSize": 1,
-        "hashSize": 200000,
-        "hashSVDSVDLimit": 50000,
-        "hashSVDSVDComponents": 100,
-        "stopWordsMode": "NONE",
-        "maxSequenceLength": 128,
-        "sentenceEmbeddingBatchSize": 32,
-        "useCustomVectorizer": false,
-        "name": "car_model",
-        "role": "REJECT",
-        "type": "TEXT",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "FreeText"
-        },
-        "autoReason": "REJECT_DEFAULT_TEXT_HANDLING",
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "car_number": {
-        "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
-        "missing_impute_with": "MODE",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "min_samples": 10,
-        "max_nb_categories": 100,
-        "max_cat_safety": 200,
-        "nb_bins_hashing": 1048576,
-        "hash_whole_categories": false,
-        "dummy_drop": "NONE",
-        "impact_method": "M_ESTIMATOR",
-        "impact_m": 10,
-        "impact_kfold": true,
-        "impact_kfold_k": 5,
-        "impact_kfold_seed": 1337,
-        "ordinal_order": "COUNT",
-        "ordinal_ascending": false,
-        "ordinal_default_mode": "HIGHEST",
-        "ordinal_default_value": 0,
-        "frequency_default_mode": "EXPLICIT",
-        "frequency_default_value": 0.0,
-        "frequency_normalized": true,
-        "role": "REJECT",
-        "type": "CATEGORY",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Text"
-        },
-        "autoReason": "REJECT_CARDINALITY",
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "agency_id": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "INPUT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "customer_age": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "INPUT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "policies_last_year": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "INPUT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "fraud": {
-        "generate_derivative": false,
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "TARGET",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "product_id": {
-        "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
-        "missing_impute_with": "MODE",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "min_samples": 10,
-        "max_nb_categories": 5,
-        "max_cat_safety": 200,
-        "nb_bins_hashing": 1048576,
-        "hash_whole_categories": false,
-        "dummy_drop": "NONE",
-        "impact_method": "M_ESTIMATOR",
-        "impact_m": 10,
-        "impact_kfold": true,
-        "impact_kfold_k": 5,
-        "impact_kfold_seed": 1337,
-        "ordinal_order": "COUNT",
-        "ordinal_ascending": false,
-        "ordinal_default_mode": "HIGHEST",
-        "ordinal_default_value": 0,
-        "frequency_default_mode": "EXPLICIT",
-        "frequency_default_value": 0.0,
-        "frequency_normalized": true,
-        "role": "INPUT",
-        "type": "CATEGORY",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Text"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "gender": {
-        "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
-        "missing_impute_with": "MODE",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "min_samples": 10,
-        "max_nb_categories": 5,
-        "max_cat_safety": 200,
-        "nb_bins_hashing": 1048576,
-        "hash_whole_categories": false,
-        "dummy_drop": "NONE",
-        "impact_method": "M_ESTIMATOR",
-        "impact_m": 10,
-        "impact_kfold": true,
-        "impact_kfold_k": 5,
-        "impact_kfold_seed": 1337,
-        "ordinal_order": "COUNT",
-        "ordinal_ascending": false,
-        "ordinal_default_mode": "HIGHEST",
-        "ordinal_default_value": 0,
-        "frequency_default_mode": "EXPLICIT",
-        "frequency_default_value": 0.0,
-        "frequency_normalized": true,
-        "role": "INPUT",
-        "type": "CATEGORY",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Gender"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "customer_group": {
-        "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
-        "missing_impute_with": "MODE",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "min_samples": 10,
-        "max_nb_categories": 5,
-        "max_cat_safety": 200,
-        "nb_bins_hashing": 1048576,
-        "hash_whole_categories": false,
-        "dummy_drop": "NONE",
-        "impact_method": "M_ESTIMATOR",
-        "impact_m": 10,
-        "impact_kfold": true,
-        "impact_kfold_k": 5,
-        "impact_kfold_seed": 1337,
-        "ordinal_order": "COUNT",
-        "ordinal_ascending": false,
-        "ordinal_default_mode": "HIGHEST",
-        "ordinal_default_value": 0,
-        "frequency_default_mode": "EXPLICIT",
-        "frequency_default_value": 0.0,
-        "frequency_normalized": true,
-        "role": "INPUT",
-        "type": "CATEGORY",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Text"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "claim_amount": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "INPUT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "DoubleMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "claim_date": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "INPUT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Date"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "litigation_flag": {
-        "generate_derivative": false,
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "REJECT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "autoReason": "REJECT_ZERO_VARIANCE",
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "policies_last_3_years": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "INPUT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "customer_category": {
-        "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
-        "missing_impute_with": "MODE",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "min_samples": 10,
-        "max_nb_categories": 100,
-        "max_cat_safety": 200,
-        "nb_bins_hashing": 1048576,
-        "hash_whole_categories": false,
-        "dummy_drop": "NONE",
-        "impact_method": "M_ESTIMATOR",
-        "impact_m": 10,
-        "impact_kfold": true,
-        "impact_kfold_k": 5,
-        "impact_kfold_seed": 1337,
-        "ordinal_order": "COUNT",
-        "ordinal_ascending": false,
-        "ordinal_default_mode": "HIGHEST",
-        "ordinal_default_value": 0,
-        "frequency_default_mode": "EXPLICIT",
-        "frequency_default_value": 0.0,
-        "frequency_normalized": true,
-        "role": "INPUT",
-        "type": "CATEGORY",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Text"
-        },
-        "autoReason": "REJECT_CARDINALITY",
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "region": {
-        "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
-        "missing_impute_with": "MODE",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "min_samples": 10,
-        "max_nb_categories": 100,
-        "max_cat_safety": 200,
-        "nb_bins_hashing": 1048576,
-        "hash_whole_categories": false,
-        "dummy_drop": "NONE",
-        "impact_method": "M_ESTIMATOR",
-        "impact_m": 10,
-        "impact_kfold": true,
-        "impact_kfold_k": 5,
-        "impact_kfold_seed": 1337,
-        "ordinal_order": "COUNT",
-        "ordinal_ascending": false,
-        "ordinal_default_mode": "HIGHEST",
-        "ordinal_default_value": 0,
-        "frequency_default_mode": "EXPLICIT",
-        "frequency_default_value": 0.0,
-        "frequency_normalized": true,
-        "role": "INPUT",
-        "type": "CATEGORY",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Text"
-        },
-        "autoReason": "REJECT_CARDINALITY",
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "contract_end_date_year": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "keep_regular": false,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "datetime_cyclical_periods": [],
-        "role": "INPUT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      }
-    },
-    "reduce": {
-      "enabled": false,
-      "kept_variance": 0.0
-    },
-    "feature_generation": {
-      "pairwise_linear": {
-        "behavior": "DISABLED"
-      },
-      "polynomial_combinations": {
-        "behavior": "DISABLED"
-      },
-      "manual_interactions": {
-        "interactions": []
-      },
-      "numericals_clustering": {
-        "k": 0,
-        "all_features": false,
-        "input_features": [],
-        "behavior": "DISABLED"
-      },
-      "categoricals_count_transformer": {
-        "all_features": false,
-        "input_features": [],
-        "behavior": "DISABLED"
-      }
-    }
-  },
+  "operationMode": "TRAIN_SPLITTED_ONLY",
+  "partSource": "ACTIVE_VERSION",
+  "modelVersionNamePrefix": "",
+  "envName": "py_36",
   "assertionsParams": {
     "assertions": []
   },
-  "modeling": {
-    "algorithm": "RANDOM_FOREST_CLASSIFICATION",
-    "rf_classifier_grid": {
-      "n_estimators": {
-        "gridMode": "EXPLICIT",
-        "randomMode": "RANGE",
-        "limit": {
-          "min": 1
-        },
-        "values": [
-          100
-        ],
-        "range": {
-          "min": 80,
-          "max": 200,
-          "nbValues": 3,
-          "scaling": "LINEAR"
-        }
-      },
-      "n_jobs": 4,
-      "max_tree_depth": {
-        "gridMode": "EXPLICIT",
-        "randomMode": "RANGE",
-        "limit": {
-          "min": 1
-        },
-        "values": [
-          8
-        ],
-        "range": {
-          "min": 5,
-          "max": 10,
-          "nbValues": 3,
-          "scaling": "LINEAR"
-        }
-      },
-      "min_samples_leaf": {
-        "gridMode": "EXPLICIT",
-        "randomMode": "RANGE",
-        "limit": {
-          "min": 1
-        },
-        "values": [
-          3
-        ],
-        "range": {
-          "min": 3,
-          "max": 20,
-          "nbValues": 3,
-          "scaling": "LINEAR"
-        }
-      },
-      "selection_mode": "auto",
-      "max_features": {
-        "gridMode": "EXPLICIT",
-        "randomMode": "RANGE",
-        "limit": {
-          "min": 1
-        },
-        "values": [
-          0
-        ],
-        "range": {
-          "min": 1,
-          "max": 20,
-          "nbValues": 3,
-          "scaling": "LINEAR"
-        }
-      },
-      "max_feature_prop": {
-        "gridMode": "EXPLICIT",
-        "randomMode": "RANGE",
-        "limit": {
-          "min": 1.0E-23,
-          "max": 1.0
-        },
-        "values": [
-          0.3
-        ],
-        "range": {
-          "min": 0.1,
-          "max": 0.7,
-          "nbValues": 3,
-          "scaling": "LINEAR"
-        }
-      },
-      "enabled": true
-    },
-    "max_ensemble_nodes_serialized": 6000,
-    "metrics": {
-      "customMetrics": [],
-      "evaluationMetric": "ROC_AUC",
-      "customEvaluationMetricGIB": true,
-      "customEvaluationMetricNeedsProba": false,
-      "thresholdOptimizationMetric": "F1",
-      "costMatrixWeights": {
-        "tpGain": 1.0,
-        "tnGain": 0.0,
-        "fpGain": -0.3,
-        "fnGain": 0.0
-      },
-      "liftPoint": 0.4,
-      "netUpliftPoint": 0.5
-    },
-    "autoOptimizeThreshold": true,
-    "forcedClassifierThreshold": 0.0,
-    "gridLength": 1,
-    "grid_search_params": {
-      "mode": "KFOLD",
-      "splitRatio": 0.8,
-      "shuffleIterations": 1,
-      "nFolds": 3,
-      "cvSeed": 1337,
-      "stratified": true,
-      "strategy": "GRID",
-      "bayesianOptimizer": "SCIKIT_OPTIMIZE",
-      "randomized": true,
-      "seed": 1337,
-      "nIter": 0,
-      "nIterRandom": 10,
-      "timeout": 0,
-      "nJobs": 4,
-      "distributed": false,
-      "nContainers": 4,
-      "foldOffset": true
-    },
-    "pluginAlgoCustomGridSearch": false,
-    "computeLearningCurves": false,
-    "skipExpensiveReports": false
-  },
-  "partSource": "ACTIVE_VERSION",
   "splitParams": {
-    "ttPolicy": "EXPLICIT_FILTERING_TWO_DATASETS",
-    "ssdSplitMode": "RANDOM",
+    "instanceIdRefresher": 1,
+    "ssdSeed": 1337,
+    "nFolds": 5,
     "splitBeforePrepare": true,
     "ssdSelection": {
       "useMemTable": false,
@@ -1021,44 +1191,20 @@
         "distinct": false,
         "enabled": false
       },
-      "partitionSelectionMethod": "ALL",
       "latestPartitionsN": 1,
-      "ordering": {
-        "enabled": false,
-        "rules": []
-      },
-      "samplingMethod": "HEAD_SEQUENTIAL",
       "maxRecords": 100000,
-      "targetRatio": 0.02,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
       "withinFirstN": -1,
-      "maxReadUncompressedBytes": -1
+      "partitionSelectionMethod": "ALL",
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL"
     },
     "ssdTrainingRatio": 0.8,
-    "ssdStratified": false,
-    "ssdSeed": 1337,
-    "testOnLargerValues": true,
     "streamAll": false,
-    "eftdTrain": {
-      "datasetSmartName": "train_train",
-      "selection": {
-        "useMemTable": false,
-        "filter": {
-          "distinct": false,
-          "enabled": false
-        },
-        "partitionSelectionMethod": "ALL",
-        "latestPartitionsN": 1,
-        "ordering": {
-          "enabled": false,
-          "rules": []
-        },
-        "samplingMethod": "HEAD_SEQUENTIAL",
-        "maxRecords": 100000,
-        "targetRatio": 0.02,
-        "withinFirstN": -1,
-        "maxReadUncompressedBytes": -1
-      }
-    },
     "eftdTest": {
       "datasetSmartName": "train_test",
       "selection": {
@@ -1067,128 +1213,57 @@
           "distinct": false,
           "enabled": false
         },
-        "partitionSelectionMethod": "ALL",
         "latestPartitionsN": 1,
-        "ordering": {
-          "enabled": false,
-          "rules": []
-        },
-        "samplingMethod": "HEAD_SEQUENTIAL",
         "maxRecords": 100000,
-        "targetRatio": 0.02,
-        "withinFirstN": -1,
-        "maxReadUncompressedBytes": -1
-      }
-    },
-    "kfold": false,
-    "nFolds": 5,
-    "instanceIdRefresher": 1,
-    "subSamplingSeed": 1337
-  },
-  "backendType": "PY_MEMORY",
-  "envName": "py_36",
-  "envSelection": {
-    "envMode": "EXPLICIT_ENV",
-    "envName": "model_training_36"
-  },
-  "script": {
-    "steps": [],
-    "maxProcessedMemTableBytes": -1,
-    "contextProjectKey": "INSURANCEFRAUDDETECTIONNEW",
-    "columnsSelection": {
-      "mode": "ALL"
-    },
-    "columnWidthsByName": {},
-    "columnUseScientificNotationByName": {},
-    "coloring": {
-      "scheme": "MEANING_AND_STATUS",
-      "individualColumns": [],
-      "valueColoringMode": "HASH"
-    },
-    "sorting": [],
-    "analysisColumnData": {},
-    "explorationSampling": {
-      "selection": {
-        "maxRecordsForDisplay": -1,
-        "maxStoredBytes": 104857600,
-        "timeout": -1,
-        "filter": {
-          "distinct": false,
+        "ordering": {
+          "rules": [],
           "enabled": false
         },
-        "partitionSelectionMethod": "ALL",
-        "latestPartitionsN": 1,
-        "ordering": {
-          "enabled": false,
-          "rules": []
-        },
-        "samplingMethod": "HEAD_SEQUENTIAL",
-        "maxRecords": 10000,
-        "targetRatio": 0.02,
         "withinFirstN": -1,
-        "maxReadUncompressedBytes": -1
-      },
-      "autoRefreshSample": false,
-      "_refreshTrigger": 0
+        "partitionSelectionMethod": "ALL",
+        "targetRatio": 0.02,
+        "maxReadUncompressedBytes": -1,
+        "samplingMethod": "HEAD_SEQUENTIAL"
+      }
     },
-    "vizSampling": {
+    "testOnLargerValues": true,
+    "eftdTrain": {
+      "datasetSmartName": "train_train",
       "selection": {
         "useMemTable": false,
         "filter": {
           "distinct": false,
           "enabled": false
         },
-        "partitionSelectionMethod": "ALL",
         "latestPartitionsN": 1,
+        "maxRecords": 100000,
         "ordering": {
-          "enabled": false,
-          "rules": []
+          "rules": [],
+          "enabled": false
         },
-        "samplingMethod": "FULL",
-        "maxRecords": -1,
-        "targetRatio": 0.02,
         "withinFirstN": -1,
-        "maxReadUncompressedBytes": -1
-      },
-      "autoRefreshSample": false,
-      "_refreshTrigger": 0
+        "partitionSelectionMethod": "ALL",
+        "targetRatio": 0.02,
+        "maxReadUncompressedBytes": -1,
+        "samplingMethod": "HEAD_SEQUENTIAL"
+      }
     },
-    "exploreUIParams": {},
-    "globalSearchQuery": "",
-    "explorationFilters": [],
-    "previewMode": "ALL_ROWS"
+    "ssdStratified": false,
+    "subSamplingSeed": 1337,
+    "ssdSplitMode": "RANDOM",
+    "ttPolicy": "EXPLICIT_FILTERING_TWO_DATASETS",
+    "kfold": false
   },
-  "expectedPreparationOutputSchema": {
-    "columns": [
-      {"name":"claim_id","type":"bigint"},
-      {"name":"contract_id","type":"bigint"},
-      {"name":"claim_amount","type":"double"},
-      {"name":"claim_date","type":"date"},
-      {"name":"expert","type":"bigint"},
-      {"name":"litigation_flag","type":"bigint"},
-      {"name":"fraud","type":"bigint"},
-      {"name":"code_dep","type":"bigint"},
-      {"name":"department","type":"string"},
-      {"name":"region","type":"string"},
-      {"name":"geopoint","type":"string"},
-      {"name":"product_id","type":"string"},
-      {"name":"car_brand","type":"string"},
-      {"name":"car_model","type":"string"},
-      {"name":"car_number","type":"string"},
-      {"name":"policies_last_year","type":"bigint"},
-      {"name":"policies_last_3_years","type":"bigint"},
-      {"name":"contract_duration","type":"bigint"},
-      {"name":"contract_end_date_year","type":"bigint"},
-      {"name":"agency_id","type":"bigint"},
-      {"name":"customer_age","type":"bigint"},
-      {"name":"customer_group","type":"string"},
-      {"name":"email_domain","type":"string"},
-      {"name":"gender","type":"string"},
-      {"name":"customer_category","type":"string"}
-    ],
-    "userModified": false
-  },
-  "generatingModelId": "A-INSURANCEFRAUDDETECTIONNEW-9dxhzg0A-qjVvk83H-s6-pp1-m1",
-  "modelVersionNamePrefix": "",
-  "operationMode": "TRAIN_SPLITTED_ONLY"
+  "sparkParams": {
+    "pipelineAllowMerge": true,
+    "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK",
+    "pipelineAllowStart": true,
+    "sparkExecutionEngine": "SPARK_SUBMIT",
+    "sparkConf": {
+      "inheritConf": "default",
+      "conf": []
+    },
+    "sparkRepartitionNonHDFS": 1,
+    "sparkUseGlobalMetastore": false
+  }
 }
