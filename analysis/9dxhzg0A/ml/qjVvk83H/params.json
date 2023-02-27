@@ -778,7 +778,31 @@
     }
   },
   "assertionsParams": {
-    "assertions": []
+    "assertions": [
+      {
+        "name": "Assertion 1",
+        "filter": {
+          "distinct": false,
+          "enabled": true,
+          "uiData": {
+            "mode": "\u0026\u0026",
+            "conditions": [
+              {
+                "input": "car_model",
+                "operator": "!\u003d [string]",
+                "col": "contract_id",
+                "string": "vw",
+                "num": 0.0
+              }
+            ]
+          }
+        },
+        "assertionCondition": {
+          "expectedValidRatio": 0.9,
+          "expectedClass": "0"
+        }
+      }
+    ]
   },
   "overridesParams": {
     "overrides": []
@@ -3727,6 +3751,10 @@
       },
       {
         "type": "ML_DIAGNOSTICS_ML_ASSERTIONS",
+        "enabled": true
+      },
+      {
+        "type": "ML_DIAGNOSTICS_ABNORMAL_PREDICTIONS_DETECTION",
         "enabled": true
       }
     ]
