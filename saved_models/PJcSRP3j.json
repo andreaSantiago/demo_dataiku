@@ -4,7 +4,7 @@
   "rebuildBehavior": "EXPLICIT",
   "name": "Prediction (RANDOM_FOREST_CLASSIFICATION) on Historical_Claims_train",
   "contentType": "prediction/py_memory",
-  "activeVersion": "1673361616663",
+  "activeVersion": "1677536414853",
   "conditionalOutputs": [],
   "partitioning": {
     "ignoreNonMatchingFile": false,
@@ -86,6 +86,9 @@
     },
     "assertionsParams": {
       "assertions": []
+    },
+    "overridesParams": {
+      "overrides": []
     },
     "guessPolicy": "DEFAULT",
     "partitionedModel": {
@@ -1655,7 +1658,7 @@
         "early_stopping_rounds": 4,
         "enabled": false
       },
-      "multi_layer_perceptron_regression": {
+      "deep_neural_network_regression": {
         "learning_rate": {
           "gridMode": "EXPLICIT",
           "randomMode": "RANGE",
@@ -1700,22 +1703,23 @@
           ],
           "range": {
             "min": 1,
-            "max": 1024,
+            "max": 256,
             "nbValues": 3,
             "scaling": "LINEAR"
           }
         },
         "batch_size": 32,
         "max_epochs": 50,
-        "criterion": "MSELoss",
-        "optimizer": "Adam",
         "device": "cpu",
         "early_stopping_enabled": true,
         "early_stopping_patience": 5,
         "early_stopping_threshold": 1.0E-4,
+        "dropout": 0.0,
+        "reg_l2": 0.0,
+        "reg_l1": 0.0,
         "enabled": false
       },
-      "multi_layer_perceptron_classification": {
+      "deep_neural_network_classification": {
         "learning_rate": {
           "gridMode": "EXPLICIT",
           "randomMode": "RANGE",
@@ -1760,19 +1764,20 @@
           ],
           "range": {
             "min": 1,
-            "max": 1024,
+            "max": 256,
             "nbValues": 3,
             "scaling": "LINEAR"
           }
         },
         "batch_size": 32,
         "max_epochs": 50,
-        "criterion": "CrossEntropyLoss",
-        "optimizer": "SGD",
         "device": "cpu",
         "early_stopping_enabled": true,
         "early_stopping_patience": 5,
         "early_stopping_threshold": 1.0E-4,
+        "dropout": 0.0,
+        "reg_l2": 0.0,
+        "reg_l1": 0.0,
         "enabled": false
       },
       "deep_learning_sparkling": {
@@ -2917,8 +2922,7 @@
           "fnGain": 0.0
         },
         "liftPoint": 0.4,
-        "unitaryTreatmentCost": 0.0,
-        "unitaryConversionBenefit": 0.0
+        "netUpliftPoint": 0.5
       },
       "custom_mllib": [],
       "max_ensemble_nodes_serialized": 6000
@@ -3052,11 +3056,11 @@
   "lastTrainIndex": 2,
   "lastTrainJobId": "Build_Historical_Claims_train_scored__NP___test_2__NP___New_Claims_enriched_scored__NP___prediction__NP___metrics_windows__NP___metrics__NP___Prediction__RANDOM_FOREST_CLASSIFICATION__on_Historical_Cl_2023-01-10T14-40-12.022",
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1673361647781
+    "lastModifiedOn": 1677536490016
   },
   "creationTag": {
     "versionNumber": 0,
