@@ -3054,14 +3054,14 @@
     "predictionDisplayCharts": [],
     "labels": []
   },
-  "lastTrainIndex": 2,
-  "lastTrainJobId": "Build_pred_from_2_datasets_2023-01-10T14-37-59.765",
+  "lastTrainIndex": 3,
+  "lastTrainJobId": "Build_pred_from_2_datasets_2023-02-27T22-51-25.599",
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 12,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677538348736
+    "lastModifiedOn": 1677538349231
   },
   "creationTag": {
     "versionNumber": 0,
