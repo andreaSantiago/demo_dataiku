@@ -1,83 +1,18 @@
 {
-  "authMethod": "PUBLIC",
-  "authRealm": {
-    "queryKeys": []
-  },
-  "checklists": {
-    "checklists": []
-  },
-  "creationTag": {
-    "lastModifiedBy": {
-      "login": "admin"
-    },
-    "lastModifiedOn": 1648031622617,
-    "versionNumber": 0
-  },
-  "customFields": {},
+  "name": "Insurance_Fraud_Detection",
   "endpoints": [
     {
-      "auditPostEnrichData": false,
-      "enrichMapping": [
-        {
-          "columnsMapping": {
-            "agency_id": "agency_id",
-            "car_brand": "car_brand",
-            "car_model": "car_model",
-            "car_number": "car_number",
-            "contract_duration": "contract_duration",
-            "contract_end_date_year": "contract_end_date_year",
-            "contract_id": "contract_id",
-            "customer_age": "customer_age",
-            "customer_category": "customer_category",
-            "customer_group": "customer_group",
-            "customer_id": "customer_id",
-            "email_domain": "email_domain",
-            "gender": "gender",
-            "policies_last_3_years": "policies_last_3_years",
-            "policies_last_year": "policies_last_year",
-            "product_id": "product_id"
-          },
-          "datasetRef": "Contracts_and_Customers_ref",
-          "missingLookupKeyBehavior": "IGNORE",
-          "multiMatchBehavior": "KEEP_FIRST",
-          "notFoundBehavior": "IGNORE",
-          "on": [
-            {
-              "resourceLookupCol": "contract_id"
-            }
-          ],
-          "packagingType": "REFERENCED"
-        },
-        {
-          "columnsMapping": {
-            "department": "department",
-            "region": "region"
-          },
-          "datasetRef": "Departements_Ref",
-          "missingLookupKeyBehavior": "IGNORE",
-          "multiMatchBehavior": "KEEP_FIRST",
-          "notFoundBehavior": "IGNORE",
-          "on": [
-            {
-              "resourceLookupCol": "code_dep"
-            }
-          ],
-          "packagingType": "REFERENCED"
-        }
-      ],
-      "healthCheckQueries": [],
-      "id": "insurance_fraud_detection",
+      "modelRef": "VNCmGzOW",
+      "useJava": false,
+      "outputExplanations": false,
       "individualExplanationParams": {
-        "drawInScoredSet": false,
         "method": "ICE",
         "nbExplanations": 3,
-        "shapleyBackgroundSize": 100,
-        "subChunkSize": 5000
+        "drawInScoredSet": false,
+        "subChunkSize": 5000,
+        "shapleyBackgroundSize": 100
       },
       "mlFlowOutputStyle": "RAW",
-      "modelRef": "VNCmGzOW",
-      "outputExplanations": true,
-      "returnPostEnrichData": false,
       "testQueries": [
         {
           "name": "Test_query_With_enrichment",
@@ -93,18 +28,82 @@
           }
         }
       ],
-      "type": "STD_PREDICTION",
-      "useJava": false
+      "enrichMapping": [
+        {
+          "datasetRef": "Contracts_and_Customers_ref",
+          "packagingType": "REFERENCED",
+          "on": [
+            {
+              "resourceLookupCol": "contract_id"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "product_id": "product_id",
+            "contract_id": "contract_id",
+            "car_brand": "car_brand",
+            "car_model": "car_model",
+            "car_number": "car_number",
+            "policies_last_year": "policies_last_year",
+            "policies_last_3_years": "policies_last_3_years",
+            "contract_duration": "contract_duration",
+            "contract_end_date_year": "contract_end_date_year",
+            "customer_id": "customer_id",
+            "agency_id": "agency_id",
+            "customer_age": "customer_age",
+            "customer_group": "customer_group",
+            "email_domain": "email_domain",
+            "gender": "gender",
+            "customer_category": "customer_category"
+          }
+        },
+        {
+          "datasetRef": "Departements_Ref",
+          "packagingType": "REFERENCED",
+          "on": [
+            {
+              "resourceLookupCol": "code_dep"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "department": "department",
+            "region": "region"
+          }
+        }
+      ],
+      "healthCheckQueries": [],
+      "returnPostEnrichData": false,
+      "auditPostEnrichData": false,
+      "id": "insurance_fraud_detection",
+      "type": "STD_PREDICTION"
     }
   ],
-  "name": "Insurance_Fraud_Detection",
-  "publicAccess": true,
-  "tags": [],
+  "authMethod": "PUBLIC",
+  "authRealm": {
+    "queryKeys": []
+  },
   "versionTag": {
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1648034818639,
-    "versionNumber": 7
+    "lastModifiedOn": 1677579621732
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1648031622617
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
   }
 }
