@@ -1,5 +1,27 @@
 {
-  "endpoints": [],
+  "name": "Fraud_Detection_Service",
+  "endpoints": [
+    {
+      "modelRef": "VNCmGzOW",
+      "useJava": true,
+      "outputExplanations": false,
+      "individualExplanationParams": {
+        "method": "ICE",
+        "nbExplanations": 3,
+        "drawInScoredSet": false,
+        "subChunkSize": 5000,
+        "shapleyBackgroundSize": 100
+      },
+      "mlFlowOutputStyle": "RAW",
+      "testQueries": [],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "returnPostEnrichData": false,
+      "auditPostEnrichData": false,
+      "id": "i_fraud_detection",
+      "type": "STD_PREDICTION"
+    }
+  ],
   "authMethod": "PUBLIC",
   "authRealm": {
     "queryKeys": []
@@ -10,11 +32,11 @@
     "scopeClaimKey": "scope"
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677582365211
+    "lastModifiedOn": 1677582382298
   },
   "creationTag": {
     "versionNumber": 0,
