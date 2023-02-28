@@ -1,5 +1,5 @@
 {
-  "name": "Fraud_Detection_v2",
+  "name": "Fraud_Detection_service",
   "endpoints": [
     {
       "modelRef": "VNCmGzOW",
@@ -92,11 +92,11 @@
     "scopeClaimKey": "scope"
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677579351449
+    "lastModifiedOn": 1677579368206
   },
   "creationTag": {
     "versionNumber": 0,
