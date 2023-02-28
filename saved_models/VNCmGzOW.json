@@ -4,7 +4,7 @@
   "rebuildBehavior": "EXPLICIT",
   "name": "pred_from_2_datasets",
   "contentType": "prediction/py_memory",
-  "activeVersion": "1677576555097",
+  "activeVersion": "1677580518409",
   "conditionalOutputs": [],
   "partitioning": {
     "ignoreNonMatchingFile": false,
@@ -16,7 +16,7 @@
     "rebuildBehavior": "NORMAL",
     "crossProjectBuildBehavior": "DEFAULT"
   },
-  "lastExportedFrom": "A-INSURANCEFRAUDDETECTIONNEW-9dxhzg0A-qjVvk83H-s6-pp1-m1",
+  "lastExportedFrom": "A-INSURANCEFRAUDDETECTIONNEW-9dxhzg0A-qjVvk83H-s8-pp1-m1",
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -1516,7 +1516,7 @@
         },
         "max_delta_step": {
           "gridMode": "EXPLICIT",
-          "randomMode": "RANGE",
+          "randomMode": "EXPLICIT",
           "limit": {
             "min": 0.0
           },
@@ -2959,6 +2959,10 @@
         {
           "type": "ML_DIAGNOSTICS_ML_ASSERTIONS",
           "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_ABNORMAL_PREDICTIONS_DETECTION",
+          "enabled": true
         }
       ]
     },
@@ -2967,7 +2971,7 @@
     "maxConcurrentModelTraining": 2,
     "envSelection": {
       "envMode": "EXPLICIT_ENV",
-      "envName": "model_training_36"
+      "envName": "py_36"
     },
     "containerSelection": {
       "containerMode": "INHERIT"
@@ -3054,14 +3058,14 @@
     "predictionDisplayCharts": [],
     "labels": []
   },
-  "lastTrainIndex": 4,
+  "lastTrainIndex": 1,
   "lastTrainJobId": "Build_pred_from_2_datasets_2023-02-28T09-28-53.287",
   "versionTag": {
-    "versionNumber": 14,
+    "versionNumber": 15,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677576592517
+    "lastModifiedOn": 1677580519081
   },
   "creationTag": {
     "versionNumber": 0,
