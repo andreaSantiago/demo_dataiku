@@ -3,7 +3,7 @@
   "endpoints": [
     {
       "modelRef": "VNCmGzOW",
-      "useJava": true,
+      "useJava": false,
       "outputExplanations": false,
       "individualExplanationParams": {
         "method": "ICE",
@@ -14,7 +14,54 @@
       },
       "mlFlowOutputStyle": "RAW",
       "testQueries": [],
-      "enrichMapping": [],
+      "enrichMapping": [
+        {
+          "datasetRef": "Contracts_and_Customers_ref",
+          "packagingType": "REFERENCED",
+          "on": [
+            {
+              "resourceLookupCol": "contract_id"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "product_id": "product_id",
+            "contract_id": "contract_id",
+            "car_brand": "car_brand",
+            "car_model": "car_model",
+            "car_number": "car_number",
+            "policies_last_year": "policies_last_year",
+            "policies_last_3_years": "policies_last_3_years",
+            "contract_duration": "contract_duration",
+            "contract_end_date_year": "contract_end_date_year",
+            "customer_id": "customer_id",
+            "agency_id": "agency_id",
+            "customer_age": "customer_age",
+            "customer_group": "customer_group",
+            "email_domain": "email_domain",
+            "gender": "gender",
+            "customer_category": "customer_category"
+          }
+        },
+        {
+          "datasetRef": "Departements_Ref",
+          "packagingType": "REFERENCED",
+          "on": [
+            {
+              "resourceLookupCol": "code_dep"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "department": "department",
+            "region": "region"
+          }
+        }
+      ],
       "healthCheckQueries": [],
       "returnPostEnrichData": false,
       "auditPostEnrichData": false,
@@ -32,11 +79,11 @@
     "scopeClaimKey": "scope"
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677583905574
+    "lastModifiedOn": 1677583964472
   },
   "creationTag": {
     "versionNumber": 0,
