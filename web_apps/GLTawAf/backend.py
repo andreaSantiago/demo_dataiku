@@ -44,7 +44,8 @@ def scoring_api_call(params):
     #}
     
     #client = dataikuapi.APINodeClient("http://localhost:11900/", "Insurance_Fraud_Detection")
-    client = dataikuapi.APINodeClient("http://localhost:11900/", "Insurance_Fraud_Detection")
-    prediction = client.predict_record("insurance_fraud_detection", record_to_predict)
+    #client = dataikuapi.APINodeClient("http://localhost:11900/", "Insurance_Fraud_Detection")
+    client = dataikuapi.APINodeClient("http://localhost:11900/", "test")
+    prediction = client.predict_record("test", record_to_predict)
     #return json.dumps({"results": prediction["result"]})
     return json.dumps({"results": prediction})
