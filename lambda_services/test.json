@@ -3,7 +3,7 @@
   "endpoints": [
     {
       "modelRef": "VNCmGzOW",
-      "useJava": true,
+      "useJava": false,
       "outputExplanations": false,
       "individualExplanationParams": {
         "method": "ICE",
@@ -13,7 +13,20 @@
         "shapleyBackgroundSize": 100
       },
       "mlFlowOutputStyle": "RAW",
-      "testQueries": [],
+      "testQueries": [
+        {
+          "name": "Claims_Alerts #1",
+          "q": {
+            "features": {
+              "claim_id": 68261,
+              "customer_id": "0-10367726338",
+              "claim_date": "2016-10-19T00:00:00.000Z",
+              "claim_amount": 129.8,
+              "fraud_score": 0.7499318580627239
+            }
+          }
+        }
+      ],
       "enrichMapping": [],
       "healthCheckQueries": [],
       "returnPostEnrichData": false,
@@ -32,11 +45,11 @@
     "scopeClaimKey": "scope"
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677581008605
+    "lastModifiedOn": 1677581028168
   },
   "creationTag": {
     "versionNumber": 0,
