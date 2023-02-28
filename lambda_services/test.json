@@ -18,16 +18,64 @@
           "name": "Claims_Alerts #1",
           "q": {
             "features": {
-              "claim_id": 68261,
-              "customer_id": "0-10367726338",
-              "claim_date": "2016-10-19T00:00:00.000Z",
-              "claim_amount": 129.8,
-              "fraud_score": 0.7499318580627239
+              "contract_id": "229959",
+              "claim_amount": "240.93",
+              "claim_date": "2015-11-27T00:00:00.000Z",
+              "expert": "1",
+              "litigation_flag": "0",
+              "code_dep": 76
             }
           }
         }
       ],
-      "enrichMapping": [],
+      "enrichMapping": [
+        {
+          "datasetRef": "Contracts_and_Customers_ref",
+          "packagingType": "REFERENCED",
+          "on": [
+            {
+              "resourceLookupCol": "contract_id"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "product_id": "product_id",
+            "contract_id": "contract_id",
+            "car_brand": "car_brand",
+            "car_model": "car_model",
+            "car_number": "car_number",
+            "policies_last_year": "policies_last_year",
+            "policies_last_3_years": "policies_last_3_years",
+            "contract_duration": "contract_duration",
+            "contract_end_date_year": "contract_end_date_year",
+            "customer_id": "customer_id",
+            "agency_id": "agency_id",
+            "customer_age": "customer_age",
+            "customer_group": "customer_group",
+            "email_domain": "email_domain",
+            "gender": "gender",
+            "customer_category": "customer_category"
+          }
+        },
+        {
+          "datasetRef": "Departements_Ref",
+          "packagingType": "REFERENCED",
+          "on": [
+            {
+              "resourceLookupCol": "code_dep"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "department": "department",
+            "region": "region"
+          }
+        }
+      ],
       "healthCheckQueries": [],
       "returnPostEnrichData": false,
       "auditPostEnrichData": false,
@@ -45,11 +93,11 @@
     "scopeClaimKey": "scope"
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677581354449
+    "lastModifiedOn": 1677582017023
   },
   "creationTag": {
     "versionNumber": 0,
