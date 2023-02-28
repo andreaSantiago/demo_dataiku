@@ -3,8 +3,8 @@
   "endpoints": [
     {
       "modelRef": "VNCmGzOW",
-      "useJava": true,
-      "outputExplanations": false,
+      "useJava": false,
+      "outputExplanations": true,
       "individualExplanationParams": {
         "method": "ICE",
         "nbExplanations": 3,
@@ -13,8 +13,68 @@
         "shapleyBackgroundSize": 100
       },
       "mlFlowOutputStyle": "RAW",
-      "testQueries": [],
-      "enrichMapping": [],
+      "testQueries": [
+        {
+          "q": {
+            "features": {
+              "contract_id": "229959",
+              "claim_amount": "240.93",
+              "claim_date": "2015-11-27T00:00:00.000Z",
+              "expert": "1",
+              "litigation_flag": "0",
+              "code_dep": 76
+            }
+          }
+        }
+      ],
+      "enrichMapping": [
+        {
+          "datasetRef": "Contracts_and_Customers_ref",
+          "packagingType": "REFERENCED",
+          "on": [
+            {
+              "resourceLookupCol": "contract_id"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "product_id": "product_id",
+            "contract_id": "contract_id",
+            "car_brand": "car_brand",
+            "car_model": "car_model",
+            "car_number": "car_number",
+            "policies_last_year": "policies_last_year",
+            "policies_last_3_years": "policies_last_3_years",
+            "contract_duration": "contract_duration",
+            "contract_end_date_year": "contract_end_date_year",
+            "customer_id": "customer_id",
+            "agency_id": "agency_id",
+            "customer_age": "customer_age",
+            "customer_group": "customer_group",
+            "email_domain": "email_domain",
+            "gender": "gender",
+            "customer_category": "customer_category"
+          }
+        },
+        {
+          "datasetRef": "Departements_Ref",
+          "packagingType": "REFERENCED",
+          "on": [
+            {
+              "resourceLookupCol": "code_dep"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "department": "department",
+            "region": "region"
+          }
+        }
+      ],
       "healthCheckQueries": [],
       "returnPostEnrichData": false,
       "auditPostEnrichData": false,
@@ -32,11 +92,11 @@
     "scopeClaimKey": "scope"
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677577854700
+    "lastModifiedOn": 1677578125233
   },
   "creationTag": {
     "versionNumber": 0,
