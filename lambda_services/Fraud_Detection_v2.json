@@ -30,6 +30,16 @@
               "nExplanations": 3
             }
           }
+        },
+        {
+          "q": {
+            "features": {},
+            "explanations": {
+              "enabled": true,
+              "method": "ICE",
+              "nExplanations": 3
+            }
+          }
         }
       ],
       "enrichMapping": [
@@ -97,11 +107,11 @@
     "scopeClaimKey": "scope"
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677578973750
+    "lastModifiedOn": 1677579002903
   },
   "creationTag": {
     "versionNumber": 0,
