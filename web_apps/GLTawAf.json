@@ -44,11 +44,11 @@
   "name": "Real-Time Fraud Scoring",
   "apiKey": "cTecGeBUeciYQwi1UDqM1GR089i5zMbM",
   "versionTag": {
-    "versionNumber": 400,
+    "versionNumber": 401,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677583483278
+    "lastModifiedOn": 1677585591097
   },
   "creationTag": {
     "versionNumber": 0,
