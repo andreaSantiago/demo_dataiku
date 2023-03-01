@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677677491209
+    "lastModifiedOn": 1677677535357
   },
   "creationTag": {
     "versionNumber": 0,
@@ -240,7 +240,24 @@
         "type": "numericRange",
         "meta": {
           "name": "Value in range",
-          "label": "Limit Age"
+          "label": "Min Age"
+        },
+        "computeOnBuildMode": "PARTITION"
+      },
+      {
+        "metricId": "col_stats:MAX:Age",
+        "minimum": 0.0,
+        "maximum": 90.0,
+        "softMinimum": 0.0,
+        "softMaximum": 0.0,
+        "minimumEnabled": false,
+        "maximumEnabled": true,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": false,
+        "type": "numericRange",
+        "meta": {
+          "name": "Value in range",
+          "label": "Max Age"
         },
         "computeOnBuildMode": "PARTITION"
       }
@@ -248,7 +265,8 @@
     "displayedState": {
       "partition": "NP",
       "checks": [
-        "Limit Age"
+        "Limit Age",
+        "Max Age"
       ]
     }
   },
