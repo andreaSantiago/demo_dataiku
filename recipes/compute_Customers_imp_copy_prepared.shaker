@@ -58,9 +58,9 @@
       "disabled": false,
       "type": "DateDifference",
       "params": {
-        "output": "since_customer_birthdate_parsed_days",
+        "output": "Age",
         "outputUnit": "YEARS",
-        "input1": "Age",
+        "input1": "customer_birthdate_parsed",
         "compareTo": "NOW",
         "reverse": false
       },
