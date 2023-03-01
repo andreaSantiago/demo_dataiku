@@ -25,17 +25,21 @@
         {
           "ref": "duplicating",
           "appendMode": false
+        },
+        {
+          "ref": "unique",
+          "appendMode": false
         }
       ]
     }
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677676045306
+    "lastModifiedOn": 1677676094988
   },
   "creationTag": {
     "versionNumber": 0,
