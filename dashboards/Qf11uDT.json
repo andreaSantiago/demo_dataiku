@@ -49,8 +49,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 0,
-              "left": 6,
+              "top": 2,
+              "left": 8,
               "width": 2,
               "height": 2
             },
@@ -145,7 +145,7 @@
             "tileType": "INSIGHT",
             "box": {
               "top": 2,
-              "left": 8,
+              "left": 10,
               "width": 2,
               "height": 2
             },
@@ -163,8 +163,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 2,
-              "left": 10,
+              "top": 0,
+              "left": 6,
               "width": 2,
               "height": 2
             },
@@ -189,11 +189,11 @@
   "name": "Data Quality",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 23,
+    "versionNumber": 24,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677678715615
+    "lastModifiedOn": 1677678726590
   },
   "creationTag": {
     "versionNumber": 0,
