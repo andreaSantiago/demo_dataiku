@@ -1,0 +1,31 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "unique",
+    "objectType": "DATASET",
+    "metricId": "col_stats:MEAN:Age"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Avg of Age on unique",
+  "dashboardCreationId": "Qf11uDT",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677678695170
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677678695170
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
