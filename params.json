@@ -107,6 +107,15 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "unique",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
       }
     ]
   },
@@ -368,11 +377,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 197,
+    "versionNumber": 198,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677676875029
+    "lastModifiedOn": 1677677596805
   },
   "creationTag": {
     "versionNumber": 0,
