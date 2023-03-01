@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677677803615
+    "lastModifiedOn": 1677677810291
   },
   "creationTag": {
     "versionNumber": 0,
@@ -51,10 +51,14 @@
   "schema": {
     "columns": [
       {"name":"partition","type":"string"},
-      {"name":"name","type":"string"},
+      {"name":"metricId","type":"string"},
       {"name":"timeComputed","type":"date"},
-      {"name":"outcome","type":"string"},
-      {"name":"message","type":"string"}
+      {"name":"valueType","type":"string"},
+      {"name":"stringValue","type":"string","meaning":"Text"},
+      {"name":"longValue","type":"bigint"},
+      {"name":"doubleValue","type":"double"},
+      {"name":"booleanValue","type":"boolean"},
+      {"name":"dateValue","type":"date"}
     ],
     "userModified": true
   },
