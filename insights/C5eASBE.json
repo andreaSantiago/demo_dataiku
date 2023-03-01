@@ -1,0 +1,31 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "unique",
+    "objectType": "DATASET",
+    "metricId": "adv_col_stats:TOP10:customer_category"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Top 10 values of customer_category on unique",
+  "dashboardCreationId": "Qf11uDT",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677678249164
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677678249164
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
