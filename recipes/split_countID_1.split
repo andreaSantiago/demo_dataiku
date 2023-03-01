@@ -3,37 +3,40 @@
   "centileSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
-  "defaultOutputIndex": 1,
   "preFilter": {
     "distinct": false,
     "enabled": false
   },
+  "defaultOutputIndex": -1,
   "seed": 1337,
   "randomColumns": [],
   "centileOrders": [],
   "rangeSetTime": false,
+  "engineType": "DSS",
   "randomSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
   "randomColumnsSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
   "computedColumns": [],
   "writeComputedColumnsInOutput": false,
+  "mode": "FILTERS",
   "centileTDigest": false,
   "valueSplits": [
     {
       "outputIndex": 0,
-      "caseSensitive": false
+      "caseSensitive": false,
+      "value": ""
     }
   ],
   "rangeSplits": [
@@ -88,7 +91,60 @@
       "filter": {
         "uiData": {
           "mode": "\u0026\u0026",
-          "conditions": []
+          "$latestOperator": "\u0026\u0026",
+          "$filterOptions": "rules",
+          "conditions": [
+            {
+              "input": "customer_id_count",
+              "col": "customer_birthdate",
+              "$showList": false,
+              "num": 1,
+              "items": [],
+              "operator": "\u003d\u003d [number]"
+            }
+          ]
+        },
+        "$status": {
+          "schema": {
+            "columns": [
+              {
+                "name": "customer_id",
+                "type": "string"
+              },
+              {
+                "name": "customer_birthdate",
+                "type": "string"
+              },
+              {
+                "name": "customer_group",
+                "type": "string"
+              },
+              {
+                "name": "firstname",
+                "type": "string"
+              },
+              {
+                "name": "lastname",
+                "type": "string"
+              },
+              {
+                "name": "email",
+                "type": "string"
+              },
+              {
+                "name": "gender",
+                "type": "string"
+              },
+              {
+                "name": "customer_category",
+                "type": "string"
+              },
+              {
+                "name": "customer_id_count",
+                "type": "bigint"
+              }
+            ]
+          }
         },
         "distinct": false,
         "enabled": true
