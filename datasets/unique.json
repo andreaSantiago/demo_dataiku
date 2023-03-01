@@ -1,7 +1,7 @@
 {
   "type": "PostgreSQL",
   "managed": true,
-  "featureGroup": false,
+  "featureGroup": true,
   "checklists": {
     "checklists": []
   },
@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677678647740
+    "lastModifiedOn": 1677679676580
   },
   "creationTag": {
     "versionNumber": 0,
