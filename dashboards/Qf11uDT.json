@@ -163,8 +163,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
+              "top": 2,
+              "left": 10,
               "width": 2,
               "height": 2
             },
@@ -189,11 +189,11 @@
   "name": "Data Quality",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 22,
+    "versionNumber": 23,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677678714940
+    "lastModifiedOn": 1677678715615
   },
   "creationTag": {
     "versionNumber": 0,
