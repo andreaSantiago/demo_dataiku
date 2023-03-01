@@ -9,8 +9,8 @@
             "box": {
               "top": 0,
               "left": 0,
-              "width": 2,
-              "height": 2
+              "width": 4,
+              "height": 4
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -37,11 +37,11 @@
   "name": "Data Quality",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677678045060
+    "lastModifiedOn": 1677678053029
   },
   "creationTag": {
     "versionNumber": 0,
