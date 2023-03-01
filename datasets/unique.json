@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677677430447
+    "lastModifiedOn": 1677677491209
   },
   "creationTag": {
     "versionNumber": 0,
@@ -114,6 +114,10 @@
             {
               "column": "Age",
               "aggregated": "MIN"
+            },
+            {
+              "column": "Age",
+              "aggregated": "MEAN"
             },
             {
               "column": "Age",
@@ -224,12 +228,13 @@
     "runOnBuild": false,
     "checks": [
       {
-        "minimum": 21.0,
+        "metricId": "col_stats:MIN:Age",
+        "minimum": 18.0,
         "maximum": 90.0,
         "softMinimum": 0.0,
         "softMaximum": 0.0,
         "minimumEnabled": true,
-        "maximumEnabled": true,
+        "maximumEnabled": false,
         "softMinimumEnabled": false,
         "softMaximumEnabled": false,
         "type": "numericRange",
