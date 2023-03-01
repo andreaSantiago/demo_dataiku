@@ -35,7 +35,6 @@
   "valueSplits": [
     {
       "outputIndex": 0,
-      "caseSensitive": false,
       "value": 1
     }
   ],
