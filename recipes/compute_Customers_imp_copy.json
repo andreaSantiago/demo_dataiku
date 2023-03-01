@@ -3,7 +3,9 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "uniqueKey": [],
+    "uniqueKey": [
+      "customer_id"
+    ],
     "filter": {
       "distinct": false,
       "enabled": false
@@ -42,11 +44,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677676368035
+    "lastModifiedOn": 1677676373005
   },
   "creationTag": {
     "versionNumber": 0,
