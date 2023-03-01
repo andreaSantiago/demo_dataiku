@@ -175,6 +175,31 @@
             "insightType": "project_activity",
             "displayMode": "INSIGHT",
             "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": -1,
+              "left": -1,
+              "width": 6,
+              "height": 3
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "tileParams": {
+              "viewKind": "EXPLORE",
+              "showName": true,
+              "showDescription": true,
+              "showCustomFields": true,
+              "showStorageType": false,
+              "showMeaning": false,
+              "showProgressBar": false
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "7MIx7pL",
+            "insightType": "dataset_table",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
           }
         ]
       },
@@ -268,11 +293,11 @@
   "name": "Project Monitoring",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 41,
+    "versionNumber": 42,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677537079550
+    "lastModifiedOn": 1677677597164
   },
   "creationTag": {
     "versionNumber": 0,
