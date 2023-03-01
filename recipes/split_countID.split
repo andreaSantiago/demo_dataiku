@@ -97,9 +97,9 @@
               "input": "customer_id_count",
               "col": "customer_birthdate",
               "$showList": false,
-              "num": 1,
+              "num": 2,
               "items": [],
-              "operator": "\u003e  [number]"
+              "operator": "\u003e\u003d [number]"
             }
           ]
         },
