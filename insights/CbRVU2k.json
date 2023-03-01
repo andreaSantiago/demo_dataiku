@@ -1,0 +1,31 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "unique",
+    "objectType": "DATASET",
+    "metricId": "check:CHECK:Min Age"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Check Min Age on unique",
+  "dashboardCreationId": "Qf11uDT",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677678172974
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677678172974
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
