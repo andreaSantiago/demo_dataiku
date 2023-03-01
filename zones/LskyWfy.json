@@ -33,6 +33,14 @@
     {
       "objectId": "unique",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_Customers_imp_copy",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Customers_imp_copy",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
