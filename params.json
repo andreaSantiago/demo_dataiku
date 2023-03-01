@@ -140,6 +140,12 @@
             "appearOnFlow": true
           }
         ]
+      },
+      {
+        "type": "DATASET",
+        "localName": "unique",
+        "quickSharingEnabled": true,
+        "rules": []
       }
     ]
   },
@@ -386,11 +392,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 208,
+    "versionNumber": 209,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677678714815
+    "lastModifiedOn": 1677679676220
   },
   "creationTag": {
     "versionNumber": 0,
