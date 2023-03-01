@@ -5,11 +5,18 @@
       "checkout": "",
       "remotePath": "",
       "isDirty": false
+    },
+    "lib": {
+      "remote": "git@github.com:andreaSantiago/dss.git",
+      "checkout": "",
+      "remotePath": "",
+      "isDirty": false
     }
   },
   "pythonPath": [
     "python",
-    "git_rep"
+    "git_rep",
+    "lib"
   ],
   "rsrcPath": [
     "R"
