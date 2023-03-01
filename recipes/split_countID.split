@@ -15,6 +15,7 @@
   "randomColumns": [],
   "centileOrders": [],
   "rangeSetTime": false,
+  "column": "customer_id_count",
   "randomSplits": [
     {
       "outputIndex": 0,
@@ -29,7 +30,7 @@
   ],
   "computedColumns": [],
   "writeComputedColumnsInOutput": false,
-  "mode": "FILTERS",
+  "mode": "RANGE",
   "centileTDigest": false,
   "valueSplits": [
     {
@@ -43,7 +44,18 @@
       "filter": {
         "uiData": {
           "mode": "\u0026\u0026",
-          "conditions": []
+          "conditions": [
+            {
+              "input": "customer_id_count",
+              "num": 2,
+              "operator": "\u003e\u003d [number]"
+            },
+            {
+              "input": "customer_id_count",
+              "num": 10000,
+              "operator": "\u003c  [number]"
+            }
+          ]
         },
         "distinct": false,
         "enabled": true
