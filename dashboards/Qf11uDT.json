@@ -159,6 +159,25 @@
             "insightType": "metrics",
             "displayMode": "INSIGHT",
             "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": -1,
+              "left": -1,
+              "width": 2,
+              "height": 2
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "tileParams": {
+              "displayMode": "LAST_VALUE"
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "C7QAVmQ",
+            "insightType": "metrics",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
           }
         ]
       },
@@ -170,11 +189,11 @@
   "name": "Data Quality",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 21,
+    "versionNumber": 22,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677678703044
+    "lastModifiedOn": 1677678714940
   },
   "creationTag": {
     "versionNumber": 0,

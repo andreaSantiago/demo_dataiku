@@ -1,0 +1,31 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "unique",
+    "objectType": "DATASET",
+    "metricId": "records:COUNT_RECORDS"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Record count of unique",
+  "dashboardCreationId": "Qf11uDT",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677678714937
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677678714937
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
