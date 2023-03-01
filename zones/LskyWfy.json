@@ -25,6 +25,10 @@
     {
       "objectId": "only",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "notunique",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
