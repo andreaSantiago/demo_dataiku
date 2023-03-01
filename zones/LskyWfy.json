@@ -29,6 +29,14 @@
     {
       "objectId": "Customers_imp_copy",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "Customers_imp_copy_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_Customers_imp_copy_prepared",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
