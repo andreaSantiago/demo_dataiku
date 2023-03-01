@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677674176228
+    "lastModifiedOn": 1677674204741
   },
   "creationTag": {
     "versionNumber": 0,
@@ -68,7 +68,8 @@
       {"name":"lastname","type":"string"},
       {"name":"email","type":"string"},
       {"name":"gender","type":"string"},
-      {"name":"customer_category","type":"string"}
+      {"name":"customer_category","type":"string"},
+      {"name":"customer_id_count","type":"bigint"}
     ],
     "userModified": true
   },
