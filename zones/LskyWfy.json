@@ -15,10 +15,6 @@
       "objectType": "RECIPE"
     },
     {
-      "objectId": "duplicates",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "unique",
       "objectType": "DATASET"
     },
