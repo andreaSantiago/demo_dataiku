@@ -28,8 +28,45 @@
   },
   "explorationFilters": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "customer_birthdate_parsed",
+        "formats": [
+          "MM/dd/yy"
+        ],
+        "columns": [
+          "customer_birthdate"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateDifference",
+      "params": {
+        "output": "since_customer_birthdate_parsed_days",
+        "outputUnit": "YEARS",
+        "input1": "Age",
+        "compareTo": "NOW",
+        "reverse": false
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -55,7 +92,19 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "firstname": 113,
+    "since_customer_birthdate_parsed_days": 145,
+    "customer_group": 120,
+    "gender": 100,
+    "customer_category": 218,
+    "customer_id": 127,
+    "customer_birthdate": 150,
+    "customer_birthdate_parsed": 225,
+    "email": 295,
+    "Age": 100,
+    "lastname": 106
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
