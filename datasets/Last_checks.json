@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677677786021
+    "lastModifiedOn": 1677677803615
   },
   "creationTag": {
     "versionNumber": 0,
@@ -45,7 +45,7 @@
   "tags": [],
   "params": {
     "smartName": "unique",
-    "view": "CHECKS_LAST",
+    "view": "METRICS_HISTORY",
     "scope": "SINGLE_OBJECT"
   },
   "schema": {
