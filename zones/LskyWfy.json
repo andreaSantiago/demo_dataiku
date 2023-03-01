@@ -1,7 +1,28 @@
 {
   "name": "Data quality",
   "color": "#4B8021",
-  "items": [],
+  "items": [
+    {
+      "objectId": "compute_duplicates",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "countID",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "split_countID",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "duplicates",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "unique",
+      "objectType": "DATASET"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
