@@ -1,7 +1,15 @@
 {
-  "gitReferences": {},
+  "gitReferences": {
+    "git_rep": {
+      "remote": "git@github.com:andreaSantiago/dss.git",
+      "checkout": "",
+      "remotePath": "",
+      "isDirty": false
+    }
+  },
   "pythonPath": [
-    "python"
+    "python",
+    "git_rep"
   ],
   "rsrcPath": [
     "R"
