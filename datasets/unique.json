@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677677272678
+    "lastModifiedOn": 1677677425087
   },
   "creationTag": {
     "versionNumber": 0,
@@ -110,7 +110,16 @@
           "level": 2
         },
         "configuration": {
-          "aggregates": []
+          "aggregates": [
+            {
+              "column": "Age",
+              "aggregated": "MIN"
+            },
+            {
+              "column": "Age",
+              "aggregated": "MAX"
+            }
+          ]
         }
       },
       {
@@ -213,7 +222,24 @@
   },
   "metricsChecks": {
     "runOnBuild": false,
-    "checks": [],
+    "checks": [
+      {
+        "minimum": 21.0,
+        "maximum": 90.0,
+        "softMinimum": 0.0,
+        "softMaximum": 0.0,
+        "minimumEnabled": true,
+        "maximumEnabled": true,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": false,
+        "type": "numericRange",
+        "meta": {
+          "name": "Value in range",
+          "label": "Limit Age"
+        },
+        "computeOnBuildMode": "PARTITION"
+      }
+    ],
     "displayedState": {
       "partition": "NP",
       "checks": []
