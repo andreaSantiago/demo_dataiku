@@ -1,0 +1,31 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "unique",
+    "objectType": "DATASET",
+    "metricId": "col_stats:MAX:Age"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Max of Age on unique",
+  "dashboardCreationId": "Qf11uDT",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677678674814
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1677678674814
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
