@@ -41,25 +41,6 @@
             },
             "autoLoad": true,
             "showTitle": "YES",
-            "insightId": "CbRVU2k",
-            "insightType": "metrics",
-            "displayMode": "INSIGHT",
-            "resizeImageMode": "FIT_SIZE"
-          },
-          {
-            "tileType": "INSIGHT",
-            "box": {
-              "top": 0,
-              "left": 6,
-              "width": 2,
-              "height": 2
-            },
-            "clickAction": "OPEN_INSIGHT",
-            "tileParams": {
-              "displayMode": "LAST_VALUE"
-            },
-            "autoLoad": true,
-            "showTitle": "YES",
             "insightId": "C5eASBE",
             "insightType": "metrics",
             "displayMode": "INSIGHT",
@@ -75,11 +56,11 @@
   "name": "Data Quality",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677678249778
+    "lastModifiedOn": 1677678256974
   },
   "creationTag": {
     "versionNumber": 0,
