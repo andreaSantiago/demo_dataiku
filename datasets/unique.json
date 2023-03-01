@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677677015930
+    "lastModifiedOn": 1677677272678
   },
   "creationTag": {
     "versionNumber": 0,
@@ -63,13 +63,18 @@
     "columns": [
       {"name":"customer_id","type":"string"},
       {"name":"customer_birthdate","type":"string"},
+      {"name":"customer_birthdate_parsed","type":"date"},
+      {"name":"Age","type":"bigint"},
       {"name":"customer_group","type":"string"},
       {"name":"firstname","type":"string"},
       {"name":"lastname","type":"string"},
       {"name":"email","type":"string"},
       {"name":"gender","type":"string"},
       {"name":"customer_category","type":"string"},
-      {"name":"customer_id_count","type":"bigint"}
+      {"name":"customer_id_count","type":"bigint"},
+      {"name":"Age_min","type":"bigint"},
+      {"name":"Age_max","type":"bigint"},
+      {"name":"Age_avg","type":"double"}
     ],
     "userModified": true
   },
