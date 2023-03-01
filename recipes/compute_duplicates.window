@@ -4,6 +4,7 @@
     "enabled": false
   },
   "ntileValues": "10",
+  "keys": [],
   "values": [
     {
       "last": false,
@@ -11,10 +12,12 @@
       "max": false,
       "firstLastNotNull": false,
       "column": "customer_id",
-      "count": false,
+      "count": true,
+      "$idx": 0,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -23,6 +26,7 @@
       "avg": false,
       "lag": false,
       "leadValues": "1",
+      "$selected": false,
       "stddev": false,
       "value": true,
       "leadDiff": false,
@@ -35,9 +39,11 @@
       "firstLastNotNull": false,
       "column": "customer_birthdate",
       "count": false,
+      "$idx": 1,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -58,9 +64,11 @@
       "firstLastNotNull": false,
       "column": "customer_group",
       "count": false,
+      "$idx": 2,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -81,9 +89,11 @@
       "firstLastNotNull": false,
       "column": "firstname",
       "count": false,
+      "$idx": 3,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -104,9 +114,11 @@
       "firstLastNotNull": false,
       "column": "lastname",
       "count": false,
+      "$idx": 4,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -127,9 +139,11 @@
       "firstLastNotNull": false,
       "column": "email",
       "count": false,
+      "$idx": 5,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -150,9 +164,11 @@
       "firstLastNotNull": false,
       "column": "gender",
       "count": false,
+      "$idx": 6,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -173,9 +189,11 @@
       "firstLastNotNull": false,
       "column": "customer_category",
       "count": false,
+      "$idx": 7,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -193,20 +211,68 @@
   "legacyUnboundedWindowStreamBehavior": false,
   "windows": [
     {
-      "windowUpperBound": 0.0,
+      "windowUpperBound": 0,
       "enablePartitioning": false,
-      "enableOrdering": false,
+      "enableOrdering": true,
       "precedingRows": 0,
       "limitFollowing": false,
-      "orders": [],
+      "orders": [
+        {
+          "column": "customer_id",
+          "desc": false
+        }
+      ],
       "limitPreceding": false,
       "followingRows": 0,
-      "windowLowerBound": 0.0,
+      "windowLowerBound": 0,
       "enableLimits": false
     }
   ],
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "customer_id",
+            "type": "string"
+          },
+          {
+            "name": "customer_birthdate",
+            "type": "string"
+          },
+          {
+            "name": "customer_group",
+            "type": "string"
+          },
+          {
+            "name": "firstname",
+            "type": "string"
+          },
+          {
+            "name": "lastname",
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "name": "gender",
+            "type": "string"
+          },
+          {
+            "name": "customer_category",
+            "type": "string"
+          },
+          {
+            "name": "customer_id_count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
@@ -248,5 +314,6 @@
   "ntile": false,
   "rank": false,
   "denseRank": false,
-  "rowNumber": false
+  "rowNumber": false,
+  "outputColumnNameOverrides": {}
 }
