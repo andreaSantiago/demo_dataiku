@@ -104,6 +104,14 @@
                 "type": "string"
               },
               {
+                "name": "customer_birthdate_parsed",
+                "type": "date"
+              },
+              {
+                "name": "Age",
+                "type": "bigint"
+              },
+              {
                 "name": "customer_group",
                 "type": "string"
               },
@@ -130,6 +138,18 @@
               {
                 "name": "customer_id_count",
                 "type": "bigint"
+              },
+              {
+                "name": "Age_min",
+                "type": "bigint"
+              },
+              {
+                "name": "Age_max",
+                "type": "bigint"
+              },
+              {
+                "name": "Age_avg",
+                "type": "double"
               }
             ]
           }
