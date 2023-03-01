@@ -15,10 +15,6 @@
       "objectType": "RECIPE"
     },
     {
-      "objectId": "unique",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "only",
       "objectType": "DATASET"
     },
