@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677677535357
+    "lastModifiedOn": 1677677631782
   },
   "creationTag": {
     "versionNumber": 0,
@@ -266,7 +266,8 @@
       "partition": "NP",
       "checks": [
         "Limit Age",
-        "Max Age"
+        "Max Age",
+        "Min Age"
       ]
     }
   },
