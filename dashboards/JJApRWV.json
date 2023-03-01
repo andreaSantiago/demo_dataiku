@@ -179,8 +179,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
+              "top": 8,
+              "left": 0,
               "width": 6,
               "height": 3
             },
@@ -293,11 +293,11 @@
   "name": "Project Monitoring",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 42,
+    "versionNumber": 43,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677677597164
+    "lastModifiedOn": 1677677598194
   },
   "creationTag": {
     "versionNumber": 0,
