@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677677050911
+    "lastModifiedOn": 1677677079433
   },
   "creationTag": {
     "versionNumber": 0,
@@ -89,12 +89,15 @@
     "columns": [
       {"name":"customer_id","type":"string"},
       {"name":"customer_birthdate","type":"string"},
+      {"name":"customer_birthdate_parsed","type":"date"},
       {"name":"customer_group","type":"string"},
       {"name":"firstname","type":"string"},
       {"name":"lastname","type":"string"},
       {"name":"email","type":"string"},
       {"name":"gender","type":"string"},
-      {"name":"customer_category","type":"string"}
+      {"name":"customer_category","type":"string"},
+      {"name":"Age","type":"string"},
+      {"name":"since_customer_birthdate_parsed_days","type":"string"}
     ],
     "userModified": true
   },
