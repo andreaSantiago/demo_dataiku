@@ -68,6 +68,7 @@
     },
     "drift_train_test": {
       "color": "#94be8e"
-    }
+    },
+    "reference": {}
   }
 }
