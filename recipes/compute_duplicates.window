@@ -226,7 +226,7 @@
       "limitPreceding": false,
       "followingRows": 0,
       "windowLowerBound": 0,
-      "enableLimits": true,
+      "enableLimits": false,
       "partitioningColumns": [
         "customer_id"
       ]
