@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 9,
+    "versionNumber": 10,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677677631782
+    "lastModifiedOn": 1677678647740
   },
   "creationTag": {
     "versionNumber": 0,
@@ -220,7 +220,13 @@
         "reporting:WARNING_COUNT",
         "reporting:BUILD_SUCCESS",
         "reporting:METRICS_COMPUTATION_DURATION",
-        "adv_col_stats:TOP10:customer_category"
+        "adv_col_stats:TOP10:customer_category",
+        "col_stats:MEAN:Age",
+        "check:CHECK:Limit Age",
+        "check:CHECK:Max Age",
+        "check:CHECK:Min Age",
+        "col_stats:MAX:Age",
+        "col_stats:MIN:Age"
       ]
     }
   },
