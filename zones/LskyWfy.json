@@ -11,14 +11,6 @@
       "objectType": "DATASET"
     },
     {
-      "objectId": "split_countID",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "only",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "notunique",
       "objectType": "DATASET"
     },
