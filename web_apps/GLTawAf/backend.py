@@ -47,5 +47,5 @@ def scoring_api_call(params):
     prediction = client.predict_record("test", record_to_predict)
         
     print(prediction)    
- 
-    return json.dumps({"result": prediction})
+    return prediction['probas'] 
+#    return json.dumps({"result": prediction})
