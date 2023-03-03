@@ -7,7 +7,7 @@
     "autoStartBackend": false,
     "hideJSSecurityPanel": false,
     "envSelection": {
-      "envMode": "INHERIT",
+      "envMode": "EXPLICIT_ENV",
       "envName": "py_36"
     },
     "nbProcesses": 1,
@@ -44,11 +44,11 @@
   "name": "Real-Time Fraud Scoring",
   "apiKey": "cTecGeBUeciYQwi1UDqM1GR089i5zMbM",
   "versionTag": {
-    "versionNumber": 407,
+    "versionNumber": 408,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1677854218005
+    "lastModifiedOn": 1677854294553
   },
   "creationTag": {
     "versionNumber": 0,
