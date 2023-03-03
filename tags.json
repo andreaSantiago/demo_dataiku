@@ -21,6 +21,9 @@
     "checks_metrics_plugin_model_data_compliance": {
       "color": "#f1c7fc"
     },
+    "reference": {
+      "color": "#28aadd"
+    },
     "checks": {
       "color": "#77bec2"
     },
@@ -68,7 +71,6 @@
     },
     "drift_train_test": {
       "color": "#94be8e"
-    },
-    "reference": {}
+    }
   }
 }
