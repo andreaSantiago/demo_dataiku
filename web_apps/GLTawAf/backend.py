@@ -45,5 +45,7 @@ def scoring_api_call(params):
     
     client = dataikuapi.APINodeClient("http://localhost:11900/", "test")
     prediction = client.predict_record("test", record_to_predict)
-    
+        
+    print(prediction)    
+ 
     return json.dumps({"results": prediction})
