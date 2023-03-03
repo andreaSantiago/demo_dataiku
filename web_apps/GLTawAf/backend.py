@@ -48,4 +48,4 @@ def scoring_api_call(params):
         
     print(prediction)    
  
-    return json.dumps({"results": prediction})
+    return json.dumps({"result": prediction})
