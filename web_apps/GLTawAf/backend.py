@@ -41,17 +41,11 @@ def scoring_api_call(params):
     #    "expert": "1",
     #    "litigation_flag": "0",
     #    "code_dep": 76
-    
-    #"contractID":"21001",
-    #"claimAmount":"140",
-    #"claimDate":"2017-07-27",
-    #"claimExpert":"true",
-    #"litigationFlag":"false","claimDept":"76 - SEINE-MARITIME"                       
     #}
     
     client = dataikuapi.APINodeClient("http://localhost:11900/", "test")
     prediction = client.predict_record("test", record_to_predict)
         
     print(prediction)    
-    return prediction['probas'] 
-#    return json.dumps({"result": prediction})
+    #return prediction['probas'] 
+    return json.dumps({"results": prediction})
