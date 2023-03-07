@@ -49,3 +49,4 @@ def scoring_api_call(params):
     print(prediction)    
     #return prediction['probas'] 
     return json.dumps({"results": prediction})
+    print(results) 
